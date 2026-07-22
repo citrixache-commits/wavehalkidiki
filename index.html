@@ -137,6 +137,24 @@ nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(29,34,42,.86);bac
 .menu-note{margin-top:40px;background:var(--charcoal);color:#fff;border-radius:22px;padding:26px 34px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
 .menu-note p{font-size:.92rem;color:#cfd4dc}
 .menu-note p b{color:var(--orange)}
+.menu-note .fine{font-size:.76rem;color:#8d95a1;width:100%}
+
+/* ---------- full menu ---------- */
+.fullmenu{columns:3;column-gap:24px}
+.fm-card{background:#fff;border-radius:26px;padding:28px 26px 24px;box-shadow:0 14px 34px rgba(38,44,53,.08);break-inside:avoid;margin:0 0 24px}
+.fm-card .mc-img{width:84px;height:84px;border-radius:50%;overflow:hidden;border:5px solid rgba(240,160,75,.35);margin-bottom:14px}
+.fm-card .mc-img img{width:100%;height:100%;object-fit:cover}
+.fm-card h3{font-size:1.35rem;margin-bottom:0}
+.fm-card .script{font-size:1.05rem;display:block;margin-bottom:10px}
+.fm-card ul{list-style:none}
+.fm-card li{padding:.42rem 0;border-bottom:1px dashed #eee7da}
+.fm-card li:last-child{border-bottom:0}
+.fm-row{display:flex;align-items:baseline;gap:8px}
+.fm-row .nm{font-size:.88rem;color:#3d4350;font-weight:500}
+.fm-row .ld{flex:1;border-bottom:2px dotted #d8cfc0;transform:translateY(-4px);min-width:14px}
+.fm-row .pr{font-weight:600;color:var(--orange);font-size:.9rem;white-space:nowrap}
+.fm-desc{font-size:.76rem;color:var(--muted);line-height:1.45;margin-top:2px}
+li.fm-hdr{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);padding:.95rem 0 .25rem;border-bottom:0}
 
 /* ---------- gallery ---------- */
 .gal{columns:4;column-gap:18px}
@@ -191,6 +209,7 @@ footer.site{background:var(--charcoal-deep);color:#9aa1ac;padding:54px 0 30px}
   .ci-1{width:320px;height:320px;right:40px}
   .ci-2{width:190px;height:190px;right:290px}
   .sig-grid,.menu-grid{grid-template-columns:repeat(2,1fr)}
+  .fullmenu{columns:2}
   .gal{columns:3}
   .story-grid{grid-template-columns:1fr;gap:80px}
   .rev-grid{grid-template-columns:1fr;max-width:560px;margin:0 auto}
@@ -212,6 +231,7 @@ footer.site{background:var(--charcoal-deep);color:#9aa1ac;padding:54px 0 30px}
   .waves-svg{left:auto;right:0;bottom:30px}
   .dots{display:none}
   .sig-grid,.menu-grid,.feat{grid-template-columns:1fr}
+  .fullmenu{columns:1}
   .gal{columns:2;column-gap:12px}
   .story-art .float{right:-6px;width:180px;height:180px}
   .visit-info{padding:40px 28px}
@@ -320,55 +340,11 @@ footer.site{background:var(--charcoal-deep);color:#9aa1ac;padding:54px 0 30px}
       <h2 data-i18n="menu_h2">Eat with the tide</h2>
       <div class="script" style="font-size:1.8rem" data-i18n="menu_script">breakfast, lunch &amp; dinner</div>
     </div>
-    <div class="menu-grid">
-      <div class="menu-card reveal">
-        <div class="mc-img"><img src="images/seafood-grill.jpg" alt="Grilled seafood platter" loading="lazy"></div>
-        <h3 data-i18n="m1_h">From the Sea</h3><span class="script" data-i18n="m1_s">fresh every day</span>
-        <ul>
-          <li data-i18n="m1_1">Grilled octopus</li>
-          <li data-i18n="m1_2">Fritto misto</li>
-          <li data-i18n="m1_3">Langoustines</li>
-          <li data-i18n="m1_4">Grilled sardines &amp; gavros</li>
-          <li data-i18n="m1_5">Whole fish of the day</li>
-        </ul>
-      </div>
-      <div class="menu-card reveal">
-        <div class="mc-img"><img src="images/pork-ribs.jpg" alt="Pork ribs with fries and tzatziki" loading="lazy"></div>
-        <h3 data-i18n="m2_h">From the Grill</h3><span class="script" data-i18n="m2_s">smoke &amp; fire</span>
-        <ul>
-          <li data-i18n="m2_1">Mixed grill platters</li>
-          <li data-i18n="m2_2">Pork ribs &amp; chops</li>
-          <li data-i18n="m2_3">Souvlaki &amp; gyros</li>
-          <li data-i18n="m2_4">Burgers with potatoes <b>10 €</b></li>
-          <li data-i18n="m2_5">Gyros pizza</li>
-        </ul>
-      </div>
-      <div class="menu-card reveal">
-        <div class="mc-img"><img src="images/breakfast-eggs.jpg" alt="Greek breakfast plate with fried eggs" loading="lazy"></div>
-        <h3 data-i18n="m3_h">Morning &amp; Coffee</h3><span class="script" data-i18n="m3_s">from 05:30</span>
-        <ul>
-          <li data-i18n="m3_1">Greek breakfast plates</li>
-          <li data-i18n="m3_2">Omelettes &amp; fried eggs</li>
-          <li data-i18n="m3_3">Warm cheese pies</li>
-          <li data-i18n="m3_4">Freddo espresso &amp; cappuccino</li>
-          <li data-i18n="m3_5">Fresh orange juice</li>
-        </ul>
-      </div>
-      <div class="menu-card reveal">
-        <div class="mc-img"><img src="images/pancakes-kinder.jpg" alt="Pancakes with chocolate" loading="lazy"></div>
-        <h3 data-i18n="m4_h">Sweet Waves</h3><span class="script" data-i18n="m4_s">crepes &amp; more</span>
-        <ul>
-          <li data-i18n="m4_1">Crepes with ice cream</li>
-          <li data-i18n="m4_2">American pancakes <b>10 €</b></li>
-          <li data-i18n="m4_3">Savory pancakes <b>12 €</b></li>
-          <li data-i18n="m4_4">Waffles &amp; sundaes</li>
-          <li data-i18n="m4_5">Baklava &amp; walnut cake</li>
-        </ul>
-      </div>
-    </div>
+    <div class="fullmenu" id="fullmenu"></div>
     <div class="menu-note reveal">
       <p data-i18n="note_1"><b>Around 10–15 € per person.</b> Fresh fish priced daily — ask for today's catch.</p>
       <p data-i18n="note_2">Dine-in · Takeaway · Contactless delivery</p>
+      <p class="fine" data-i18n="note_3">Prices as shown on our in-house menu — small seasonal changes possible; today's menu always applies at the table.</p>
     </div>
   </div>
 </section>
@@ -493,7 +469,8 @@ en: {
   s2_h:"Fisherman's Platter", s2_p:"Calamari, prawns, anchovies, mussels and octopus over oregano fries.",
   s3_h:"Grilled Sardines", s3_p:"Topped with cherry tomato, onion and herbs — simple, smoky, perfect.",
   s4_h:"Whole Grilled Squid", s4_p:"Crosshatched and charred, with seasoned fries and lemon.",
-  menu_pill:"THE MENU", menu_h2:"Eat with the tide", menu_script:"breakfast, lunch &amp; dinner",
+  menu_pill:"THE MENU", menu_h2:"Eat with the tide", menu_script:"the complete menu",
+  note_3:"Prices as shown on our in-house menu — small seasonal changes possible; today's menu always applies at the table.",
   m1_h:"From the Sea", m1_s:"fresh every day",
   m1_1:"Grilled octopus", m1_2:"Fritto misto", m1_3:"Langoustines", m1_4:"Grilled sardines &amp; gavros", m1_5:"Whole fish of the day",
   m2_h:"From the Grill", m2_s:"smoke &amp; fire",
@@ -539,7 +516,8 @@ el: {
   s2_h:"Πιατέλα του ψαρά", s2_p:"Καλαμάρι, γαρίδες, γαύρος, μύδια και χταπόδι πάνω σε πατάτες με ρίγανη.",
   s3_h:"Σαρδέλες σχάρας", s3_p:"Με ντοματίνια, κρεμμύδι και μυρωδικά — απλό, καπνιστό, τέλειο.",
   s4_h:"Ολόκληρο καλαμάρι σχάρας", s4_p:"Χαρακωμένο και καψαλισμένο, με πατάτες και λεμόνι.",
-  menu_pill:"ΤΟ ΜΕΝΟΥ", menu_h2:"Στον ρυθμό του κύματος", menu_script:"πρωινό, μεσημεριανό &amp; βραδινό",
+  menu_pill:"ΤΟ ΜΕΝΟΥ", menu_h2:"Στον ρυθμό του κύματος", menu_script:"όλο το μενού",
+  note_3:"Οι τιμές όπως αναγράφονται στον κατάλογο του καταστήματος — ενδέχεται μικρές εποχιακές αλλαγές· ισχύει πάντα ο κατάλογος στο τραπέζι.",
   m1_h:"Από τη θάλασσα", m1_s:"φρέσκο κάθε μέρα",
   m1_1:"Χταπόδι σχάρας", m1_2:"Fritto misto", m1_3:"Καραβίδες", m1_4:"Σαρδέλες &amp; γαύρος σχάρας", m1_5:"Ψάρι ημέρας",
   m2_h:"Από τη σχάρα", m2_s:"φωτιά &amp; κάπνα",
@@ -585,7 +563,8 @@ ro: {
   s2_h:"Platoul pescarului", s2_p:"Calamari, creveți, hamsii, midii și caracatiță peste cartofi cu oregano.",
   s3_h:"Sardine la grătar", s3_p:"Cu roșii cherry, ceapă și ierburi — simplu, afumat, perfect.",
   s4_h:"Calamar întreg la grătar", s4_p:"Crestat și rumenit, cu cartofi și lămâie.",
-  menu_pill:"MENIUL", menu_h2:"Mănânci în ritmul mării", menu_script:"mic dejun, prânz &amp; cină",
+  menu_pill:"MENIUL", menu_h2:"Mănânci în ritmul mării", menu_script:"meniul complet",
+  note_3:"Prețurile sunt cele din meniul tipărit al localului — pot apărea mici modificări de sezon; la masă e valabil întotdeauna meniul zilei.",
   m1_h:"Din mare", m1_s:"proaspăt în fiecare zi",
   m1_1:"Caracatiță la grătar", m1_2:"Fritto misto", m1_3:"Langustine", m1_4:"Sardine &amp; gavros la grătar", m1_5:"Peștele zilei",
   m2_h:"De pe grătar", m2_s:"foc &amp; fum",
@@ -613,7 +592,137 @@ ro: {
 }
 };
 
+/* ---------------- full menu data (transcribed from the in-house menu) ---------------- */
+const MENU = [
+ {img:'images/seafood-grill.jpg', t:{en:'From the Sea',el:'Ψαρικά',ro:'Din mare'}, s:{en:'fresh &amp; grilled',el:'φρέσκα, στη σχάρα',ro:'proaspăt, la grătar'}, items:[
+  {n:{en:'Grilled octopus',el:'Χταπόδι σχάρας',ro:'Caracatiță la grătar'},p:'16'},
+  {n:{en:'Grilled calamari',el:'Καλαμάρι σχάρας',ro:'Calamar la grătar'},p:'18'},
+  {n:{en:'Fried calamari',el:'Καλαμαράκια τηγανητά',ro:'Calamari prăjiți'},p:'14'},
+  {n:{en:'Fried anchovies (gavros)',el:'Γαύρος',ro:'Hamsii prăjite (gavros)'},p:'10'},
+  {n:{en:'Shrimps',el:'Γαρίδες',ro:'Creveți'},p:'17'},
+  {n:{en:'Shrimp pasta',el:'Γαριδομακαρονάδα',ro:'Paste cu creveți'},p:'17'},
+  {n:{en:'Seafood spaghetti',el:'Μακαρόνια θαλασσινών',ro:'Spaghete cu fructe de mare'},p:'18'},
+  {n:{en:'Seafood mix',el:'Μιξ θαλασσινών',ro:'Mix de fructe de mare'},p:'20'},
+  {n:{en:'Sea bream (dorada)',el:'Τσιπούρα',ro:'Doradă'},p:'20'}
+ ]},
+ {img:'images/pork-ribs.jpg', t:{en:'Grilled Meat',el:'Κρεατικά σχάρας',ro:'De pe grătar'}, s:{en:'over charcoal',el:'στα κάρβουνα',ro:'pe cărbuni'}, items:[
+  {n:{en:'Lamb chops',el:'Παϊδάκια αρνίσια',ro:'Cotlete de miel'},p:'18'},
+  {n:{en:'Pork steak',el:'Μπριζόλα',ro:'Cotlet de porc'},p:'12'},
+  {n:{en:'Pork ribs (pancetta)',el:'Πανσέτα',ro:'Coaste de porc'},p:'12'},
+  {n:{en:'Souvlaki',el:'Σουβλάκια',ro:'Frigărui souvlaki'},p:'12'},
+  {n:{en:'Gyros (pork or chicken)',el:'Γύρος (χοιρινός / κοτόπουλο)',ro:'Gyros (porc sau pui)'},p:'12'},
+  {n:{en:'Bifteki (Greek burger patty)',el:'Μπιφτέκι',ro:'Bifteki (biftec grecesc)'},p:'12'},
+  {n:{en:'Soutzoukakia',el:'Σουτζουκάκια',ro:'Suzukaki'},p:'12'}
+ ]},
+ {t:{en:'Burgers',el:'Burgers',ro:'Burgeri'}, s:{en:'street classics',el:'τα κλασικά',ro:'clasicii'}, items:[
+  {n:{en:'Classic Burger',el:'Classic Burger',ro:'Classic Burger'},d:{en:'sauce, tomato, lettuce, cheddar, ketchup',el:'σως, ντομάτα, μαρούλι, τσένταρ, κέτσαπ',ro:'sos, roșii, salată, cheddar, ketchup'},p:'8'},
+  {n:{en:'Golden Burger',el:'Golden Burger',ro:'Golden Burger'},d:{en:'grated cheese, bacon, tomato, lettuce, mayonnaise',el:'τριμμένο τυρί, μπέικον, ντομάτα, μαρούλι, μαγιονέζα',ro:'cașcaval ras, bacon, roșii, salată, maioneză'},p:'8'},
+  {n:{en:'Texas BBQ Burger',el:'Texas BBQ Burger',ro:'Texas BBQ Burger'},d:{en:'cheddar, bacon, lettuce, tomato, BBQ sauce',el:'τσένταρ, μπέικον, μαρούλι, ντομάτα, BBQ σως',ro:'cheddar, bacon, salată, roșii, sos BBQ'},p:'8'},
+  {n:{en:'Angus Burger',el:'Angus Burger',ro:'Angus Burger'},d:{en:'Philadelphia, lettuce, tomato, cheddar, bacon, ketchup',el:'τυρί Φιλαδέλφεια, μαρούλι, ντομάτα, τσένταρ, μπέικον, κέτσαπ',ro:'Philadelphia, salată, roșii, cheddar, bacon, ketchup'},p:'8'},
+  {n:{en:'Crispy Chicken Burger',el:'Crispy Chicken Burger',ro:'Crispy Chicken Burger'},d:{en:'chicken schnitzel, cheddar, tomato, lettuce, crispy sauce, bacon',el:'σνίτσελ κοτόπουλο, τσένταρ, ντομάτα, μαρούλι, σως Κρίσπι, μπέικον',ro:'șnițel de pui, cheddar, roșii, salată, sos crispy, bacon'},p:'8'},
+  {n:{en:'Any burger with country potatoes',el:'Κάθε burger με πατάτες',ro:'Orice burger cu cartofi'},p:'10'}
+ ]},
+ {t:{en:'Soups',el:'Σούπες',ro:'Supe &amp; ciorbe'}, s:{en:'warm from the pot',el:'ζεστές από την κατσαρόλα',ro:'calde, din oală'}, items:[
+  {n:{en:'Seafood soup',el:'Θαλασσινών',ro:'Supă de fructe de mare'},p:'18'},
+  {n:{en:'Fish soup',el:'Ψαρόσουπα',ro:'Ciorbă de pește'},p:'12'},
+  {n:{en:'Mushroom soup',el:'Μανιταρόσουπα',ro:'Supă de ciuperci'},p:'9'},
+  {n:{en:'Vegetable soup',el:'Λαχανικών',ro:'Supă de legume'},p:'8'},
+  {n:{en:'Tomato soup',el:'Τοματόσουπα',ro:'Supă de roșii'},p:'8'}
+ ]},
+ {t:{en:'Salads',el:'Σαλάτες',ro:'Salate'}, s:{en:'crisp &amp; fresh',el:'δροσερές',ro:'proaspete'}, items:[
+  {n:{en:'Greek salad',el:'Χωριάτικη',ro:'Salată grecească'},p:'12'},
+  {n:{en:'Caesar\'s salad',el:'Καίσαρα',ro:'Salată Caesar'},p:'13'},
+  {n:{en:'Tuna salad',el:'Τονοσαλάτα',ro:'Salată cu ton'},p:'13'},
+  {n:{en:'Lettuce salad',el:'Μαρούλι',ro:'Salată verde'},p:'10'},
+  {n:{en:'Bougiourdi (baked spicy feta)',el:'Μπουγιουρντί',ro:'Bougiourdi (feta picantă la cuptor)'},p:'8'}
+ ]},
+ {img:'images/pizza-wine.jpg', t:{en:'Pizza',el:'Πίτσες',ro:'Pizza'}, s:{en:'stone-baked',el:'στην πέτρα',ro:'pe vatră'}, items:[
+  {n:{en:'Special',el:'Σπέσιαλ',ro:'Special'},p:'15'},
+  {n:{en:'Margherita',el:'Μαργαρίτα',ro:'Margherita'},d:{en:'mozzarella &amp; tomato sauce',el:'μοτσαρέλα &amp; σάλτσα ντομάτας',ro:'mozzarella &amp; sos de roșii'},p:'12'},
+  {n:{en:'Tuna pizza',el:'Πίτσα με τόνο',ro:'Pizza cu ton'},p:'15'},
+  {n:{en:'Gyros pizza',el:'Πίτσα με γύρο',ro:'Pizza cu gyros'},p:'15'},
+  {n:{en:'Pepperoni pizza',el:'Πίτσα πεπερόνι',ro:'Pizza cu pepperoni'},p:'15'},
+  {n:{en:'Lenten (vegan) pizza',el:'Νηστίσιμη',ro:'Pizza de post'},p:'12'}
+ ]},
+ {img:'images/breakfast-eggs.jpg', t:{en:'Omelettes &amp; Eggs',el:'Ομελέτες',ro:'Omlete &amp; ouă'}, s:{en:'from 05:30',el:'από τις 05:30',ro:'de la 05:30'}, items:[
+  {n:{en:'Fried eggs plate',el:'Αυγά μάτια',ro:'Ochiuri'},p:'12'},
+  {n:{en:'Omelette with sausage or bacon',el:'Ομελέτα με λουκάνικο ή μπέικον',ro:'Omletă cu cârnați sau bacon'},p:'12'},
+  {n:{en:'Vegetarian omelette',el:'Ομελέτα λαχανικών',ro:'Omletă de legume'},p:'12'},
+  {n:{en:'Scrambled eggs',el:'Σκραμπλ αυγά',ro:'Scrambled eggs'},p:'13'}
+ ]},
+ {t:{en:'Savory Crepes',el:'Αλμυρές κρέπες',ro:'Clătite sărate'}, s:{en:'handmade',el:'χειροποίητες',ro:'făcute în casă'}, items:[
+  {n:{en:'Vegetarian',el:'Vegetarian',ro:'Vegetarian'},d:{en:'gouda, tomato, mushrooms, olives, pepper',el:'γκούντα, ντομάτα, μανιτάρια, ελιές, πιπεριά',ro:'gouda, roșii, ciuperci, măsline, ardei'},p:'7'},
+  {n:{en:'Light',el:'Light',ro:'Light'},d:{en:'gouda, turkey, tomato, corn, pepper',el:'γκούντα, γαλοπούλα, ντομάτα, καλαμπόκι, πιπεριές',ro:'gouda, curcan, roșii, porumb, ardei'},p:'8'},
+  {n:{en:'Chef',el:'Chef',ro:'Chef'},d:{en:'gouda, turkey, corn, egg, tomato, lettuce',el:'γκούντα, γαλοπούλα, καλαμπόκι, αυγό, ντομάτα, μαρούλι',ro:'gouda, curcan, porumb, ou, roșii, salată verde'},p:'9'},
+  {n:{en:'Caesar\'s',el:'Caesar\'s',ro:'Caesar\'s'},d:{en:'gouda, chicken, corn, parmesan',el:'γκούντα, κοτόπουλο, καλαμπόκι, παρμεζάνα',ro:'gouda, pui, porumb, parmezan'},p:'9'},
+  {n:{en:'Special',el:'Special',ro:'Special'},d:{en:'gouda, ham, bacon, mushrooms, tomato, mayonnaise',el:'γκούντα, πάριζα, μπέικον, μανιτάρια, ντομάτα, μαγιονέζα',ro:'gouda, șuncă, bacon, ciuperci, roșii, maioneză'},p:'9'},
+  {n:{en:'Crepe with gyros',el:'Κρέπα με γύρο',ro:'Clătită cu gyros'},p:'10'},
+  {n:{en:'Crepe with minced meat',el:'Κρέπα με κιμά',ro:'Clătită cu carne tocată'},p:'10'}
+ ]},
+ {img:'images/waffle.jpg', t:{en:'Sweet Crepes',el:'Γλυκές κρέπες',ro:'Clătite dulci'}, s:{en:'the sweet spot',el:'για το τέλος',ro:'partea dulce'}, items:[
+  {n:{en:'Banoffee',el:'Banoffee',ro:'Banoffee'},d:{en:'merenda, biscuit, banana, caramel syrup',el:'μερέντα, μπισκότο, μπανάνα, σιρόπι καραμέλας',ro:'merenda, biscuiți, banană, sirop de caramel'},p:'8'},
+  {n:{en:'White',el:'White',ro:'White'},d:{en:'white praline, strawberry, biscuit',el:'λευκή πραλίνα, φράουλα, μπισκότο',ro:'pralină albă, căpșuni, biscuiți'},p:'8'},
+  {n:{en:'Oreo Madness',el:'Oreo Madness',ro:'Oreo Madness'},d:{en:'white praline, merenda, Oreo cookies',el:'λευκή πραλίνα, μερέντα, μπισκότα Oreo',ro:'pralină albă, merenda, biscuiți Oreo'},p:'8'},
+  {n:{en:'Caprice',el:'Caprice',ro:'Caprice'},d:{en:'merenda, white praline, Caprice',el:'μερέντα, λευκή πραλίνα, Caprice',ro:'merenda, pralină albă, Caprice'},p:'8'},
+  {n:{en:'Snow White',el:'Snow White',ro:'Snow White'},d:{en:'white chocolate, coconut, banana',el:'λευκή σοκολάτα, καρύδα, μπανάνα',ro:'ciocolată albă, cocos, banană'},p:'8'},
+  {n:{en:'Bueno',el:'Bueno',ro:'Bueno'},d:{en:'Bueno praline, biscuit',el:'πραλίνα Bueno, μπισκότο',ro:'pralină Bueno, biscuiți'},p:'6'},
+  {n:{en:'Choco',el:'Choco',ro:'Choco'},d:{en:'merenda, biscuit',el:'μερέντα, μπισκότο',ro:'merenda, biscuiți'},p:'5'}
+ ]},
+ {img:'images/pancakes-kinder.jpg', t:{en:'Pancakes',el:'Pancakes',ro:'Pancakes'}, s:{en:'American style',el:'αμερικάνικα',ro:'americane'}, items:[
+  {n:{en:'Banana, honey &amp; walnuts',el:'Με μέλι, μπανάνα &amp; καρύδια',ro:'Cu miere, banane și nuci'},p:'10'},
+  {n:{en:'Bueno',el:'Bueno',ro:'Bueno'},p:'10'},
+  {n:{en:'Oreo',el:'Oreo',ro:'Oreo'},p:'10'},
+  {n:{en:'White chocolate &amp; strawberries',el:'Λευκή σοκολάτα &amp; φράουλες',ro:'Ciocolată albă și căpșuni'},p:'10'},
+  {n:{en:'Biscuit',el:'Μπισκότο',ro:'Cu biscuiți'},p:'10'},
+  {n:{en:'Savory pancakes',el:'Αλμυρά pancakes',ro:'Pancakes sărate'},p:'12'}
+ ]},
+ {img:'images/sundae.jpg', t:{en:'Sweets &amp; Ice Cream',el:'Γλυκά &amp; παγωτά',ro:'Dulciuri &amp; înghețată'}, s:{en:'Greek classics',el:'τα κλασικά μας',ro:'clasice grecești'}, items:[
+  {n:{en:'Baklava',el:'Μπακλαβάς',ro:'Baclava'},p:'3'},
+  {n:{en:'Ekmek kantaifi',el:'Εκμέκ κανταΐφι',ro:'Ekmek kantaifi'},p:'3'},
+  {n:{en:'Kantaifi',el:'Κανταΐφι',ro:'Kantaifi'},p:'2'},
+  {n:{en:'Ice cream (per scoop)',el:'Παγωτό (η μπάλα)',ro:'Înghețată (cupa)'},d:{en:'vanilla, chocolate, strawberry, fig, cookies, banana',el:'βανίλια, σοκολάτα, φράουλα, σύκο, cookies, μπανάνα',ro:'vanilie, ciocolată, căpșuni, smochine, cookies, banană'},p:'1.50'}
+ ]},
+ {img:'images/coolers.jpg', t:{en:'Coffee &amp; Drinks',el:'Καφέδες &amp; ροφήματα',ro:'Cafea &amp; băuturi'}, s:{en:'from dawn till dusk',el:'από το πρωί',ro:'din zori'}, items:[
+  {hdr:{en:'Coffee',el:'Καφέδες',ro:'Cafea'}},
+  {n:{en:'Espresso / ristretto / macchiato',el:'Espresso / ristretto / macchiato',ro:'Espresso / ristretto / macchiato'},p:'2.50'},
+  {n:{en:'Espresso double / lungo',el:'Espresso διπλός / lungo',ro:'Espresso dublu / lungo'},p:'3'},
+  {n:{en:'Americano',el:'Americano',ro:'Americano'},p:'3'},
+  {n:{en:'Cappuccino / latte',el:'Cappuccino / latte',ro:'Cappuccino / latte'},p:'3'},
+  {n:{en:'Freddo espresso / freddo cappuccino',el:'Freddo espresso / freddo cappuccino',ro:'Freddo espresso / freddo cappuccino'},p:'3'},
+  {n:{en:'Nes / frappe / filter coffee',el:'Νες / φραπέ / γαλλικός',ro:'Nes / frappe / cafea la filtru'},p:'2.50'},
+  {n:{en:'Greek coffee',el:'Ελληνικός',ro:'Cafea grecească'},p:'1.50'},
+  {n:{en:'Greek coffee double',el:'Ελληνικός διπλός',ro:'Cafea grecească dublă'},p:'2'},
+  {hdr:{en:'Beverages',el:'Ροφήματα',ro:'Băuturi calde &amp; reci'}},
+  {n:{en:'Hot chocolate / cold chocolate',el:'Ζεστή / κρύα σοκολάτα',ro:'Ciocolată caldă / rece'},p:'3'},
+  {n:{en:'Hot tea',el:'Ζεστό τσάι',ro:'Ceai cald'},p:'2'},
+  {n:{en:'Granita (strawberry, lemon)',el:'Γρανίτα (φράουλα, λεμόνι)',ro:'Granita (căpșuni, lămâie)'},p:'3.50'},
+  {n:{en:'Milkshake',el:'Μιλκσέικ',ro:'Milkshake'},p:'3.50'},
+  {n:{en:'Juice (cherry, orange, peach, apple, exotic)',el:'Χυμός (βύσσινο, πορτοκάλι, ροδάκινο, μήλο, εξωτικά)',ro:'Suc (vișine, portocale, piersici, măr, exotic)'},p:'3'},
+  {hdr:{en:'Refreshments',el:'Αναψυκτικά',ro:'Răcoritoare'}},
+  {n:{en:'Coca-Cola / Fanta / Sprite / Schweppes / Fuze Tea 330ml',el:'Coca-Cola / Fanta / Sprite / Schweppes / Fuze Tea 330ml',ro:'Coca-Cola / Fanta / Sprite / Schweppes / Fuze Tea 330ml'},p:'2'},
+  {n:{en:'Coca-Cola / Fanta 500ml',el:'Coca-Cola / Fanta 500ml',ro:'Coca-Cola / Fanta 500ml'},p:'2.50'},
+  {n:{en:'Water 500ml',el:'Νερό 500ml',ro:'Apă 500ml'},p:'0.50'},
+  {n:{en:'Water 1.5L',el:'Νερό 1,5lt',ro:'Apă 1,5L'},p:'1'}
+ ]}
+];
+
+function renderMenu(lang){
+  const root = document.getElementById('fullmenu');
+  if(!root) return;
+  root.innerHTML = MENU.map(cat=>{
+    const img = cat.img ? `<div class="mc-img"><img src="${cat.img}" alt="" loading="lazy"></div>` : '';
+    const rows = cat.items.map(it=>{
+      if(it.hdr) return `<li class="fm-hdr">${it.hdr[lang]||it.hdr.en}</li>`;
+      const nm = it.n[lang]||it.n.en;
+      const d = it.d ? `<div class="fm-desc">${it.d[lang]||it.d.en}</div>` : '';
+      return `<li><div class="fm-row"><span class="nm">${nm}</span><span class="ld"></span><span class="pr">${it.p} €</span></div>${d}</li>`;
+    }).join('');
+    return `<div class="fm-card">${img}<h3>${cat.t[lang]||cat.t.en}</h3><span class="script">${cat.s[lang]||cat.s.en}</span><ul>${rows}</ul></div>`;
+  }).join('');
+}
+
 function setLang(lang){
+  renderMenu(lang);
   const dict = I18N[lang] || I18N.en;
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const k = el.getAttribute('data-i18n');
