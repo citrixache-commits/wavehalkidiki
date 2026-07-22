@@ -2,7 +2,8 @@
 
 Website for **Waves Coffee & Food**, a beachfront taverna, grill & all-day café in Ouranoupoli, Halkidiki, Greece.
 
-- **Live:** https://wavehalkidiki.vercel.app/
+- **Live:** https://wavehalkidiki.vercel.app/ (alias: https://waveshalkidiki.vercel.app/)
+- **Languages:** English (default) · Ελληνικά · Română — switcher in the nav, saved in localStorage
 - **Google Maps:** https://maps.app.goo.gl/TWM8Gz17om45NjVWA — 4.9★ from 414 reviews
 - Open every day 05:30–22:00 · +30 2377 071088
 
