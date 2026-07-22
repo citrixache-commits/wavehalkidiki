@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://waveshalkidiki.vercel.app/sitemap.xml
