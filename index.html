@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Waves Coffee &amp; Food — Seaside Taverna in Ouranoupoli, Halkidiki</title>
-<meta name="description" content="Waves Coffee & Food — beachfront taverna, grill & all-day café in Ouranoupoli, Halkidiki. Fresh seafood, charcoal grill, coffee from 05:30. Rated 4.9★ on Google.">
+<meta name="description" id="meta-desc" content="Waves Coffee & Food — beachfront taverna, grill & all-day café in Ouranoupoli, Halkidiki. Fresh seafood, charcoal grill, coffee from 05:30. Rated 4.9★ on Google.">
 <meta property="og:title" content="Waves Coffee &amp; Food — Ouranoupoli, Halkidiki">
 <meta property="og:description" content="Beachfront taverna & all-day café. Fresh seafood, charcoal grill, coffee from dawn. 4.9★ from 414 Google reviews.">
 <meta property="og:image" content="images/seafood-platter.jpg">
@@ -46,16 +46,20 @@ h1,h2,h3{font-family:var(--serif);line-height:1.15}
 
 /* ---------- nav ---------- */
 nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(29,34,42,.86);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
-.nav-in{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:32px}
+.nav-in{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:28px}
 .logo{display:flex;align-items:baseline;gap:10px;color:#fff}
 .logo .script{font-size:1.7rem;line-height:1}
 .logo small{font-size:.62rem;letter-spacing:.34em;color:#cfd4dc;font-weight:600}
-.nav-links{display:flex;gap:28px;margin-left:auto}
+.nav-links{display:flex;gap:24px;margin-left:auto}
 .nav-links a{color:#dfe3e9;font-size:.88rem;font-weight:500;transition:color .2s}
 .nav-links a:hover{color:var(--orange)}
+.lang-sw{display:flex;gap:5px}
+.lang-sw button{background:none;border:1px solid rgba(255,255,255,.25);color:#dfe3e9;font:600 .72rem var(--sans);letter-spacing:.05em;padding:.32rem .6rem;border-radius:8px;cursor:pointer;transition:all .2s}
+.lang-sw button:hover{border-color:var(--orange);color:var(--orange)}
+.lang-sw button.on{background:var(--orange);color:var(--charcoal-deep);border-color:var(--orange)}
 .nav-call{background:var(--orange);color:var(--charcoal-deep);font-weight:600;font-size:.85rem;padding:.5rem 1.2rem;border-radius:999px;white-space:nowrap;transition:background .2s}
 .nav-call:hover{background:var(--orange-soft)}
-.burger{display:none;margin-left:auto;background:none;border:0;cursor:pointer;padding:6px}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:6px}
 .burger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;border-radius:2px}
 
 /* ---------- hero ---------- */
@@ -144,7 +148,7 @@ nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(29,34,42,.86);bac
 
 /* ---------- reviews ---------- */
 .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.rev-card{background:var(--charcoal-deep);border-radius:26px;padding:34px 30px;position:relative}
+.rev-card{background:var(--charcoal);border-radius:26px;padding:34px 30px;position:relative}
 .rev-card .stars{color:var(--orange);letter-spacing:.2em;font-size:1rem;margin-bottom:14px}
 .rev-card p{font-size:.95rem;color:#d4d9e0;font-style:italic;margin-bottom:20px}
 .rev-card footer{display:flex;align-items:center;gap:12px}
@@ -197,6 +201,8 @@ footer.site{background:var(--charcoal-deep);color:#9aa1ac;padding:54px 0 30px}
   .sec{padding:64px 0}
   .nav-links,.nav-call{display:none}
   .burger{display:block}
+  .nav-in{gap:12px}
+  .lang-sw{margin-left:auto}
   nav.open .nav-links{display:flex;position:absolute;top:100%;left:0;right:0;background:var(--charcoal-deep);flex-direction:column;padding:18px 24px;gap:16px}
   .hero{padding-top:130px}
   .hero-art{height:400px;max-width:360px}
@@ -220,12 +226,17 @@ footer.site{background:var(--charcoal-deep);color:#9aa1ac;padding:54px 0 30px}
       <small>COFFEE &amp; FOOD</small>
     </a>
     <div class="nav-links">
-      <a href="#story">Our Story</a>
-      <a href="#signature">Signature</a>
-      <a href="#menu">Menu</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#visit">Visit Us</a>
+      <a href="#story" data-i18n="nav_story">Our Story</a>
+      <a href="#signature" data-i18n="nav_sig">Signature</a>
+      <a href="#menu" data-i18n="nav_menu">Menu</a>
+      <a href="#gallery" data-i18n="nav_gal">Gallery</a>
+      <a href="#reviews" data-i18n="nav_rev">Reviews</a>
+      <a href="#visit" data-i18n="nav_visit">Visit Us</a>
+    </div>
+    <div class="lang-sw" id="langsw" role="group" aria-label="Language">
+      <button data-lang="en">EN</button>
+      <button data-lang="el">ΕΛ</button>
+      <button data-lang="ro">RO</button>
     </div>
     <a class="nav-call" href="tel:+302377071088">☎ +30 2377 071088</a>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -235,18 +246,18 @@ footer.site{background:var(--charcoal-deep);color:#9aa1ac;padding:54px 0 30px}
 <header class="hero" id="top">
   <div class="wrap hero-in">
     <div>
-      <span class="pill kicker">OURANOUPOLI · HALKIDIKI</span>
+      <span class="pill kicker" data-i18n="kicker">OURANOUPOLI · HALKIDIKI</span>
       <h1>Waves</h1>
       <div class="script script-line">Coffee &amp; Food</div>
-      <p class="lead">A beachfront taverna, grill &amp; all-day café on the Ouranoupoli shore — where the fish is fresh, the grill is smoking and the coffee starts at dawn.</p>
+      <p class="lead" data-i18n="lead">A beachfront taverna, grill &amp; all-day café on the Ouranoupoli shore — where the fish is fresh, the grill is smoking and the coffee starts at dawn.</p>
       <div class="hero-cta">
-        <a class="btn btn-orange" href="#menu">See the Menu</a>
-        <a class="btn btn-ghost" href="https://maps.app.goo.gl/TWM8Gz17om45NjVWA" target="_blank" rel="noopener">Get Directions</a>
+        <a class="btn btn-orange" href="#menu" data-i18n="cta_menu">See the Menu</a>
+        <a class="btn btn-ghost" href="https://maps.app.goo.gl/TWM8Gz17om45NjVWA" target="_blank" rel="noopener" data-i18n="cta_dir">Get Directions</a>
       </div>
       <div class="hero-stats">
-        <div><strong>4.9 ★</strong><span>414 Google reviews</span></div>
-        <div><strong>05:30 – 22:00</strong><span>open every day</span></div>
-        <div><strong>10 – 15 €</strong><span>per person</span></div>
+        <div><strong>4.9 ★</strong><span data-i18n="st_rev">414 Google reviews</span></div>
+        <div><strong>05:30 – 22:00</strong><span data-i18n="st_open">open every day</span></div>
+        <div><strong>10 – 15 €</strong><span data-i18n="st_pp">per person</span></div>
       </div>
     </div>
     <div class="hero-art">
@@ -260,9 +271,7 @@ footer.site{background:var(--charcoal-deep);color:#9aa1ac;padding:54px 0 30px}
 </header>
 
 <div class="strip" aria-hidden="true">
-  <div class="strip-track">
-    <span>Fresh Fish Daily</span><span class="sep">✦</span><span>Charcoal Grill</span><span class="sep">✦</span><span>Breakfast from 05:30</span><span class="sep">✦</span><span>Handmade Crepes</span><span class="sep">✦</span><span>Freddo by the Sea</span><span class="sep">✦</span><span>Fresh Fish Daily</span><span class="sep">✦</span><span>Charcoal Grill</span><span class="sep">✦</span><span>Breakfast from 05:30</span><span class="sep">✦</span><span>Handmade Crepes</span><span class="sep">✦</span><span>Freddo by the Sea</span><span class="sep">✦</span>
-  </div>
+  <div class="strip-track" id="strip-track"></div>
 </div>
 
 <section class="sec" id="story">
@@ -273,15 +282,15 @@ footer.site{background:var(--charcoal-deep);color:#9aa1ac;padding:54px 0 30px}
       <div class="float"><img src="images/interior.jpg" alt="Covered terrace dining room with wicker lamps" loading="lazy"></div>
     </div>
     <div class="reveal">
-      <span class="pill">OUR STORY</span>
-      <h2 style="font-size:clamp(2.1rem,4vw,3rem);margin:1rem 0 .2rem">A taverna on the<br>Ouranoupoli shore</h2>
-      <div class="script" style="font-size:1.9rem;margin-bottom:1.2rem">where the day begins with the waves</div>
-      <p style="color:var(--muted)">Steps from the beach in Ouranoupoli — the last village before Mount Athos — Waves serves the Halkidiki day in full: sunrise coffee and warm pastries, long seaside lunches of grilled fish and octopus, and slow evenings of mixed grills, crepes and cocktails under the wicker lamps.</p>
+      <span class="pill" data-i18n="story_pill">OUR STORY</span>
+      <h2 style="font-size:clamp(2.1rem,4vw,3rem);margin:1rem 0 .2rem" data-i18n="story_h2">A taverna on the<br>Ouranoupoli shore</h2>
+      <div class="script" style="font-size:1.9rem;margin-bottom:1.2rem" data-i18n="story_script">where the day begins with the waves</div>
+      <p style="color:var(--muted)" data-i18n="story_p">Steps from the beach in Ouranoupoli — the last village before Mount Athos — Waves serves the Halkidiki day in full: sunrise coffee and warm pastries, long seaside lunches of grilled fish and octopus, and slow evenings of mixed grills, crepes and cocktails under the wicker lamps.</p>
       <div class="feat">
-        <div><div class="ic">🐟</div><div><h3>From the sea, daily</h3><p>Octopus, calamari, sardines and whole fish, straight to the charcoal.</p></div></div>
-        <div><div class="ic">🔥</div><div><h3>The Greek grill</h3><p>Souvlaki, ribs, bifteki and chops — generous portions, honest prices.</p></div></div>
-        <div><div class="ic">☕</div><div><h3>Coffee from 05:30</h3><p>First freddo before the ferry to Athos leaves the pier.</p></div></div>
-        <div><div class="ic">🌊</div><div><h3>Right on the water</h3><p>Terrace tables with the Singitic Gulf for a horizon.</p></div></div>
+        <div><div class="ic">🐟</div><div><h3 data-i18n="f1_h">From the sea, daily</h3><p data-i18n="f1_p">Octopus, calamari, sardines and whole fish, straight to the charcoal.</p></div></div>
+        <div><div class="ic">🔥</div><div><h3 data-i18n="f2_h">The Greek grill</h3><p data-i18n="f2_p">Souvlaki, ribs, bifteki and chops — generous portions, honest prices.</p></div></div>
+        <div><div class="ic">☕</div><div><h3 data-i18n="f3_h">Coffee from 05:30</h3><p data-i18n="f3_p">First freddo before the ferry to Athos leaves the pier.</p></div></div>
+        <div><div class="ic">🌊</div><div><h3 data-i18n="f4_h">Right on the water</h3><p data-i18n="f4_p">Terrace tables with the Singitic Gulf for a horizon.</p></div></div>
       </div>
     </div>
   </div>
@@ -290,15 +299,15 @@ footer.site{background:var(--charcoal-deep);color:#9aa1ac;padding:54px 0 30px}
 <section class="sec dark" id="signature">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="pill">SIGNATURE</span>
-      <h2 style="color:#fff">Plates worth the trip</h2>
-      <div class="script" style="font-size:1.8rem">from the Aegean, with love</div>
+      <span class="pill" data-i18n="sig_pill">SIGNATURE</span>
+      <h2 style="color:#fff" data-i18n="sig_h2">Plates worth the trip</h2>
+      <div class="script" style="font-size:1.8rem" data-i18n="sig_script">from the Aegean, with love</div>
     </div>
     <div class="sig-grid">
-      <article class="sig-card reveal"><img src="images/octopus-grill.jpg" alt="Grilled octopus with balsamic" loading="lazy"><span class="sig-arrow">↗</span><div class="sig-body"><h3>Grilled Octopus</h3><p>Char-grilled tentacle over greens, shaved onion and a balsamic glaze.</p></div></article>
-      <article class="sig-card reveal"><img src="images/fried-platter.jpg" alt="Fried seafood platter" loading="lazy"><span class="sig-arrow">↗</span><div class="sig-body"><h3>Fisherman's Platter</h3><p>Calamari, prawns, anchovies, mussels and octopus over oregano fries.</p></div></article>
-      <article class="sig-card reveal"><img src="images/sardines.jpg" alt="Grilled sardines with tomato and herb salsa" loading="lazy"><span class="sig-arrow">↗</span><div class="sig-body"><h3>Grilled Sardines</h3><p>Topped with cherry tomato, onion and herbs — simple, smoky, perfect.</p></div></article>
-      <article class="sig-card reveal"><img src="images/grilled-squid.jpg" alt="Whole grilled squid with fries and lemon" loading="lazy"><span class="sig-arrow">↗</span><div class="sig-body"><h3>Whole Grilled Squid</h3><p>Crosshatched and charred, with seasoned fries and lemon.</p></div></article>
+      <article class="sig-card reveal"><img src="images/octopus-grill.jpg" alt="Grilled octopus with balsamic" loading="lazy"><span class="sig-arrow">↗</span><div class="sig-body"><h3 data-i18n="s1_h">Grilled Octopus</h3><p data-i18n="s1_p">Char-grilled tentacle over greens, shaved onion and a balsamic glaze.</p></div></article>
+      <article class="sig-card reveal"><img src="images/fried-platter.jpg" alt="Fried seafood platter" loading="lazy"><span class="sig-arrow">↗</span><div class="sig-body"><h3 data-i18n="s2_h">Fisherman's Platter</h3><p data-i18n="s2_p">Calamari, prawns, anchovies, mussels and octopus over oregano fries.</p></div></article>
+      <article class="sig-card reveal"><img src="images/sardines.jpg" alt="Grilled sardines with tomato and herb salsa" loading="lazy"><span class="sig-arrow">↗</span><div class="sig-body"><h3 data-i18n="s3_h">Grilled Sardines</h3><p data-i18n="s3_p">Topped with cherry tomato, onion and herbs — simple, smoky, perfect.</p></div></article>
+      <article class="sig-card reveal"><img src="images/grilled-squid.jpg" alt="Whole grilled squid with fries and lemon" loading="lazy"><span class="sig-arrow">↗</span><div class="sig-body"><h3 data-i18n="s4_h">Whole Grilled Squid</h3><p data-i18n="s4_p">Crosshatched and charred, with seasoned fries and lemon.</p></div></article>
     </div>
   </div>
 </section>
@@ -306,59 +315,59 @@ footer.site{background:var(--charcoal-deep);color:#9aa1ac;padding:54px 0 30px}
 <section class="sec" id="menu">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="pill">THE MENU</span>
-      <h2>Eat with the tide</h2>
-      <div class="script" style="font-size:1.8rem">breakfast, lunch &amp; dinner</div>
+      <span class="pill" data-i18n="menu_pill">THE MENU</span>
+      <h2 data-i18n="menu_h2">Eat with the tide</h2>
+      <div class="script" style="font-size:1.8rem" data-i18n="menu_script">breakfast, lunch &amp; dinner</div>
     </div>
     <div class="menu-grid">
       <div class="menu-card reveal">
         <div class="mc-img"><img src="images/seafood-grill.jpg" alt="Grilled seafood platter" loading="lazy"></div>
-        <h3>From the Sea</h3><span class="script">fresh every day</span>
+        <h3 data-i18n="m1_h">From the Sea</h3><span class="script" data-i18n="m1_s">fresh every day</span>
         <ul>
-          <li>Grilled octopus</li>
-          <li>Fritto misto</li>
-          <li>Langoustines</li>
-          <li>Grilled sardines &amp; gavros</li>
-          <li>Whole fish of the day</li>
+          <li data-i18n="m1_1">Grilled octopus</li>
+          <li data-i18n="m1_2">Fritto misto</li>
+          <li data-i18n="m1_3">Langoustines</li>
+          <li data-i18n="m1_4">Grilled sardines &amp; gavros</li>
+          <li data-i18n="m1_5">Whole fish of the day</li>
         </ul>
       </div>
       <div class="menu-card reveal">
         <div class="mc-img"><img src="images/pork-ribs.jpg" alt="Pork ribs with fries and tzatziki" loading="lazy"></div>
-        <h3>From the Grill</h3><span class="script">smoke &amp; fire</span>
+        <h3 data-i18n="m2_h">From the Grill</h3><span class="script" data-i18n="m2_s">smoke &amp; fire</span>
         <ul>
-          <li>Mixed grill platters</li>
-          <li>Pork ribs &amp; chops</li>
-          <li>Souvlaki &amp; gyros</li>
-          <li>Burgers with potatoes <b>10 €</b></li>
-          <li>Gyros pizza</li>
+          <li data-i18n="m2_1">Mixed grill platters</li>
+          <li data-i18n="m2_2">Pork ribs &amp; chops</li>
+          <li data-i18n="m2_3">Souvlaki &amp; gyros</li>
+          <li data-i18n="m2_4">Burgers with potatoes <b>10 €</b></li>
+          <li data-i18n="m2_5">Gyros pizza</li>
         </ul>
       </div>
       <div class="menu-card reveal">
         <div class="mc-img"><img src="images/breakfast-eggs.jpg" alt="Greek breakfast plate with fried eggs" loading="lazy"></div>
-        <h3>Morning &amp; Coffee</h3><span class="script">from 05:30</span>
+        <h3 data-i18n="m3_h">Morning &amp; Coffee</h3><span class="script" data-i18n="m3_s">from 05:30</span>
         <ul>
-          <li>Greek breakfast plates</li>
-          <li>Omelettes &amp; fried eggs</li>
-          <li>Warm cheese pies</li>
-          <li>Freddo espresso &amp; cappuccino</li>
-          <li>Fresh orange juice</li>
+          <li data-i18n="m3_1">Greek breakfast plates</li>
+          <li data-i18n="m3_2">Omelettes &amp; fried eggs</li>
+          <li data-i18n="m3_3">Warm cheese pies</li>
+          <li data-i18n="m3_4">Freddo espresso &amp; cappuccino</li>
+          <li data-i18n="m3_5">Fresh orange juice</li>
         </ul>
       </div>
       <div class="menu-card reveal">
         <div class="mc-img"><img src="images/pancakes-kinder.jpg" alt="Pancakes with chocolate" loading="lazy"></div>
-        <h3>Sweet Waves</h3><span class="script">crepes &amp; more</span>
+        <h3 data-i18n="m4_h">Sweet Waves</h3><span class="script" data-i18n="m4_s">crepes &amp; more</span>
         <ul>
-          <li>Crepes with ice cream</li>
-          <li>American pancakes <b>10 €</b></li>
-          <li>Savory pancakes <b>12 €</b></li>
-          <li>Waffles &amp; sundaes</li>
-          <li>Baklava &amp; walnut cake</li>
+          <li data-i18n="m4_1">Crepes with ice cream</li>
+          <li data-i18n="m4_2">American pancakes <b>10 €</b></li>
+          <li data-i18n="m4_3">Savory pancakes <b>12 €</b></li>
+          <li data-i18n="m4_4">Waffles &amp; sundaes</li>
+          <li data-i18n="m4_5">Baklava &amp; walnut cake</li>
         </ul>
       </div>
     </div>
     <div class="menu-note reveal">
-      <p><b>Around 10–15 € per person.</b> Fresh fish priced daily — ask for today's catch.</p>
-      <p>Dine-in · Takeaway · Contactless delivery</p>
+      <p data-i18n="note_1"><b>Around 10–15 € per person.</b> Fresh fish priced daily — ask for today's catch.</p>
+      <p data-i18n="note_2">Dine-in · Takeaway · Contactless delivery</p>
     </div>
   </div>
 </section>
@@ -366,23 +375,23 @@ footer.site{background:var(--charcoal-deep);color:#9aa1ac;padding:54px 0 30px}
 <section class="sec dark" id="gallery">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="pill">GALLERY</span>
-      <h2 style="color:#fff">Straight from our plates</h2>
-      <div class="script" style="font-size:1.8rem">no filters needed</div>
+      <span class="pill" data-i18n="gal_pill">GALLERY</span>
+      <h2 style="color:#fff" data-i18n="gal_h2">Straight from our plates</h2>
+      <div class="script" style="font-size:1.8rem" data-i18n="gal_script">no filters needed</div>
     </div>
     <div class="gal">
-      <figure class="reveal"><img src="images/grill-platter.jpg" alt="Grilled seafood platter with octopus, calamari and prawns" loading="lazy"><figcaption>Grill platter for two</figcaption></figure>
-      <figure class="reveal"><img src="images/coolers.jpg" alt="Berry coolers and lemonade with mint" loading="lazy"><figcaption>House coolers</figcaption></figure>
-      <figure class="reveal"><img src="images/greek-breakfast.jpg" alt="Greek breakfast with eggs, feta and olives" loading="lazy"><figcaption>Greek breakfast</figcaption></figure>
-      <figure class="reveal"><img src="images/tbone.jpg" alt="Grilled chop with fries and tzatziki" loading="lazy"><figcaption>From the charcoal</figcaption></figure>
-      <figure class="reveal"><img src="images/calamari.jpg" alt="Fried calamari and anchovies with lemon" loading="lazy"><figcaption>Fritto misto</figcaption></figure>
-      <figure class="reveal"><img src="images/gelato-sea.jpg" alt="Gelato cup by the seaside promenade" loading="lazy"><figcaption>Gelato by the sea</figcaption></figure>
-      <figure class="reveal"><img src="images/pizza-wine.jpg" alt="Pizza with a carafe of white wine" loading="lazy"><figcaption>Pizza &amp; local wine</figcaption></figure>
-      <figure class="reveal"><img src="images/octopus-salad.jpg" alt="Octopus tentacles over salad" loading="lazy"><figcaption>Octopus, simply</figcaption></figure>
-      <figure class="reveal"><img src="images/waffle.jpg" alt="Waffle with chocolate and whipped cream" loading="lazy"><figcaption>Waffle, all in</figcaption></figure>
-      <figure class="reveal"><img src="images/anchovies.jpg" alt="Fried anchovies with fries and lemon" loading="lazy"><figcaption>Gavros &amp; fries</figcaption></figure>
-      <figure class="reveal"><img src="images/sundae.jpg" alt="Sundae with cream, banana and peach" loading="lazy"><figcaption>Summer sundae</figcaption></figure>
-      <figure class="reveal"><img src="images/terrace-sea.jpg" alt="View from the terrace over the turquoise bay" loading="lazy"><figcaption>The view from your table</figcaption></figure>
+      <figure class="reveal"><img src="images/grill-platter.jpg" alt="Grilled seafood platter with octopus, calamari and prawns" loading="lazy"><figcaption data-i18n="g1">Grill platter for two</figcaption></figure>
+      <figure class="reveal"><img src="images/coolers.jpg" alt="Berry coolers and lemonade with mint" loading="lazy"><figcaption data-i18n="g2">House coolers</figcaption></figure>
+      <figure class="reveal"><img src="images/greek-breakfast.jpg" alt="Greek breakfast with eggs, feta and olives" loading="lazy"><figcaption data-i18n="g3">Greek breakfast</figcaption></figure>
+      <figure class="reveal"><img src="images/tbone.jpg" alt="Grilled chop with fries and tzatziki" loading="lazy"><figcaption data-i18n="g4">From the charcoal</figcaption></figure>
+      <figure class="reveal"><img src="images/calamari.jpg" alt="Fried calamari and anchovies with lemon" loading="lazy"><figcaption data-i18n="g5">Fritto misto</figcaption></figure>
+      <figure class="reveal"><img src="images/gelato-sea.jpg" alt="Gelato cup by the seaside promenade" loading="lazy"><figcaption data-i18n="g6">Gelato by the sea</figcaption></figure>
+      <figure class="reveal"><img src="images/pizza-wine.jpg" alt="Pizza with a carafe of white wine" loading="lazy"><figcaption data-i18n="g7">Pizza &amp; local wine</figcaption></figure>
+      <figure class="reveal"><img src="images/octopus-salad.jpg" alt="Octopus tentacles over salad" loading="lazy"><figcaption data-i18n="g8">Octopus, simply</figcaption></figure>
+      <figure class="reveal"><img src="images/waffle.jpg" alt="Waffle with chocolate and whipped cream" loading="lazy"><figcaption data-i18n="g9">Waffle, all in</figcaption></figure>
+      <figure class="reveal"><img src="images/anchovies.jpg" alt="Fried anchovies with fries and lemon" loading="lazy"><figcaption data-i18n="g10">Gavros &amp; fries</figcaption></figure>
+      <figure class="reveal"><img src="images/sundae.jpg" alt="Sundae with cream, banana and peach" loading="lazy"><figcaption data-i18n="g11">Summer sundae</figcaption></figure>
+      <figure class="reveal"><img src="images/terrace-sea.jpg" alt="View from the terrace over the turquoise bay" loading="lazy"><figcaption data-i18n="g12">The view from your table</figcaption></figure>
     </div>
   </div>
 </section>
@@ -390,30 +399,30 @@ footer.site{background:var(--charcoal-deep);color:#9aa1ac;padding:54px 0 30px}
 <section class="sec" id="reviews" style="background:var(--charcoal-deep)">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="pill">REVIEWS</span>
-      <h2 style="color:#fff">Word of mouth</h2>
-      <div class="script" style="font-size:1.8rem">straight from Google</div>
+      <span class="pill" data-i18n="rev_pill">REVIEWS</span>
+      <h2 style="color:#fff" data-i18n="rev_h2">Word of mouth</h2>
+      <div class="script" style="font-size:1.8rem" data-i18n="rev_script">straight from Google</div>
     </div>
     <div class="rev-grid">
-      <article class="rev-card reveal" style="background:var(--charcoal)">
+      <article class="rev-card reveal">
         <div class="stars">★★★★★</div>
-        <p>"If you're in Ouranoupoli, this taverna is the best choice in the area. The food is always fresh."</p>
-        <footer><div class="avatar">P</div><div><b>Petru T.</b><span>Local Guide · Google</span></div></footer>
+        <p data-i18n="r1_q">"If you're in Ouranoupoli, this taverna is the best choice in the area. The food is always fresh."</p>
+        <footer><div class="avatar">P</div><div><b>Petru T.</b><span data-i18n="r_lg">Local Guide · Google</span></div></footer>
       </article>
-      <article class="rev-card reveal" style="background:var(--charcoal)">
+      <article class="rev-card reveal">
         <div class="stars">★★★★★</div>
-        <p>"A taverna right on the seafront with fresh, delicious dishes — and the portions are huge."</p>
-        <footer><div class="avatar">C</div><div><b>Cristinel D.</b><span>Local Guide · Google</span></div></footer>
+        <p data-i18n="r2_q">"A taverna right on the seafront with fresh, delicious dishes — and the portions are huge."</p>
+        <footer><div class="avatar">C</div><div><b>Cristinel D.</b><span data-i18n="r_lg2">Local Guide · Google</span></div></footer>
       </article>
-      <article class="rev-card reveal" style="background:var(--charcoal)">
+      <article class="rev-card reveal">
         <div class="stars">★★★★★</div>
-        <p>"Fantastic food, the staff is great and we had an amazing time!"</p>
-        <footer><div class="avatar">G</div><div><b>Google visitor</b><span>Visitor update · Google</span></div></footer>
+        <p data-i18n="r3_q">"Fantastic food, the staff is great and we had an amazing time!"</p>
+        <footer><div class="avatar">G</div><div><b data-i18n="r3_n">Google visitor</b><span data-i18n="r3_t">Visitor update · Google</span></div></footer>
       </article>
     </div>
     <div class="rev-badge reveal">
       <div class="big">4.9 / 5</div>
-      <p>from 414 reviews on <a href="https://maps.app.goo.gl/TWM8Gz17om45NjVWA" target="_blank" rel="noopener" style="color:var(--orange)">Google Maps</a></p>
+      <p><span data-i18n="rev_badge">from 414 reviews on</span> <a href="https://maps.app.goo.gl/TWM8Gz17om45NjVWA" target="_blank" rel="noopener" style="color:var(--orange)">Google Maps</a></p>
     </div>
   </div>
 </section>
@@ -422,15 +431,15 @@ footer.site{background:var(--charcoal-deep);color:#9aa1ac;padding:54px 0 30px}
   <div class="wrap">
     <div class="visit-grid reveal">
       <div class="visit-info">
-        <span class="pill">VISIT US</span>
-        <h2>Find the waves</h2>
-        <div class="script">we're right on the beach</div>
-        <div class="v-row"><div class="ic">📍</div><div><h3>Address</h3><p>Ouranoupoli 630 75, Halkidiki, Greece</p></div></div>
-        <div class="v-row"><div class="ic">🕐</div><div><h3>Open every day</h3><p>05:30 – 22:00</p></div></div>
-        <div class="v-row"><div class="ic">☎</div><div><h3>Phone</h3><p><a href="tel:+302377071088">+30 2377 071088</a></p></div></div>
+        <span class="pill" data-i18n="v_pill">VISIT US</span>
+        <h2 data-i18n="v_h2">Find the waves</h2>
+        <div class="script" data-i18n="v_script">we're right on the beach</div>
+        <div class="v-row"><div class="ic">📍</div><div><h3 data-i18n="v_addr_h">Address</h3><p data-i18n="v_addr_p">Ouranoupoli 630 75, Halkidiki, Greece</p></div></div>
+        <div class="v-row"><div class="ic">🕐</div><div><h3 data-i18n="v_open_h">Open every day</h3><p>05:30 – 22:00</p></div></div>
+        <div class="v-row"><div class="ic">☎</div><div><h3 data-i18n="v_ph_h">Phone</h3><p><a href="tel:+302377071088">+30 2377 071088</a></p></div></div>
         <div class="visit-cta">
-          <a class="btn btn-orange" href="https://maps.app.goo.gl/TWM8Gz17om45NjVWA" target="_blank" rel="noopener">Get Directions</a>
-          <a class="btn btn-ghost" href="tel:+302377071088">Call Us</a>
+          <a class="btn btn-orange" href="https://maps.app.goo.gl/TWM8Gz17om45NjVWA" target="_blank" rel="noopener" data-i18n="cta_dir2">Get Directions</a>
+          <a class="btn btn-ghost" href="tel:+302377071088" data-i18n="cta_call">Call Us</a>
         </div>
       </div>
       <div class="visit-map">
@@ -445,21 +454,184 @@ footer.site{background:var(--charcoal-deep);color:#9aa1ac;padding:54px 0 30px}
     <div class="foot-grid">
       <a class="foot-logo" href="#top"><span class="script">Waves</span><small>COFFEE &amp; FOOD · OURANOUPOLI</small></a>
       <div class="foot-nav">
-        <a href="#story">Our Story</a>
-        <a href="#signature">Signature</a>
-        <a href="#menu">Menu</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#visit">Visit Us</a>
+        <a href="#story" data-i18n="nav_story2">Our Story</a>
+        <a href="#signature" data-i18n="nav_sig2">Signature</a>
+        <a href="#menu" data-i18n="nav_menu2">Menu</a>
+        <a href="#gallery" data-i18n="nav_gal2">Gallery</a>
+        <a href="#visit" data-i18n="nav_visit2">Visit Us</a>
       </div>
     </div>
     <div class="foot-base">
-      <span>© 2026 Waves Coffee &amp; Food · Ouranoupoli, Halkidiki</span>
-      <span>Photos from our kitchen &amp; guests · <a href="https://maps.app.goo.gl/TWM8Gz17om45NjVWA" target="_blank" rel="noopener">Google Maps</a></span>
+      <span data-i18n="foot_c">© 2026 Waves Coffee &amp; Food · Ouranoupoli, Halkidiki</span>
+      <span><span data-i18n="foot_ph">Photos from our kitchen &amp; guests</span> · <a href="https://maps.app.goo.gl/TWM8Gz17om45NjVWA" target="_blank" rel="noopener">Google Maps</a></span>
     </div>
   </div>
 </footer>
 
 <script>
+/* ---------------- i18n ---------------- */
+const I18N = {
+en: {
+  _title: "Waves Coffee & Food — Seaside Taverna in Ouranoupoli, Halkidiki",
+  _desc: "Waves Coffee & Food — beachfront taverna, grill & all-day café in Ouranoupoli, Halkidiki. Fresh seafood, charcoal grill, coffee from 05:30. Rated 4.9★ on Google.",
+  _strip: ["Fresh Fish Daily","Charcoal Grill","Breakfast from 05:30","Handmade Crepes","Freddo by the Sea"],
+  nav_story:"Our Story", nav_sig:"Signature", nav_menu:"Menu", nav_gal:"Gallery", nav_rev:"Reviews", nav_visit:"Visit Us",
+  kicker:"OURANOUPOLI · HALKIDIKI",
+  lead:"A beachfront taverna, grill &amp; all-day café on the Ouranoupoli shore — where the fish is fresh, the grill is smoking and the coffee starts at dawn.",
+  cta_menu:"See the Menu", cta_dir:"Get Directions",
+  st_rev:"414 Google reviews", st_open:"open every day", st_pp:"per person",
+  story_pill:"OUR STORY", story_h2:"A taverna on the<br>Ouranoupoli shore", story_script:"where the day begins with the waves",
+  story_p:"Steps from the beach in Ouranoupoli — the last village before Mount Athos — Waves serves the Halkidiki day in full: sunrise coffee and warm pastries, long seaside lunches of grilled fish and octopus, and slow evenings of mixed grills, crepes and cocktails under the wicker lamps.",
+  f1_h:"From the sea, daily", f1_p:"Octopus, calamari, sardines and whole fish, straight to the charcoal.",
+  f2_h:"The Greek grill", f2_p:"Souvlaki, ribs, bifteki and chops — generous portions, honest prices.",
+  f3_h:"Coffee from 05:30", f3_p:"First freddo before the ferry to Athos leaves the pier.",
+  f4_h:"Right on the water", f4_p:"Terrace tables with the Singitic Gulf for a horizon.",
+  sig_pill:"SIGNATURE", sig_h2:"Plates worth the trip", sig_script:"from the Aegean, with love",
+  s1_h:"Grilled Octopus", s1_p:"Char-grilled tentacle over greens, shaved onion and a balsamic glaze.",
+  s2_h:"Fisherman's Platter", s2_p:"Calamari, prawns, anchovies, mussels and octopus over oregano fries.",
+  s3_h:"Grilled Sardines", s3_p:"Topped with cherry tomato, onion and herbs — simple, smoky, perfect.",
+  s4_h:"Whole Grilled Squid", s4_p:"Crosshatched and charred, with seasoned fries and lemon.",
+  menu_pill:"THE MENU", menu_h2:"Eat with the tide", menu_script:"breakfast, lunch &amp; dinner",
+  m1_h:"From the Sea", m1_s:"fresh every day",
+  m1_1:"Grilled octopus", m1_2:"Fritto misto", m1_3:"Langoustines", m1_4:"Grilled sardines &amp; gavros", m1_5:"Whole fish of the day",
+  m2_h:"From the Grill", m2_s:"smoke &amp; fire",
+  m2_1:"Mixed grill platters", m2_2:"Pork ribs &amp; chops", m2_3:"Souvlaki &amp; gyros", m2_4:"Burgers with potatoes <b>10 €</b>", m2_5:"Gyros pizza",
+  m3_h:"Morning &amp; Coffee", m3_s:"from 05:30",
+  m3_1:"Greek breakfast plates", m3_2:"Omelettes &amp; fried eggs", m3_3:"Warm cheese pies", m3_4:"Freddo espresso &amp; cappuccino", m3_5:"Fresh orange juice",
+  m4_h:"Sweet Waves", m4_s:"crepes &amp; more",
+  m4_1:"Crepes with ice cream", m4_2:"American pancakes <b>10 €</b>", m4_3:"Savory pancakes <b>12 €</b>", m4_4:"Waffles &amp; sundaes", m4_5:"Baklava &amp; walnut cake",
+  note_1:"<b>Around 10–15 € per person.</b> Fresh fish priced daily — ask for today's catch.",
+  note_2:"Dine-in · Takeaway · Contactless delivery",
+  gal_pill:"GALLERY", gal_h2:"Straight from our plates", gal_script:"no filters needed",
+  g1:"Grill platter for two", g2:"House coolers", g3:"Greek breakfast", g4:"From the charcoal", g5:"Fritto misto", g6:"Gelato by the sea",
+  g7:"Pizza &amp; local wine", g8:"Octopus, simply", g9:"Waffle, all in", g10:"Gavros &amp; fries", g11:"Summer sundae", g12:"The view from your table",
+  rev_pill:"REVIEWS", rev_h2:"Word of mouth", rev_script:"straight from Google",
+  r1_q:"“If you're in Ouranoupoli, this taverna is the best choice in the area. The food is always fresh.”",
+  r2_q:"“A taverna right on the seafront with fresh, delicious dishes — and the portions are huge.”",
+  r3_q:"“Fantastic food, the staff is great and we had an amazing time!”",
+  r_lg:"Local Guide · Google", r_lg2:"Local Guide · Google", r3_n:"Google visitor", r3_t:"Visitor update · Google",
+  rev_badge:"from 414 reviews on",
+  v_pill:"VISIT US", v_h2:"Find the waves", v_script:"we're right on the beach",
+  v_addr_h:"Address", v_addr_p:"Ouranoupoli 630 75, Halkidiki, Greece", v_open_h:"Open every day", v_ph_h:"Phone",
+  cta_dir2:"Get Directions", cta_call:"Call Us",
+  nav_story2:"Our Story", nav_sig2:"Signature", nav_menu2:"Menu", nav_gal2:"Gallery", nav_visit2:"Visit Us",
+  foot_c:"© 2026 Waves Coffee &amp; Food · Ouranoupoli, Halkidiki", foot_ph:"Photos from our kitchen &amp; guests"
+},
+el: {
+  _title: "Waves Coffee & Food — Παραλιακή Ταβέρνα στην Ουρανούπολη, Χαλκιδική",
+  _desc: "Waves Coffee & Food — παραλιακή ταβέρνα, ψησταριά και all-day καφέ στην Ουρανούπολη Χαλκιδικής. Φρέσκα θαλασσινά, σχάρα στα κάρβουνα, καφές από τις 05:30. 4,9★ στο Google.",
+  _strip: ["Φρέσκο ψάρι καθημερινά","Σχάρα στα κάρβουνα","Πρωινό από τις 05:30","Χειροποίητες κρέπες","Freddo δίπλα στο κύμα"],
+  nav_story:"Η ιστορία μας", nav_sig:"Σπεσιαλιτέ", nav_menu:"Μενού", nav_gal:"Γκαλερί", nav_rev:"Κριτικές", nav_visit:"Επισκεφθείτε μας",
+  kicker:"ΟΥΡΑΝΟΥΠΟΛΗ · ΧΑΛΚΙΔΙΚΗ",
+  lead:"Παραλιακή ταβέρνα, ψησταριά &amp; all-day καφέ στην ακτή της Ουρανούπολης — εκεί όπου το ψάρι είναι φρέσκο, η σχάρα καίει και ο καφές ξεκινά με την αυγή.",
+  cta_menu:"Δείτε το μενού", cta_dir:"Οδηγίες πρόσβασης",
+  st_rev:"414 κριτικές στο Google", st_open:"ανοιχτά κάθε μέρα", st_pp:"ανά άτομο",
+  story_pill:"Η ΙΣΤΟΡΙΑ ΜΑΣ", story_h2:"Μια ταβέρνα στην ακτή<br>της Ουρανούπολης", story_script:"εκεί όπου η μέρα ξεκινά με τα κύματα",
+  story_p:"Λίγα βήματα από την παραλία της Ουρανούπολης — το τελευταίο χωριό πριν το Άγιο Όρος — το Waves σερβίρει όλη τη μέρα της Χαλκιδικής: καφέ με την ανατολή και ζεστά αρτοσκευάσματα, μεγάλα μεσημέρια δίπλα στη θάλασσα με ψητό ψάρι και χταπόδι, και χαλαρά βράδια με σχάρα, κρέπες και κοκτέιλ κάτω από τα ψάθινα φωτιστικά.",
+  f1_h:"Από τη θάλασσα, καθημερινά", f1_p:"Χταπόδι, καλαμάρι, σαρδέλες και ολόκληρα ψάρια, κατευθείαν στα κάρβουνα.",
+  f2_h:"Ελληνική ψησταριά", f2_p:"Σουβλάκι, παϊδάκια, μπιφτέκι και μπριζόλες — γενναιόδωρες μερίδες, τίμιες τιμές.",
+  f3_h:"Καφές από τις 05:30", f3_p:"Ο πρώτος freddo πριν φύγει το καράβι για τον Άθω.",
+  f4_h:"Πάνω στο κύμα", f4_p:"Τραπέζια στη βεράντα με ορίζοντα τον Σιγγιτικό κόλπο.",
+  sig_pill:"ΣΠΕΣΙΑΛΙΤΕ", sig_h2:"Πιάτα που αξίζουν το ταξίδι", sig_script:"από το Αιγαίο, με αγάπη",
+  s1_h:"Χταπόδι σχάρας", s1_p:"Ψητό πλοκάμι πάνω σε πράσινα, κρεμμύδι και γλάσο βαλσάμικο.",
+  s2_h:"Πιατέλα του ψαρά", s2_p:"Καλαμάρι, γαρίδες, γαύρος, μύδια και χταπόδι πάνω σε πατάτες με ρίγανη.",
+  s3_h:"Σαρδέλες σχάρας", s3_p:"Με ντοματίνια, κρεμμύδι και μυρωδικά — απλό, καπνιστό, τέλειο.",
+  s4_h:"Ολόκληρο καλαμάρι σχάρας", s4_p:"Χαρακωμένο και καψαλισμένο, με πατάτες και λεμόνι.",
+  menu_pill:"ΤΟ ΜΕΝΟΥ", menu_h2:"Στον ρυθμό του κύματος", menu_script:"πρωινό, μεσημεριανό &amp; βραδινό",
+  m1_h:"Από τη θάλασσα", m1_s:"φρέσκο κάθε μέρα",
+  m1_1:"Χταπόδι σχάρας", m1_2:"Fritto misto", m1_3:"Καραβίδες", m1_4:"Σαρδέλες &amp; γαύρος σχάρας", m1_5:"Ψάρι ημέρας",
+  m2_h:"Από τη σχάρα", m2_s:"φωτιά &amp; κάπνα",
+  m2_1:"Ποικιλίες σχάρας", m2_2:"Παϊδάκια &amp; μπριζόλες", m2_3:"Σουβλάκι &amp; γύρος", m2_4:"Burgers με πατάτες <b>10 €</b>", m2_5:"Πίτσα γύρος",
+  m3_h:"Πρωινό &amp; καφές", m3_s:"από τις 05:30",
+  m3_1:"Ελληνικά πρωινά", m3_2:"Ομελέτες &amp; αυγά τηγανητά", m3_3:"Ζεστές τυρόπιτες", m3_4:"Freddo espresso &amp; cappuccino", m3_5:"Φρέσκος χυμός πορτοκάλι",
+  m4_h:"Γλυκά κύματα", m4_s:"κρέπες &amp; άλλα",
+  m4_1:"Κρέπες με παγωτό", m4_2:"Αμερικάνικα pancakes <b>10 €</b>", m4_3:"Αλμυρά pancakes <b>12 €</b>", m4_4:"Βάφλες &amp; sundae", m4_5:"Μπακλαβάς &amp; καρυδόπιτα",
+  note_1:"<b>Περίπου 10–15 € το άτομο.</b> Το φρέσκο ψάρι τιμολογείται καθημερινά — ρωτήστε για την ψαριά της ημέρας.",
+  note_2:"Στο κατάστημα · Take away · Ανέπαφη παράδοση",
+  gal_pill:"ΓΚΑΛΕΡΙ", gal_h2:"Κατευθείαν από τα πιάτα μας", gal_script:"χωρίς φίλτρα",
+  g1:"Πιατέλα σχάρας για δύο", g2:"Σπιτικές λεμονάδες", g3:"Ελληνικό πρωινό", g4:"Από τα κάρβουνα", g5:"Fritto misto", g6:"Παγωτό δίπλα στο κύμα",
+  g7:"Πίτσα &amp; τοπικό κρασί", g8:"Χταπόδι, απλά", g9:"Βάφλα με τα όλα της", g10:"Γαύρος &amp; πατάτες", g11:"Καλοκαιρινό sundae", g12:"Η θέα από το τραπέζι σας",
+  rev_pill:"ΚΡΙΤΙΚΕΣ", rev_h2:"Από στόμα σε στόμα", rev_script:"κατευθείαν από το Google",
+  r1_q:"«Αν βρίσκεστε στην Ουρανούπολη, αυτή η ταβέρνα είναι η καλύτερη επιλογή στην περιοχή. Το φαγητό είναι πάντα φρέσκο.»",
+  r2_q:"«Ταβέρνα πάνω στο κύμα με φρέσκα, νόστιμα πιάτα — και οι μερίδες είναι τεράστιες.»",
+  r3_q:"«Φανταστικό φαγητό, υπέροχο προσωπικό — περάσαμε καταπληκτικά!»",
+  r_lg:"Local Guide · Google", r_lg2:"Local Guide · Google", r3_n:"Επισκέπτης Google", r3_t:"Ενημέρωση επισκέπτη · Google",
+  rev_badge:"από 414 κριτικές στο",
+  v_pill:"ΕΠΙΣΚΕΦΘΕΙΤΕ ΜΑΣ", v_h2:"Βρείτε τα κύματα", v_script:"είμαστε πάνω στην παραλία",
+  v_addr_h:"Διεύθυνση", v_addr_p:"Ουρανούπολη 630 75, Χαλκιδική", v_open_h:"Ανοιχτά κάθε μέρα", v_ph_h:"Τηλέφωνο",
+  cta_dir2:"Οδηγίες πρόσβασης", cta_call:"Καλέστε μας",
+  nav_story2:"Η ιστορία μας", nav_sig2:"Σπεσιαλιτέ", nav_menu2:"Μενού", nav_gal2:"Γκαλερί", nav_visit2:"Επισκεφθείτε μας",
+  foot_c:"© 2026 Waves Coffee &amp; Food · Ουρανούπολη, Χαλκιδική", foot_ph:"Φωτογραφίες από την κουζίνα &amp; τους πελάτες μας"
+},
+ro: {
+  _title: "Waves Coffee & Food — Tavernă pe malul mării în Ouranoupoli, Halkidiki",
+  _desc: "Waves Coffee & Food — tavernă pe plajă, grill și cafenea all-day în Ouranoupoli, Halkidiki. Fructe de mare proaspete, grătar pe cărbuni, cafea de la 05:30. 4,9★ pe Google.",
+  _strip: ["Pește proaspăt zilnic","Grătar pe cărbuni","Mic dejun de la 05:30","Clătite făcute în casă","Freddo lângă mare"],
+  nav_story:"Povestea noastră", nav_sig:"Specialități", nav_menu:"Meniu", nav_gal:"Galerie", nav_rev:"Recenzii", nav_visit:"Vizitează-ne",
+  kicker:"OURANOUPOLI · HALKIDIKI",
+  lead:"O tavernă pe plajă, grill &amp; cafenea all-day pe malul mării din Ouranoupoli — unde peștele e proaspăt, grătarul fumegă și cafeaua începe în zori.",
+  cta_menu:"Vezi meniul", cta_dir:"Cum ajungi",
+  st_rev:"414 recenzii Google", st_open:"deschis zilnic", st_pp:"de persoană",
+  story_pill:"POVESTEA NOASTRĂ", story_h2:"O tavernă pe malul mării<br>din Ouranoupoli", story_script:"unde ziua începe cu valurile",
+  story_p:"La câțiva pași de plaja din Ouranoupoli — ultimul sat înainte de Muntele Athos — Waves servește întreaga zi din Halkidiki: cafea la răsărit și patiserie caldă, prânzuri lungi lângă mare cu pește la grătar și caracatiță, și seri tihnite cu grătar, clătite și cocktailuri sub lămpile de rattan.",
+  f1_h:"Din mare, zilnic", f1_p:"Caracatiță, calamar, sardine și pește întreg, direct pe cărbuni.",
+  f2_h:"Grătar grecesc", f2_p:"Souvlaki, coaste, bifteki și cotlete — porții generoase, prețuri corecte.",
+  f3_h:"Cafea de la 05:30", f3_p:"Primul freddo înainte să plece feribotul spre Athos.",
+  f4_h:"Chiar pe malul apei", f4_p:"Mese pe terasă cu golful Singitic drept orizont.",
+  sig_pill:"SPECIALITĂȚI", sig_h2:"Farfurii pentru care merită drumul", sig_script:"din Egeea, cu drag",
+  s1_h:"Caracatiță la grătar", s1_p:"Tentacul fript pe verdețuri, ceapă și glazură balsamică.",
+  s2_h:"Platoul pescarului", s2_p:"Calamari, creveți, hamsii, midii și caracatiță peste cartofi cu oregano.",
+  s3_h:"Sardine la grătar", s3_p:"Cu roșii cherry, ceapă și ierburi — simplu, afumat, perfect.",
+  s4_h:"Calamar întreg la grătar", s4_p:"Crestat și rumenit, cu cartofi și lămâie.",
+  menu_pill:"MENIUL", menu_h2:"Mănânci în ritmul mării", menu_script:"mic dejun, prânz &amp; cină",
+  m1_h:"Din mare", m1_s:"proaspăt în fiecare zi",
+  m1_1:"Caracatiță la grătar", m1_2:"Fritto misto", m1_3:"Langustine", m1_4:"Sardine &amp; gavros la grătar", m1_5:"Peștele zilei",
+  m2_h:"De pe grătar", m2_s:"foc &amp; fum",
+  m2_1:"Platouri mixte la grătar", m2_2:"Coaste &amp; cotlete de porc", m2_3:"Souvlaki &amp; gyros", m2_4:"Burgeri cu cartofi <b>10 €</b>", m2_5:"Pizza gyros",
+  m3_h:"Dimineața &amp; cafea", m3_s:"de la 05:30",
+  m3_1:"Mic dejun grecesc", m3_2:"Omlete &amp; ochiuri", m3_3:"Plăcinte calde cu brânză", m3_4:"Freddo espresso &amp; cappuccino", m3_5:"Fresh de portocale",
+  m4_h:"Valuri dulci", m4_s:"clătite &amp; nu numai",
+  m4_1:"Crepes cu înghețată", m4_2:"Pancakes americane <b>10 €</b>", m4_3:"Pancakes sărate <b>12 €</b>", m4_4:"Vafe &amp; sundae", m4_5:"Baclava &amp; prăjitură cu nuci",
+  note_1:"<b>Aproximativ 10–15 € de persoană.</b> Peștele proaspăt are preț zilnic — întreabă de captura zilei.",
+  note_2:"În local · La pachet · Livrare fără contact",
+  gal_pill:"GALERIE", gal_h2:"Direct din farfuriile noastre", gal_script:"fără filtre",
+  g1:"Platou la grătar pentru doi", g2:"Limonade de casă", g3:"Mic dejun grecesc", g4:"De pe cărbuni", g5:"Fritto misto", g6:"Înghețată lângă mare",
+  g7:"Pizza &amp; vin local", g8:"Caracatiță, simplu", g9:"Vafă cu de toate", g10:"Gavros &amp; cartofi", g11:"Sundae de vară", g12:"Priveliștea de la masa ta",
+  rev_pill:"RECENZII", rev_h2:"Din gură în gură", rev_script:"direct de pe Google",
+  r1_q:"„Dacă ești în Uranopoli, această tavernă este cea mai bună alegere din zonă. Mâncarea este mereu proaspătă.”",
+  r2_q:"„O tavernă pe malul mării cu preparate proaspete și delicioase — iar porțiile sunt foarte mari.”",
+  r3_q:"„Mâncare fantastică, personal de treabă — ne-am simțit minunat!”",
+  r_lg:"Local Guide · Google", r_lg2:"Local Guide · Google", r3_n:"Vizitator Google", r3_t:"Actualizare vizitator · Google",
+  rev_badge:"din 414 recenzii pe",
+  v_pill:"VIZITEAZĂ-NE", v_h2:"Găsește valurile", v_script:"suntem chiar pe plajă",
+  v_addr_h:"Adresă", v_addr_p:"Ouranoupoli 630 75, Halkidiki, Grecia", v_open_h:"Deschis zilnic", v_ph_h:"Telefon",
+  cta_dir2:"Cum ajungi", cta_call:"Sună-ne",
+  nav_story2:"Povestea noastră", nav_sig2:"Specialități", nav_menu2:"Meniu", nav_gal2:"Galerie", nav_visit2:"Vizitează-ne",
+  foot_c:"© 2026 Waves Coffee &amp; Food · Ouranoupoli, Halkidiki", foot_ph:"Fotografii din bucătăria noastră &amp; de la oaspeți"
+}
+};
+
+function setLang(lang){
+  const dict = I18N[lang] || I18N.en;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k = el.getAttribute('data-i18n');
+    if(dict[k] !== undefined) el.innerHTML = dict[k];
+  });
+  const items = dict._strip;
+  const seq = items.map(t=>`<span>${t}</span><span class="sep">✦</span>`).join('');
+  document.getElementById('strip-track').innerHTML = seq + seq;
+  document.documentElement.lang = lang;
+  document.title = dict._title;
+  document.getElementById('meta-desc').setAttribute('content', dict._desc);
+  document.querySelectorAll('.lang-sw button').forEach(b=>b.classList.toggle('on', b.dataset.lang===lang));
+  try{ localStorage.setItem('wave-lang', lang); }catch(e){}
+}
+document.querySelectorAll('.lang-sw button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+let saved = null;
+try{ saved = localStorage.getItem('wave-lang'); }catch(e){}
+setLang(saved && I18N[saved] ? saved : 'en');
+
+/* ---------------- nav & reveal ---------------- */
 const nav=document.getElementById('nav');
 document.getElementById('burger').addEventListener('click',()=>nav.classList.toggle('open'));
 nav.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
