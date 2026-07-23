@@ -9,7 +9,7 @@ Website for **Waves Coffee & Food**, a beachfront taverna, grill & all-day café
 
 ## Stack
 
-Static site, no dependencies. `index.html` is the EN master (embedded i18n dictionaries + menu data); `node scripts/build.mjs` pre-renders the five language pages into `el/ ro/ bg/ sr/ ru/`. Photos in `images/` are from the restaurant's public Google Maps listing (≤1600px JPEG + 800px variants for `srcset`). SEO: canonical + hreflang cluster, `robots.txt`, `sitemap.xml`, Restaurant + FAQPage JSON-LD; redirects/headers in `vercel.json`.
+Static site, no dependencies. **`_src/master.html` is the source of truth** (embedded i18n dictionaries + menu data); `node scripts/build.mjs` pre-renders the EN root `index.html` and the five language pages `el/ ro/ bg/ sr/ ru/` — never edit those outputs by hand. Photos in `images/` are from the restaurant's public Google Maps listing (≤1600px JPEG + 800px variants for `srcset`). SEO: canonical + hreflang cluster, `robots.txt`, `sitemap.xml`, Restaurant + FAQPage JSON-LD; redirects/headers in `vercel.json`.
 
 ## Deploy
 

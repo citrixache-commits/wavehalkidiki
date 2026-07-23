@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Waves Coffee &amp; Food — Restaurant &amp; Café in Ouranoupoli, Gateway to Mount Athos</title>
-<meta name="description" id="meta-desc" content="Waves Coffee & Food — beachfront taverna, grill & all-day café in Ouranoupoli, the gateway to Mount Athos. Fresh seafood, charcoal grill, breakfast from 05:30 before the ferry. 4.9★ on Google.">
+<title>Waves Coffee &amp; Food — Ouranoupoli Restaurant by Mount Athos</title>
+<meta name="description" id="meta-desc" content="Beachfront taverna &amp; café in Ouranoupoli, by the Mount Athos ferry. Fresh seafood, Greek grill, breakfast from 05:30. 4.9★ on Google.">
 <link rel="canonical" id="canon" href="https://waveshalkidiki.vercel.app/">
 <link rel="alternate" hreflang="en" href="https://waveshalkidiki.vercel.app/">
 <link rel="alternate" hreflang="el" href="https://waveshalkidiki.vercel.app/el/">
@@ -13,11 +13,11 @@
 <link rel="alternate" hreflang="sr-Latn" href="https://waveshalkidiki.vercel.app/sr/">
 <link rel="alternate" hreflang="ru" href="https://waveshalkidiki.vercel.app/ru/">
 <link rel="alternate" hreflang="x-default" href="https://waveshalkidiki.vercel.app/">
-<meta property="og:title" id="og-title" content="Waves Coffee &amp; Food — Ouranoupoli, Gateway to Mount Athos">
-<meta property="og:description" id="og-desc" content="Beachfront taverna & all-day café. Fresh seafood, charcoal grill, coffee from dawn — right by the port for Mount Athos. 4.9★ from 414 Google reviews.">
-<meta property="og:image" content="https://waveshalkidiki.vercel.app/images/seafood-platter.jpg">
-<meta property="og:image:width" content="1050">
-<meta property="og:image:height" content="1400">
+<meta property="og:title" id="og-title" content="Waves Coffee &amp; Food — Ouranoupoli Restaurant by Mount Athos">
+<meta property="og:description" id="og-desc" content="Beachfront taverna &amp; café in Ouranoupoli, by the Mount Athos ferry. Fresh seafood, Greek grill, breakfast from 05:30. 4.9★ on Google.">
+<meta property="og:image" content="https://waveshalkidiki.vercel.app/images/og-1200x630.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mixed seafood platter at Waves Coffee & Food">
 <meta property="og:url" id="og-url" content="https://waveshalkidiki.vercel.app/">
 <meta property="og:type" content="restaurant.restaurant">
@@ -25,6 +25,8 @@
 <meta property="og:locale" id="og-locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#262C35">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23262C35'/%3E%3Crect x='6' y='6' width='52' height='52' fill='none' stroke='white' stroke-width='2.5'/%3E%3Cpath d='M33 15c-3 2.4-3 5-.6 7.2 2.2 1.9 2.2 3.9.4 5.8' stroke='white' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M22 32.5h20c0 6.5-4.2 10.3-10 10.3s-10-3.8-10-10.3z' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath d='M42 33.5c3.4 0 5.3 1.7 5.3 4s-2 4.4-5.5 3.4' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M19 47.5c3 2.4 8.3 3.6 13 3.6s10-1.2 13-3.6' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,6 +35,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Restaurant",
+  "@id": "https://waveshalkidiki.vercel.app/#restaurant",
   "name": "Waves Coffee & Food",
   "url": "https://waveshalkidiki.vercel.app/",
   "image": "https://waveshalkidiki.vercel.app/images/facade.jpg",
@@ -54,7 +57,7 @@
     "closes": "22:00"
   }],
   "hasMenu": "https://waveshalkidiki.vercel.app/#menu",
-  "acceptsReservations": "True",
+  "acceptsReservations": true,
   "sameAs": ["https://maps.app.goo.gl/TWM8Gz17om45NjVWA"]
 }
 </script>
@@ -76,6 +79,7 @@
   --charcoal-deep:#1D222A;
   --orange:#F0A04B;
   --orange-soft:#F5BE7E;
+  --orange-deep:#A85D0F;
   --cream:#FAF6F0;
   --white:#FFFFFF;
   --ink:#22262E;
@@ -93,6 +97,10 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}
   .sig-card,.menu-card,.gal img,.btn{transition:none!important}
 }
 :focus-visible{outline:3px solid var(--orange);outline-offset:2px;border-radius:4px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+/* WCAG contrast on light backgrounds */
+.fm-row .pr{color:var(--orange-deep)}
+.fm-card .script,#menu .sec-head .script,#faq .sec-head .script,#story .script{color:var(--orange-deep)}
 body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.7;font-size:16px}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
@@ -110,20 +118,20 @@ h1,h2,h3{font-family:var(--serif);line-height:1.15}
 
 /* ---------- nav ---------- */
 nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(29,34,42,.86);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
-.nav-in{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:28px}
+.nav-in{max-width:1180px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:15px}
 .logo{display:flex;align-items:center;gap:11px;color:#fff}
 .logo .badge{flex:none}
 .logo .script{font-size:1.7rem;line-height:1}
-.logo small{font-size:.62rem;letter-spacing:.34em;color:#cfd4dc;font-weight:600;align-self:flex-end;padding-bottom:.3rem}
-.nav-links{display:flex;gap:24px;margin-left:auto}
-.nav-links a{color:#dfe3e9;font-size:.88rem;font-weight:500;transition:color .2s}
+.logo small{display:none}
+.nav-links{display:flex;gap:13px;margin-left:auto}
+.nav-links a{color:#dfe3e9;font-size:.84rem;font-weight:500;transition:color .2s}
 .nav-links a:hover{color:var(--orange)}
-.lang-sw{display:flex;gap:5px;flex-wrap:wrap}
+.lang-sw{display:flex;gap:4px;flex-wrap:wrap}
 .lang-sw-more{display:none}
-.lang-sw button{background:none;border:1px solid rgba(255,255,255,.25);color:#dfe3e9;font:600 .72rem var(--sans);letter-spacing:.05em;padding:.55rem .68rem;border-radius:8px;cursor:pointer;transition:all .2s}
+.lang-sw button{background:none;border:1px solid rgba(255,255,255,.25);color:#dfe3e9;font:600 .68rem var(--sans);letter-spacing:.03em;padding:.5rem .55rem;border-radius:8px;cursor:pointer;transition:all .2s}
 .lang-sw button:hover{border-color:var(--orange);color:var(--orange)}
 .lang-sw button.on{background:var(--orange);color:var(--charcoal-deep);border-color:var(--orange)}
-.nav-call{background:var(--orange);color:var(--charcoal-deep);font-weight:600;font-size:.85rem;padding:.5rem 1.2rem;border-radius:999px;white-space:nowrap;transition:background .2s}
+.nav-call{background:var(--orange);color:var(--charcoal-deep);font-weight:600;font-size:.8rem;padding:.5rem .9rem;border-radius:999px;white-space:nowrap;transition:background .2s}
 .nav-call:hover{background:var(--orange-soft)}
 .burger{display:none;background:none;border:0;cursor:pointer;padding:6px}
 .burger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;border-radius:2px}
@@ -268,7 +276,7 @@ li.fm-hdr{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacin
 footer.site{background:var(--charcoal-deep);color:#a6adb9;padding:54px 0 30px}
 .foot-grid{display:flex;justify-content:space-between;gap:30px;align-items:center;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:30px;margin-bottom:22px}
 .foot-logo .script{font-size:2rem}
-.foot-logo small{display:block;font-size:.6rem;letter-spacing:.34em;color:#7a828e;font-weight:600}
+.foot-logo small{display:block;font-size:.6rem;letter-spacing:.34em;color:#99a2ae;font-weight:600}
 .foot-nav{display:flex;gap:24px;flex-wrap:wrap}
 .foot-nav a{font-size:.85rem;transition:color .2s}
 .foot-nav a:hover{color:var(--orange)}
@@ -302,7 +310,7 @@ footer.site{background:var(--charcoal-deep);color:#a6adb9;padding:54px 0 30px}
   .visit-grid{grid-template-columns:1fr}
   .visit-map iframe{min-height:380px}
 }
-@media(max-width:900px){
+@media(max-width:1180px){
   .nav-links,.nav-call{display:none}
   .burger{display:block;padding:12px}
   nav.open .nav-links{display:flex;position:absolute;top:100%;left:0;right:0;background:var(--charcoal-deep);flex-direction:column;padding:18px 24px;gap:16px}
@@ -310,6 +318,11 @@ footer.site{background:var(--charcoal-deep);color:#a6adb9;padding:54px 0 30px}
 }
 @media(max-width:640px){
   .sec{padding:64px 0}
+  .fm-card h3{cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px}
+  .fm-card h3::after{content:'+';font-family:var(--serif);color:var(--orange-deep);font-size:1.5rem;line-height:1;flex:none}
+  .fm-card.open h3::after{content:'–'}
+  .fm-card ul{display:none}
+  .fm-card.open ul{display:block}
   .nav-in{gap:12px}
   .logo small{display:none}
   .lang-sw{margin-left:auto}
@@ -381,7 +394,7 @@ footer.site{background:var(--charcoal-deep);color:#a6adb9;padding:54px 0 30px}
   <div class="wrap hero-in">
     <div>
       <span class="pill kicker" data-i18n="kicker">OURANOUPOLI · HALKIDIKI</span>
-      <h1>Waves</h1>
+      <h1>Waves<span class="sr-only" data-i18n="h1_tail"> — Coffee &amp; Food, beachfront restaurant in Ouranoupoli, near Mount Athos</span></h1>
       <div class="script script-line">Coffee &amp; Food</div>
       <p class="lead" data-i18n="lead">A beachfront taverna, grill &amp; all-day café on the Ouranoupoli shore — where the fish is fresh, the grill is smoking and the coffee starts at dawn.</p>
       <span class="tagline" data-i18n="tagline">☀ Breakfast before the Mount Athos ferry — seaside meals when you return.</span>
@@ -452,7 +465,7 @@ footer.site{background:var(--charcoal-deep);color:#a6adb9;padding:54px 0 30px}
     <div class="sig-grid">
       <article class="sig-card reveal"><img src="/images/octopus-grill-800.jpg" srcset="/images/octopus-grill-800.jpg 800w, /images/octopus-grill.jpg 1400w" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px" width="800" height="600" alt="Grilled octopus with balsamic" loading="lazy"><span class="sig-arrow">↗</span><div class="sig-body"><h3 data-i18n="s1_h">Grilled Octopus</h3><p data-i18n="s1_p">Char-grilled tentacle over greens, shaved onion and a balsamic glaze.</p></div></article>
       <article class="sig-card reveal"><img src="/images/fried-platter-800.jpg" srcset="/images/fried-platter-800.jpg 800w, /images/fried-platter.jpg 1400w" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px" width="800" height="450" alt="Fried seafood platter" loading="lazy"><span class="sig-arrow">↗</span><div class="sig-body"><h3 data-i18n="s2_h">Fisherman's Platter</h3><p data-i18n="s2_p">Calamari, prawns, anchovies, mussels and octopus over oregano fries.</p></div></article>
-      <article class="sig-card reveal"><img src="/images/dorada-platter-800.jpg" srcset="/images/dorada-platter-800.jpg 800w, /images/dorada-platter.jpg 1400w" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px" width="800" height="600" alt="Whole grilled dorada with grilled vegetables and lemon" loading="lazy"><span class="sig-arrow">↗</span><div class="sig-body"><h3 data-i18n="s3_h">Grilled Sardines</h3><p data-i18n="s3_p">Topped with cherry tomato, onion and herbs — simple, smoky, perfect.</p></div></article>
+      <article class="sig-card reveal"><img src="/images/dorada-platter-800.jpg" srcset="/images/dorada-platter-800.jpg 800w, /images/dorada-platter.jpg 1400w" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px" width="800" height="600" alt="Whole grilled dorada with grilled vegetables and lemon" loading="lazy"><span class="sig-arrow">↗</span><div class="sig-body"><h3 data-i18n="s3_h">Whole Grilled Dorada</h3><p data-i18n="s3_p">Fresh sea bream chargrilled whole, with grilled vegetables and lemon.</p></div></article>
       <article class="sig-card reveal"><img src="/images/grilled-squid-800.jpg" srcset="/images/grilled-squid-800.jpg 800w, /images/grilled-squid.jpg 1400w" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px" width="600" height="800" alt="Whole grilled squid with fries and lemon" loading="lazy"><span class="sig-arrow">↗</span><div class="sig-body"><h3 data-i18n="s4_h">Whole Grilled Squid</h3><p data-i18n="s4_p">Crosshatched and charred, with seasoned fries and lemon.</p></div></article>
     </div>
   </div>
@@ -463,11 +476,11 @@ footer.site{background:var(--charcoal-deep);color:#a6adb9;padding:54px 0 30px}
     <div class="sec-head reveal">
       <span class="pill" data-i18n="menu_pill">THE MENU</span>
       <h2 data-i18n="menu_h2">Eat with the tide</h2>
-      <div class="script" style="font-size:1.8rem" data-i18n="menu_script">breakfast, lunch &amp; dinner</div>
+      <div class="script" style="font-size:1.8rem" data-i18n="menu_script">the complete menu</div>
     </div>
     <div class="fullmenu" id="fullmenu"><div class="fm-card"><div class="mc-img"><img src="/images/seafood-grill-800.jpg" alt="" loading="lazy"></div><h3>From the Sea</h3><span class="script">fresh &amp; grilled</span><ul><li><div class="fm-row"><span class="nm">Grilled octopus</span><span class="ld"></span><span class="pr">18 €</span></div></li><li><div class="fm-row"><span class="nm">Grilled calamari</span><span class="ld"></span><span class="pr">20 €</span></div></li><li><div class="fm-row"><span class="nm">Fried calamari</span><span class="ld"></span><span class="pr">14 €</span></div></li><li><div class="fm-row"><span class="nm">Fried anchovies (gavros)</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Shrimps</span><span class="ld"></span><span class="pr">18 €</span></div></li><li><div class="fm-row"><span class="nm">Shrimp pasta</span><span class="ld"></span><span class="pr">18 €</span></div></li><li><div class="fm-row"><span class="nm">Seafood spaghetti</span><span class="ld"></span><span class="pr">18 €</span></div></li><li><div class="fm-row"><span class="nm">Seafood mix</span><span class="ld"></span><span class="pr">23 €</span></div></li><li><div class="fm-row"><span class="nm">Sea bream (dorada)</span><span class="ld"></span><span class="pr">22 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><img src="/images/pork-ribs-800.jpg" alt="" loading="lazy"></div><h3>Grilled Meat</h3><span class="script">over charcoal</span><ul><li><div class="fm-row"><span class="nm">Lamb chops</span><span class="ld"></span><span class="pr">20 €</span></div></li><li><div class="fm-row"><span class="nm">Pork steak</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Pork ribs (pancetta)</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Souvlaki</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Gyros (pork or chicken)</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Gyros chicken / gyros mix</span><span class="ld"></span><span class="pr">13 €</span></div></li><li><div class="fm-row"><span class="nm">Bifteki (Greek burger patty)</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Soutzoukakia</span><span class="ld"></span><span class="pr">12 €</span></div></li></ul></div><div class="fm-card"><h3>Burgers</h3><span class="script">street classics</span><ul><li><div class="fm-row"><span class="nm">Classic Burger</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">sauce, tomato, lettuce, cheddar, ketchup</div></li><li><div class="fm-row"><span class="nm">Golden Burger</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">grated cheese, bacon, tomato, lettuce, mayonnaise</div></li><li><div class="fm-row"><span class="nm">Texas BBQ Burger</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">cheddar, bacon, lettuce, tomato, BBQ sauce</div></li><li><div class="fm-row"><span class="nm">Angus Burger</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">Philadelphia, lettuce, tomato, cheddar, bacon, ketchup</div></li><li><div class="fm-row"><span class="nm">Crispy Chicken Burger</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">chicken schnitzel, cheddar, tomato, lettuce, crispy sauce, bacon</div></li><li><div class="fm-row"><span class="nm">Any burger with country potatoes</span><span class="ld"></span><span class="pr">10 €</span></div></li></ul></div><div class="fm-card"><h3>Sandwiches &amp; Snacks</h3><span class="script">grab &amp; go</span><ul><li><div class="fm-row"><span class="nm">White baguette with chicken</span><span class="ld"></span><span class="pr">7 €</span></div><div class="fm-desc">mayonnaise, parmesan, arugula</div></li><li><div class="fm-row"><span class="nm">Whole wheat baguette</span><span class="ld"></span><span class="pr">6 €</span></div><div class="fm-desc">mayonnaise, lettuce, turkey, tomato, feta</div></li><li><div class="fm-row"><span class="nm">Greek baguette</span><span class="ld"></span><span class="pr">6 €</span></div><div class="fm-desc">lettuce, feta, tomato, cucumber, olives</div></li><li><div class="fm-row"><span class="nm">Savory croissant</span><span class="ld"></span><span class="pr">6 €</span></div><div class="fm-desc">gouda, turkey, tomato, mayonnaise</div></li><li><div class="fm-row"><span class="nm">Club sandwich</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Club sandwich with chicken</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Chicken nuggets</span><span class="ld"></span><span class="pr">11 €</span></div></li><li><div class="fm-row"><span class="nm">Fried potatoes</span><span class="ld"></span><span class="pr">6 €</span></div></li><li><div class="fm-row"><span class="nm">Gyros sandwich</span><span class="ld"></span><span class="pr">5 €</span></div></li><li><div class="fm-row"><span class="nm">Hot dog</span><span class="ld"></span><span class="pr">5 €</span></div></li></ul></div><div class="fm-card"><h3>Soups</h3><span class="script">warm from the pot</span><ul><li><div class="fm-row"><span class="nm">Seafood soup</span><span class="ld"></span><span class="pr">18 €</span></div></li><li><div class="fm-row"><span class="nm">Fish soup</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Mushroom soup</span><span class="ld"></span><span class="pr">9 €</span></div></li><li><div class="fm-row"><span class="nm">Vegetable soup</span><span class="ld"></span><span class="pr">8 €</span></div></li><li><div class="fm-row"><span class="nm">Tomato soup</span><span class="ld"></span><span class="pr">8 €</span></div></li></ul></div><div class="fm-card"><h3>Salads</h3><span class="script">crisp &amp; fresh</span><ul><li><div class="fm-row"><span class="nm">Greek salad</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Caesar's salad</span><span class="ld"></span><span class="pr">13 €</span></div></li><li><div class="fm-row"><span class="nm">Tuna salad</span><span class="ld"></span><span class="pr">13 €</span></div></li><li><div class="fm-row"><span class="nm">Lettuce salad</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Bougiourdi (baked spicy feta)</span><span class="ld"></span><span class="pr">8 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><img src="/images/pizza-wine-800.jpg" alt="" loading="lazy"></div><h3>Pizza</h3><span class="script">stone-baked</span><ul><li><div class="fm-row"><span class="nm">Special</span><span class="ld"></span><span class="pr">15 €</span></div></li><li><div class="fm-row"><span class="nm">Margherita</span><span class="ld"></span><span class="pr">12 €</span></div><div class="fm-desc">mozzarella &amp; tomato sauce</div></li><li><div class="fm-row"><span class="nm">Tuna pizza</span><span class="ld"></span><span class="pr">15 €</span></div></li><li><div class="fm-row"><span class="nm">Gyros pizza</span><span class="ld"></span><span class="pr">15 €</span></div></li><li><div class="fm-row"><span class="nm">Pepperoni pizza</span><span class="ld"></span><span class="pr">15 €</span></div></li><li><div class="fm-row"><span class="nm">Lenten (vegan) pizza</span><span class="ld"></span><span class="pr">12 €</span></div></li></ul></div><div class="fm-card"><h3>Breakfast &amp; Pies</h3><span class="script">warm from 05:30</span><ul><li><div class="fm-row"><span class="nm">Bougatsa (cream / cheese / spinach / spinach &amp; cheese / minced meat)</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Sausage pie / ham &amp; cheese pie / potato pie</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Croissant</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">WAVES Breakfast (full plate)</span><span class="ld"></span><span class="pr">15 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><img src="/images/breakfast-eggs-800.jpg" alt="" loading="lazy"></div><h3>Omelettes &amp; Eggs</h3><span class="script">from 05:30</span><ul><li><div class="fm-row"><span class="nm">Fried eggs plate</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Omelette with sausage or bacon</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Vegetarian omelette</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Scrambled eggs</span><span class="ld"></span><span class="pr">13 €</span></div></li></ul></div><div class="fm-card"><h3>Savory Crepes</h3><span class="script">handmade</span><ul><li><div class="fm-row"><span class="nm">Vegetarian</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">gouda, tomato, mushrooms, olives, pepper</div></li><li><div class="fm-row"><span class="nm">Light</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">gouda, turkey, tomato, corn, pepper</div></li><li><div class="fm-row"><span class="nm">Chef</span><span class="ld"></span><span class="pr">9 €</span></div><div class="fm-desc">gouda, turkey, corn, egg, tomato, lettuce</div></li><li><div class="fm-row"><span class="nm">Caesar's</span><span class="ld"></span><span class="pr">9 €</span></div><div class="fm-desc">gouda, chicken, corn, parmesan</div></li><li><div class="fm-row"><span class="nm">Special</span><span class="ld"></span><span class="pr">9 €</span></div><div class="fm-desc">gouda, ham, bacon, mushrooms, tomato, mayonnaise</div></li><li><div class="fm-row"><span class="nm">Crepe with gyros</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Crepe with minced meat</span><span class="ld"></span><span class="pr">10 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><img src="/images/waffle-800.jpg" alt="" loading="lazy"></div><h3>Sweet Crepes</h3><span class="script">the sweet spot</span><ul><li><div class="fm-row"><span class="nm">Banoffee</span><span class="ld"></span><span class="pr">9 €</span></div><div class="fm-desc">merenda, biscuit, banana, caramel syrup</div></li><li><div class="fm-row"><span class="nm">White</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">white praline, strawberry, biscuit</div></li><li><div class="fm-row"><span class="nm">Oreo Madness</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">white praline, merenda, Oreo cookies</div></li><li><div class="fm-row"><span class="nm">Caprice</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">merenda, white praline, Caprice</div></li><li><div class="fm-row"><span class="nm">Snow White</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">white chocolate, coconut, banana</div></li><li><div class="fm-row"><span class="nm">Bueno</span><span class="ld"></span><span class="pr">7 €</span></div><div class="fm-desc">Bueno praline, biscuit</div></li><li><div class="fm-row"><span class="nm">Choco</span><span class="ld"></span><span class="pr">6 €</span></div><div class="fm-desc">merenda, biscuit</div></li></ul></div><div class="fm-card"><div class="mc-img"><img src="/images/pancakes-kinder-800.jpg" alt="" loading="lazy"></div><h3>Pancakes</h3><span class="script">American style</span><ul><li><div class="fm-row"><span class="nm">Banana, honey &amp; walnuts</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Bueno</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Oreo</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">White chocolate &amp; strawberries</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Biscuit</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Savory pancakes</span><span class="ld"></span><span class="pr">12 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><img src="/images/sundae-800.jpg" alt="" loading="lazy"></div><h3>Sweets &amp; Ice Cream</h3><span class="script">Greek classics</span><ul><li><div class="fm-row"><span class="nm">Baklava</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Ekmek kantaifi</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Kantaifi</span><span class="ld"></span><span class="pr">2 €</span></div></li><li><div class="fm-row"><span class="nm">Ice cream (per scoop)</span><span class="ld"></span><span class="pr">1.50 €</span></div><div class="fm-desc">vanilla, chocolate, strawberry, fig, cookies, banana</div></li></ul></div><div class="fm-card"><div class="mc-img"><img src="/images/coolers-800.jpg" alt="" loading="lazy"></div><h3>Coffee &amp; Drinks</h3><span class="script">from dawn till dusk</span><ul><li class="fm-hdr">Coffee</li><li><div class="fm-row"><span class="nm">Espresso / ristretto / macchiato</span><span class="ld"></span><span class="pr">2.50 €</span></div></li><li><div class="fm-row"><span class="nm">Espresso double / lungo</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Americano</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Cappuccino / latte</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Freddo espresso / freddo cappuccino</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Nes / frappe / filter coffee</span><span class="ld"></span><span class="pr">2.50 €</span></div></li><li><div class="fm-row"><span class="nm">Greek coffee</span><span class="ld"></span><span class="pr">1.50 €</span></div></li><li><div class="fm-row"><span class="nm">Greek coffee double</span><span class="ld"></span><span class="pr">2 €</span></div></li><li class="fm-hdr">Beverages</li><li><div class="fm-row"><span class="nm">Hot chocolate / cold chocolate</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Hot tea</span><span class="ld"></span><span class="pr">2 €</span></div></li><li><div class="fm-row"><span class="nm">Granita (strawberry, lemon)</span><span class="ld"></span><span class="pr">3.50 €</span></div></li><li><div class="fm-row"><span class="nm">Milkshake</span><span class="ld"></span><span class="pr">3.50 €</span></div></li><li><div class="fm-row"><span class="nm">Juice (cherry, orange, peach, apple, exotic)</span><span class="ld"></span><span class="pr">3 €</span></div></li><li class="fm-hdr">Refreshments</li><li><div class="fm-row"><span class="nm">Coca-Cola / Fanta / Sprite / Schweppes / Fuze Tea 330ml</span><span class="ld"></span><span class="pr">2 €</span></div></li><li><div class="fm-row"><span class="nm">Coca-Cola / Fanta 500ml</span><span class="ld"></span><span class="pr">2.50 €</span></div></li><li><div class="fm-row"><span class="nm">Water 500ml</span><span class="ld"></span><span class="pr">0.50 €</span></div></li><li><div class="fm-row"><span class="nm">Water 1.5L</span><span class="ld"></span><span class="pr">1 €</span></div></li></ul></div></div>
     <div class="menu-note reveal">
-      <p data-i18n="note_1"><b>Around 10–15 € per person.</b> Fresh fish priced daily — ask for today's catch.</p>
+      <p data-i18n="note_1"><b>Around 10–15 € per person.</b> Fresh fish priced daily — ask for today's catch. Bread 2 € · pita 1 €.</p>
       <p data-i18n="note_2">Dine-in · Takeaway · Contactless delivery</p>
       <p class="fine" data-i18n="note_3">Prices as shown on our in-house menu — small seasonal changes possible; today's menu always applies at the table.</p>
     </div>
@@ -493,12 +506,12 @@ footer.site{background:var(--charcoal-deep);color:#a6adb9;padding:54px 0 30px}
       <figure class="reveal"><img src="/images/waffle-800.jpg" srcset="/images/waffle-800.jpg 800w, /images/waffle.jpg 1400w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Waffle with chocolate and whipped cream" loading="lazy"><figcaption data-i18n="g9">Waffle, all in</figcaption></figure>
       <figure class="reveal"><img src="/images/anchovies-800.jpg" srcset="/images/anchovies-800.jpg 800w, /images/anchovies.jpg 1400w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Fried anchovies with fries and lemon" loading="lazy"><figcaption data-i18n="g10">Gavros &amp; fries</figcaption></figure>
       <figure class="reveal"><img src="/images/sundae-800.jpg" srcset="/images/sundae-800.jpg 800w, /images/sundae.jpg 1400w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Sundae with cream, banana and peach" loading="lazy"><figcaption data-i18n="g11">Summer sundae</figcaption></figure>
-      <figure class="reveal"><img src="/images/dorada-platter-800.jpg" srcset="/images/dorada-platter-800.jpg 800w, /images/dorada-platter.jpg 1400w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="800" height="600" alt="Whole grilled dorada with grilled vegetables" loading="lazy"><figcaption data-i18n="g13">x</figcaption></figure>
-      <figure class="reveal"><img src="/images/octopus-stew-800.jpg" srcset="/images/octopus-stew-800.jpg 800w, /images/octopus-stew.jpg 1400w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Octopus stewed in tomato sauce" loading="lazy"><figcaption data-i18n="g14">x</figcaption></figure>
-      <figure class="reveal"><img src="/images/shrimp-pasta-800.jpg" srcset="/images/shrimp-pasta-800.jpg 800w, /images/shrimp-pasta.jpg 1400w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Linguine with whole shrimps" loading="lazy"><figcaption data-i18n="g15">x</figcaption></figure>
-      <figure class="reveal"><img src="/images/seafood-pizza-800.jpg" srcset="/images/seafood-pizza-800.jpg 800w, /images/seafood-pizza.jpg 1400w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Seafood pizza with fresh mussels" loading="lazy"><figcaption data-i18n="g16">x</figcaption></figure>
-      <figure class="reveal"><img src="/images/shrimp-saganaki-800.jpg" srcset="/images/shrimp-saganaki-800.jpg 800w, /images/shrimp-saganaki.jpg 1400w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Shrimp saganaki in tomato sauce" loading="lazy"><figcaption data-i18n="g17">x</figcaption></figure>
-      <figure class="reveal"><img src="/images/seafood-tomato-800.jpg" srcset="/images/seafood-tomato-800.jpg 800w, /images/seafood-tomato.jpg 1400w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="800" height="600" alt="Mixed seafood in tomato sauce" loading="lazy"><figcaption data-i18n="g18">x</figcaption></figure>
+      <figure class="reveal"><img src="/images/dorada-platter-800.jpg" srcset="/images/dorada-platter-800.jpg 800w, /images/dorada-platter.jpg 1400w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="800" height="600" alt="Whole grilled dorada with grilled vegetables" loading="lazy"><figcaption data-i18n="g13">Whole dorada, grilled</figcaption></figure>
+      <figure class="reveal"><img src="/images/octopus-stew-800.jpg" srcset="/images/octopus-stew-800.jpg 800w, /images/octopus-stew.jpg 1400w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Octopus stewed in tomato sauce" loading="lazy"><figcaption data-i18n="g14">Octopus in tomato sauce</figcaption></figure>
+      <figure class="reveal"><img src="/images/shrimp-pasta-800.jpg" srcset="/images/shrimp-pasta-800.jpg 800w, /images/shrimp-pasta.jpg 1400w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Linguine with whole shrimps" loading="lazy"><figcaption data-i18n="g15">Shrimp linguine</figcaption></figure>
+      <figure class="reveal"><img src="/images/seafood-pizza-800.jpg" srcset="/images/seafood-pizza-800.jpg 800w, /images/seafood-pizza.jpg 1400w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Seafood pizza with fresh mussels" loading="lazy"><figcaption data-i18n="g16">Seafood pizza</figcaption></figure>
+      <figure class="reveal"><img src="/images/shrimp-saganaki-800.jpg" srcset="/images/shrimp-saganaki-800.jpg 800w, /images/shrimp-saganaki.jpg 1400w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Shrimp saganaki in tomato sauce" loading="lazy"><figcaption data-i18n="g17">Shrimp saganaki</figcaption></figure>
+      <figure class="reveal"><img src="/images/seafood-tomato-800.jpg" srcset="/images/seafood-tomato-800.jpg 800w, /images/seafood-tomato.jpg 1400w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="800" height="600" alt="Mixed seafood in tomato sauce" loading="lazy"><figcaption data-i18n="g18">Seafood in tomato sauce</figcaption></figure>
     </div>
   </div>
 </section>
@@ -513,17 +526,17 @@ footer.site{background:var(--charcoal-deep);color:#a6adb9;padding:54px 0 30px}
     <div class="rev-grid">
       <article class="rev-card reveal">
         <div class="stars">★★★★★</div>
-        <p data-i18n="r1_q">"If you're in Ouranoupoli, this taverna is the best choice in the area. The food is always fresh."</p>
+        <p data-i18n="r1_q">“If you're in Ouranoupoli, this taverna is the best choice in the area. The food is always fresh.”</p>
         <footer><div class="avatar">P</div><div><b>Petru T.</b><span data-i18n="r_lg">Local Guide · Google</span></div></footer>
       </article>
       <article class="rev-card reveal">
         <div class="stars">★★★★★</div>
-        <p data-i18n="r2_q">"A taverna right on the seafront with fresh, delicious dishes — and the portions are huge."</p>
+        <p data-i18n="r2_q">“A taverna right on the seafront with fresh, delicious dishes — and the portions are huge.”</p>
         <footer><div class="avatar">C</div><div><b>Cristinel D.</b><span data-i18n="r_lg2">Local Guide · Google</span></div></footer>
       </article>
       <article class="rev-card reveal">
         <div class="stars">★★★★★</div>
-        <p data-i18n="r3_q">"Fantastic food, the staff is great and we had an amazing time!"</p>
+        <p data-i18n="r3_q">“Fantastic food, the staff is great and we had an amazing time!”</p>
         <footer><div class="avatar">G</div><div><b data-i18n="r3_n">Google visitor</b><span data-i18n="r3_t">Visitor update · Google</span></div></footer>
       </article>
     </div>
@@ -620,8 +633,9 @@ footer.site{background:var(--charcoal-deep);color:#a6adb9;padding:54px 0 30px}
 /* ---------------- i18n ---------------- */
 const I18N = {
 en: {
-  _title: "Waves Coffee & Food — Restaurant & Café in Ouranoupoli, Gateway to Mount Athos",
-  _desc: "Waves Coffee & Food — beachfront taverna, grill & all-day café in Ouranoupoli, the gateway to Mount Athos. Fresh seafood, charcoal grill, breakfast from 05:30 before the ferry. 4.9★ on Google.",
+  h1_tail:" — Coffee &amp; Food, beachfront restaurant in Ouranoupoli, near Mount Athos",
+  _title: "Waves Coffee & Food — Ouranoupoli Restaurant by Mount Athos",
+  _desc: "Beachfront taverna & café in Ouranoupoli, by the Mount Athos ferry. Fresh seafood, Greek grill, breakfast from 05:30. 4.9★ on Google.",
   tagline:"☀ Breakfast before the Mount Athos ferry — seaside meals when you return.",
   faq_pill:"GOOD TO KNOW", faq_h2:"Before you sail to Athos", faq_script:"questions pilgrims ask us",
   fq1:"What time do you open before the boat to Mount Athos?",
@@ -677,8 +691,9 @@ en: {
   foot_c:"© 2026 Waves Coffee &amp; Food · Ouranoupoli, Halkidiki", foot_ph:"Photos from our kitchen &amp; guests"
 },
 el: {
-  _title: "Waves Coffee & Food — Ταβέρνα & καφέ στην Ουρανούπολη, δίπλα στο Άγιο Όρος",
-  _desc: "Παραλιακή ταβέρνα, ψησταριά και all-day καφέ στην Ουρανούπολη, στο λιμάνι για το Άγιο Όρος. Φρέσκα θαλασσινά, σχάρα στα κάρβουνα, πρωινό από τις 05:30. 4,9★ στο Google.",
+  h1_tail:" — Coffee &amp; Food, παραλιακή ταβέρνα στην Ουρανούπολη, δίπλα στο Άγιο Όρος",
+  _title: "Waves Coffee & Food — Ταβέρνα στην Ουρανούπολη, Άγιο Όρος",
+  _desc: "Παραλιακή ταβέρνα και καφέ στην Ουρανούπολη, δίπλα στο καράβι για το Άγιο Όρος. Φρέσκα θαλασσινά, σχάρα, πρωινό από 05:30. 4,9★ στο Google.",
   tagline:"☀ Πρωινό πριν το καράβι για τον Άθω — θαλασσινές γεύσεις όταν επιστρέψετε.",
   faq_pill:"ΚΑΛΟ ΝΑ ΤΟ ΞΕΡΕΤΕ", faq_h2:"Πριν σαλπάρετε για τον Άθω", faq_script:"όσα μας ρωτούν οι προσκυνητές",
   fq1:"Τι ώρα ανοίγετε πριν το καράβι για το Άγιο Όρος;",
@@ -734,8 +749,9 @@ el: {
   foot_c:"© 2026 Waves Coffee &amp; Food · Ουρανούπολη, Χαλκιδική", foot_ph:"Φωτογραφίες από την κουζίνα &amp; τους πελάτες μας"
 },
 ro: {
-  _title: "Waves Coffee & Food — Restaurant în Ouranoupoli, la plecarea spre Muntele Athos",
-  _desc: "Tavernă pe plajă în Ouranoupoli (Uranopolis), lângă portul spre Muntele Athos. Fructe de mare proaspete, grătar, mic dejun de la 05:30 înainte de feribot. 4,9★ pe Google.",
+  h1_tail:" — Coffee &amp; Food, restaurant pe plajă în Ouranoupoli, lângă Muntele Athos",
+  _title: "Waves Coffee & Food — Restaurant Ouranoupoli, Muntele Athos",
+  _desc: "Tavernă pe plajă în Ouranoupoli, lângă feribotul spre Muntele Athos. Fructe de mare, grătar grecesc, mic dejun de la 05:30. 4,9★ pe Google.",
   tagline:"☀ Mic dejun înainte de feribotul spre Muntele Athos — masă lângă mare la întoarcere.",
   faq_pill:"BINE DE ȘTIUT", faq_h2:"Înainte să pleci spre Athos", faq_script:"ce ne întreabă pelerinii",
   fq1:"La ce oră deschideți înainte de feribotul spre Muntele Athos?",
@@ -793,8 +809,9 @@ ro: {
 ,
 bg: {
   tagline:"☀ Закуска преди ферибота за Света гора — море и вкусна храна на връщане.",
-  _title:"Waves Coffee & Food – Урануполи | Таверна преди Света гора",
-  _desc:"Таверна и кафене Waves в Урануполи, Халкидики — отворено от 05:30 за закуска преди ферибота за Света гора. Прясна риба, скара на жар, 4.9★ от 414 отзива.",
+  h1_tail:" — Coffee &amp; Food, ресторант на плажа в Урануполи, до Света гора",
+  _title:"Waves Coffee & Food — Таверна в Урануполи, до Света гора",
+  _desc:"Таверна на плажа в Урануполи, до ферибота за Света гора. Пресни морски дарове, скара, закуска от 05:30. 4,9★ в Google.",
   _strip:["Прясна риба всеки ден", "Скара на жар", "Закуска от 05:30", "Ръчно приготвени палачинки", "Freddo край морето"],
   nav_story:"Нашата история",
   nav_sig:"Специалитети",
@@ -894,8 +911,9 @@ bg: {
 },
 sr: {
   tagline:"☀ Doručak pre trajekta za Svetu Goru — obrok kraj mora po povratku.",
-  _title:"Waves Coffee & Food – taverna na plaži, Uranopolis (Sveta Gora)",
-  _desc:"Taverna i roštilj na plaži u Uranopolisu, luci za Svetu Goru i Hilandar. Otvoreno od 05:30 – doručak pre trajekta, sveža riba i morski plodovi, 4.9★.",
+  h1_tail:" — Coffee &amp; Food, restoran na plaži u Uranopolisu, kod Svete Gore",
+  _title:"Waves Coffee & Food — Taverna u Uranopolisu, Sveta Gora",
+  _desc:"Taverna na plaži u Uranopolisu, kod trajekta za Svetu Goru. Sveži plodovi mora, roštilj, doručak od 05:30. 4,9★ na Google-u.",
   _strip:["Sveža riba svakog dana", "Roštilj na ćumur", "Doručak od 05:30", "Domaće palačinke", "Freddo kraj mora"],
   nav_story:"Naša priča",
   nav_sig:"Specijaliteti",
@@ -995,8 +1013,9 @@ sr: {
 },
 ru: {
   tagline:"☀ Завтрак перед паромом на Афон — обед у моря по возвращении.",
-  _title:"Waves Coffee & Food — таверна в Уранополисе у парома на Афон",
-  _desc:"Таверна и кафе Waves Coffee & Food на берегу Уранополиса (Халкидики): завтрак с 05:30 до парома на Афон, свежая рыба и гриль, 4.9★ в Google. +30 2377 071088.",
+  h1_tail:" — Coffee &amp; Food, ресторан на пляже в Уранополисе, рядом с Афоном",
+  _title:"Waves Coffee & Food — Таверна в Уранополисе, Афон",
+  _desc:"Таверна на пляже в Уранополисе, у парома на Афон. Свежие морепродукты, гриль, завтрак с 05:30. 4,9★ в Google.",
   _strip:["Свежая рыба каждый день", "Гриль на углях", "Завтрак с 05:30", "Домашние блинчики", "Фреддо у моря"],
   nav_story:"Наша история",
   nav_sig:"Фирменные блюда",
@@ -2739,6 +2758,12 @@ burgerBtn.addEventListener('click',()=>{
 });
 nav.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');burgerBtn.setAttribute('aria-expanded','false')}));
 /* small screens: EN/RO stay in the bar; the other languages live in the burger panel (.lang-sw-more) */
+/* mobile: menu categories collapse into an accordion */
+document.getElementById('fullmenu').addEventListener('click', e=>{
+  if(!matchMedia('(max-width:640px)').matches) return;
+  const h = e.target.closest('.fm-card h3');
+  if(h){ const open = h.parentElement.classList.toggle('open'); h.setAttribute('aria-expanded', String(open)); }
+});
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>

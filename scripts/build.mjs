@@ -21,6 +21,15 @@ const HTMLLANG = { el: 'el', ro: 'ro', bg: 'bg', sr: 'sr-Latn', ru: 'ru' };
 function esc(t) { return t.replace(/&(?!(amp|lt|gt|quot|#\d+);)/g, '&amp;'); }
 function stripTags(t) { return t.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&'); }
 
+function applyI18n(html, dict) {
+  for (const [key, val] of Object.entries(dict)) {
+    if (key.startsWith('_')) continue;
+    const re = new RegExp(`(<(\\w+)([^>]*data-i18n="${key}"[^>]*)>)[\\s\\S]*?(</\\2>)`);
+    html = html.replace(re, `$1${val}$4`);
+  }
+  return html;
+}
+
 function renderMenuHtml(lang) {
   return MENU.map(cat => {
     const img = cat.img ? `<div class="mc-img"><img src="${cat.img}" alt="" loading="lazy"></div>` : '';
@@ -48,11 +57,11 @@ for (const lang of ['el', 'ro', 'bg', 'sr', 'ru']) {
   html = html.replace(/(<meta property="og:description" id="og-desc" content=")[^"]*(")/, `$1${esc(dict._desc).replace(/"/g, '&quot;')}$2`);
 
   // translate every data-i18n element in place (tag-aware so nested <b>/<br> survive)
-  for (const [key, val] of Object.entries(dict)) {
-    if (key.startsWith('_')) continue;
-    const re = new RegExp(`(<(\\w+)([^>]*data-i18n="${key}"[^>]*)>)[\\s\\S]*?(</\\2>)`);
-    html = html.replace(re, `$1${val}$4`);
-  }
+  html = applyI18n(html, dict);
+
+  // localized entity URLs in the Restaurant schema
+  html = html.replace('"url": "https://waveshalkidiki.vercel.app/",', `"url": "${BASE}/${lang}/",`);
+  html = html.replace('"hasMenu": "https://waveshalkidiki.vercel.app/#menu",', `"hasMenu": "${BASE}/${lang}/#menu",`);
 
   // pre-render marquee strip and the full menu
   const seq = dict._strip.map(t => `<span>${t}</span><span class="sep">✦</span>`).join('');
@@ -78,13 +87,14 @@ for (const lang of ['el', 'ro', 'bg', 'sr', 'ru']) {
   console.log(`built /${lang}/ (${(html.length / 1024).toFixed(0)} KB) — ${dict._title}`);
 }
 
-// EN root: same master with the marquee + full menu pre-rendered (language stays saved/en)
+// EN root: master fully rendered in English (marquee, full menu and every data-i18n string)
 {
   const dict = I18N.en;
   let html = master;
   const seq = dict._strip.map(t => `<span>${t}</span><span class="sep">✦</span>`).join('');
   html = html.replace('<div class="strip-track" id="strip-track"></div>', `<div class="strip-track" id="strip-track">${seq}${seq}</div>`);
   html = html.replace('<div class="fullmenu" id="fullmenu"></div>', `<div class="fullmenu" id="fullmenu">${renderMenuHtml('en')}</div>`);
+  html = applyI18n(html, dict);
   writeFileSync(join(ROOT, 'index.html'), html);
   console.log(`built / (root, EN prerendered, ${(html.length / 1024).toFixed(0)} KB)`);
 }

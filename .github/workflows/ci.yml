@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Rebuild all pages from _src/master.html
+        run: node scripts/build.mjs
+      - name: Generated pages must match the committed ones (deterministic build)
+        run: git diff --exit-code
+      - name: Sanity checks
+        run: |
+          test -f robots.txt && test -f sitemap.xml && test -f favicon.png
+          for f in index.html el/index.html ro/index.html bg/index.html sr/index.html ru/index.html; do
+            grep -q 'rel="canonical"' "$f"
+            grep -q 'hreflang="x-default"' "$f"
+            grep -q '"@type": "Restaurant"' "$f"
+          done
+          ! grep -rn 'data-i18n="g1[3-8]">x<' index.html el ro bg sr ru
+          echo "all sanity checks passed"
