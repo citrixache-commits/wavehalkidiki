@@ -39,7 +39,7 @@ function renderMenuHtml(lang) {
       const d = it.d ? `<div class="fm-desc">${it.d[lang] || it.d.en}</div>` : '';
       return `<li><div class="fm-row"><span class="nm">${nm}</span><span class="ld"></span><span class="pr">${it.p} €</span></div>${d}</li>`;
     }).join('');
-    return `<div class="fm-card">${img}<h3>${cat.t[lang] || cat.t.en}</h3><span class="script">${cat.s[lang] || cat.s.en}</span><ul>${rows}</ul></div>`;
+    return `<div class="fm-card">${img}<h3><button type="button" class="fm-t" aria-expanded="true">${cat.t[lang] || cat.t.en}</button></h3><span class="script">${cat.s[lang] || cat.s.en}</span><ul>${rows}</ul></div>`;
   }).join('');
 }
 
