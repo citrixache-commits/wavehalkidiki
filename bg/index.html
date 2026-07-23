@@ -147,6 +147,7 @@ nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(29,34,42,.86);bac
 .nav-links a{color:#dfe3e9;font-size:.88rem;font-weight:500;transition:color .2s}
 .nav-links a:hover{color:var(--orange)}
 .lang-sw{display:flex;gap:5px;flex-wrap:wrap}
+.lang-sw-more{display:none}
 .lang-sw button{background:none;border:1px solid rgba(255,255,255,.25);color:#dfe3e9;font:600 .72rem var(--sans);letter-spacing:.05em;padding:.55rem .68rem;border-radius:8px;cursor:pointer;transition:all .2s}
 .lang-sw button:hover{border-color:var(--orange);color:var(--orange)}
 .lang-sw button.on{background:var(--orange);color:var(--charcoal-deep);border-color:var(--orange)}
@@ -338,8 +339,11 @@ footer.site{background:var(--charcoal-deep);color:#a6adb9;padding:54px 0 30px}
 @media(max-width:640px){
   .sec{padding:64px 0}
   .nav-in{gap:12px}
-  .lang-sw{display:none}
-  nav.open .nav-links .lang-sw{display:flex;flex-wrap:wrap;margin:6px 0 0}
+  .logo small{display:none}
+  .lang-sw{margin-left:auto}
+  .nav-in > .lang-sw button{display:none}
+  .nav-in > .lang-sw button[data-lang="en"],.nav-in > .lang-sw button[data-lang="ro"]{display:inline-block}
+  nav.open .nav-links .lang-sw-more{display:flex;flex-wrap:wrap;margin-top:6px}
   .hero{padding-top:130px}
   .hero-art{height:400px;max-width:340px}
   .ring-1{width:280px;height:280px;top:0;left:50%;right:auto;margin-left:-140px}
@@ -381,6 +385,12 @@ footer.site{background:var(--charcoal-deep);color:#a6adb9;padding:54px 0 30px}
       <a href="#gallery" data-i18n="nav_gal">Галерия</a>
       <a href="#reviews" data-i18n="nav_rev">Отзиви</a>
       <a href="#visit" data-i18n="nav_visit">Посетете ни</a>
+      <div class="lang-sw lang-sw-more" role="group" aria-label="More languages">
+        <button data-lang="el" aria-pressed="false">ΕΛ</button>
+        <button data-lang="bg" aria-pressed="false">BG</button>
+        <button data-lang="sr" aria-pressed="false">SR</button>
+        <button data-lang="ru" aria-pressed="false">RU</button>
+      </div>
     </div>
     <div class="lang-sw" id="langsw" role="group" aria-label="Language">
       <button data-lang="en" aria-pressed="false">EN</button>
@@ -2752,17 +2762,7 @@ burgerBtn.addEventListener('click',()=>{
   burgerBtn.setAttribute('aria-expanded', String(open));
 });
 nav.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');burgerBtn.setAttribute('aria-expanded','false')}));
-/* on small screens the language switcher lives inside the burger panel */
-const langSw=document.getElementById('langsw');
-const navLinks=document.getElementById('navlinks');
-const navCall=document.querySelector('.nav-call');
-const mqSmall=matchMedia('(max-width:640px)');
-function placeLangSw(){
-  if(mqSmall.matches) navLinks.appendChild(langSw);
-  else navLinks.parentNode.insertBefore(langSw, navCall);
-}
-if(mqSmall.addEventListener) mqSmall.addEventListener('change', placeLangSw); else mqSmall.addListener(placeLangSw);
-placeLangSw();
+/* small screens: EN/RO stay in the bar; the other languages live in the burger panel (.lang-sw-more) */
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
