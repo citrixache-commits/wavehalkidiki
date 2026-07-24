@@ -24,6 +24,16 @@ const LANGS = ['el', 'ro', 'bg', 'sr', 'ru'];
 const LASTMOD = '2026-07-24';   // bump when the content changes
 const LOCALE = { en: 'en_US', el: 'el_GR', ro: 'ro_RO', bg: 'bg_BG', sr: 'sr_RS', ru: 'ru_RU' };
 const HTMLLANG = { en: 'en', el: 'el', ro: 'ro', bg: 'bg', sr: 'sr-Latn', ru: 'ru' };
+// the two faces that paint the headline and the body copy above the fold,
+// per script, so they start downloading with the stylesheet instead of after it
+const PRELOAD = {
+  en: ['playfair-latin-600_800', 'poppins-latin-400'],
+  ro: ['playfair-latin-600_800', 'poppins-latin-400'],
+  sr: ['playfair-latin-600_800', 'poppins-latin-400'],
+  el: ['notoserif-greek-600_800', 'notosans-greek-300_700'],
+  bg: ['playfair-cyrillic-600_800', 'notosans-cyrillic-300_700'],
+  ru: ['playfair-cyrillic-600_800', 'notosans-cyrillic-300_700'],
+};
 
 const master = readFileSync(join(ROOT, '_src', 'master.html'), 'utf8');
 const hash = (buf) => createHash('sha256').update(buf).digest('hex').slice(0, 8);
@@ -276,7 +286,8 @@ function buildPage(lang) {
   html = html.replace('<div class="fullmenu" id="fullmenu"></div>', `<div class="fullmenu" id="fullmenu">${renderMenuHtml(lang)}</div>`);
 
   // inline code -> shared, content-hashed assets
-  html = html.replace(/<style>[\s\S]*?<\/style>/, `<link rel="stylesheet" href="/assets/${cssName}">`);
+  const preloads = PRELOAD[lang].map(f => `<link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/${f}.woff2">`).join('\n');
+  html = html.replace(/<style>[\s\S]*?<\/style>/, `${preloads}\n<link rel="stylesheet" href="/assets/${cssName}">`);
   html = html.replace(/<script>\n[\s\S]*?<\/script>\n<\/body>/, `<script src="/assets/${jsName}" defer></script>\n</body>`);
 
   html = versionImages(toPicture(autoSrcset(html)));
