@@ -1,9 +1,28 @@
-/* fonts: activate the print-media stylesheet without an inline handler */
-document.querySelectorAll('link[data-fonts]').forEach(l => { l.media = 'all'; });
-
 /* ---------------- i18n ---------------- */
 const I18N = {
 en: {
+  pol_1:"Breakfast",
+  pol_2:"Fast Food",
+  pol_3:"Lunch",
+  pol_4:"Drinks",
+  a11y_skip:"Skip to main content",
+  a11y_lang:"Language",
+  a11y_langmore:"More languages",
+  a11y_burger:"Menu",
+  a11y_pause:"Pause the scrolling banner",
+  a11y_play:"Resume the scrolling banner",
+  map_title:"Waves Coffee & Food on the map",
+  alt_hero1:"Mixed seafood platter with shrimp, calamari, mussels and grilled octopus",
+  alt_hero2:"Char-grilled octopus with balsamic glaze",
+  alt_facade:"The Waves Coffee & Food terrace, with the sea framed through the entrance",
+  alt_interior:"The covered terrace dining room with its wicker lamps",
+  alt_sign:"The Waves Coffee and Food signboard",
+  chips_label:"Jump to a menu category",
+  drinks_note:"Beer, wine and spirits are on the printed drinks list — just ask your server.",
+  menu_updated:"Menu prices as of July 2026",
+  nf_title:"Page not found",
+  nf_text:"This page does not exist — but the seafood does.",
+  nf_home:"Back to the homepage",
   h1_tail:" — Coffee &amp; Food, beachfront restaurant in Ouranoupoli, near Mount Athos",
   _title: "Waves Coffee & Food — Ouranoupoli Restaurant by Mount Athos",
   _desc: "Beachfront taverna & café in Ouranoupoli, by the Mount Athos ferry. Fresh seafood, Greek grill, breakfast from 05:30. 4.9★ on Google.",
@@ -36,14 +55,6 @@ en: {
   s4_h:"Whole Grilled Squid", s4_p:"Crosshatched and charred, with seasoned fries and lemon.",
   menu_pill:"THE MENU", menu_h2:"Eat with the tide", menu_script:"the complete menu",
   note_3:"Prices as shown on our in-house menu — small seasonal changes possible; today's menu always applies at the table.",
-  m1_h:"From the Sea", m1_s:"fresh every day",
-  m1_1:"Grilled octopus", m1_2:"Fritto misto", m1_3:"Langoustines", m1_4:"Grilled sardines &amp; gavros", m1_5:"Whole fish of the day",
-  m2_h:"From the Grill", m2_s:"smoke &amp; fire",
-  m2_1:"Mixed grill platters", m2_2:"Pork ribs &amp; chops", m2_3:"Souvlaki &amp; gyros", m2_4:"Burgers with potatoes <b>10 €</b>", m2_5:"Gyros pizza",
-  m3_h:"Morning &amp; Coffee", m3_s:"from 05:30",
-  m3_1:"Greek breakfast plates", m3_2:"Omelettes &amp; fried eggs", m3_3:"Warm cheese pies", m3_4:"Freddo espresso &amp; cappuccino", m3_5:"Fresh orange juice",
-  m4_h:"Sweet Waves", m4_s:"crepes &amp; more",
-  m4_1:"Crepes with ice cream", m4_2:"American pancakes <b>10 €</b>", m4_3:"Savory pancakes <b>12 €</b>", m4_4:"Waffles &amp; sundaes", m4_5:"Baklava &amp; walnut cake",
   note_1:"<b>Around 10–15 € per person.</b> Fresh fish priced daily — ask for today's catch. Bread 2 € · pita 1 €.",
   note_2:"Dine-in · Takeaway · Contactless delivery",
   gal_pill:"GALLERY", gal_h2:"Straight from our plates", gal_script:"no filters needed",
@@ -62,6 +73,28 @@ en: {
   foot_c:"© 2026 Waves Coffee &amp; Food · Ouranoupoli, Halkidiki", foot_ph:"Photos from our kitchen &amp; guests"
 },
 el: {
+  pol_1:"Πρωινό",
+  pol_2:"Fast Food",
+  pol_3:"Μεσημεριανό",
+  pol_4:"Ποτά",
+  a11y_skip:"Μετάβαση στο κύριο περιεχόμενο",
+  a11y_lang:"Γλώσσα",
+  a11y_langmore:"Περισσότερες γλώσσες",
+  a11y_burger:"Μενού",
+  a11y_pause:"Παύση κυλιόμενου banner",
+  a11y_play:"Συνέχιση κυλιόμενου banner",
+  map_title:"Το Waves Coffee & Food στον χάρτη",
+  alt_hero1:"Θαλασσινή πιατέλα με γαρίδες, καλαμάρι, μύδια και ψητό χταπόδι",
+  alt_hero2:"Χταπόδι στα κάρβουνα με κρέμα βαλσάμικου",
+  alt_facade:"Η βεράντα του Waves Coffee & Food, με τη θάλασσα να φαίνεται μέσα από την είσοδο",
+  alt_interior:"Ο σκεπαστός χώρος της βεράντας με τα ψάθινα φωτιστικά",
+  alt_sign:"Η πινακίδα του Waves Coffee and Food",
+  chips_label:"Μετάβαση σε κατηγορία μενού",
+  drinks_note:"Μπίρα, κρασί και ποτά υπάρχουν στον έντυπο κατάλογο ποτών — ζητήστε τον από το προσωπικό.",
+  menu_updated:"Τιμές καταλόγου, Ιούλιος 2026",
+  nf_title:"Η σελίδα δεν βρέθηκε",
+  nf_text:"Αυτή η σελίδα δεν υπάρχει — τα θαλασσινά όμως υπάρχουν.",
+  nf_home:"Επιστροφή στην αρχική",
   h1_tail:" — Coffee &amp; Food, παραλιακή ταβέρνα στην Ουρανούπολη, δίπλα στο Άγιο Όρος",
   _title: "Waves Coffee & Food — Ταβέρνα στην Ουρανούπολη, Άγιο Όρος",
   _desc: "Παραλιακή ταβέρνα και καφέ στην Ουρανούπολη, δίπλα στο καράβι για το Άγιο Όρος. Φρέσκα θαλασσινά, σχάρα, πρωινό από 05:30. 4,9★ στο Google.",
@@ -94,14 +127,6 @@ el: {
   s4_h:"Ολόκληρο καλαμάρι σχάρας", s4_p:"Χαρακωμένο και καψαλισμένο, με πατάτες και λεμόνι.",
   menu_pill:"ΤΟ ΜΕΝΟΥ", menu_h2:"Στον ρυθμό του κύματος", menu_script:"όλο το μενού",
   note_3:"Οι τιμές όπως αναγράφονται στον κατάλογο του καταστήματος — ενδέχεται μικρές εποχιακές αλλαγές· ισχύει πάντα ο κατάλογος στο τραπέζι.",
-  m1_h:"Από τη θάλασσα", m1_s:"φρέσκο κάθε μέρα",
-  m1_1:"Χταπόδι σχάρας", m1_2:"Fritto misto", m1_3:"Καραβίδες", m1_4:"Σαρδέλες &amp; γαύρος σχάρας", m1_5:"Ψάρι ημέρας",
-  m2_h:"Από τη σχάρα", m2_s:"φωτιά &amp; κάπνα",
-  m2_1:"Ποικιλίες σχάρας", m2_2:"Παϊδάκια &amp; μπριζόλες", m2_3:"Σουβλάκι &amp; γύρος", m2_4:"Burgers με πατάτες <b>10 €</b>", m2_5:"Πίτσα γύρος",
-  m3_h:"Πρωινό &amp; καφές", m3_s:"από τις 05:30",
-  m3_1:"Ελληνικά πρωινά", m3_2:"Ομελέτες &amp; αυγά τηγανητά", m3_3:"Ζεστές τυρόπιτες", m3_4:"Freddo espresso &amp; cappuccino", m3_5:"Φρέσκος χυμός πορτοκάλι",
-  m4_h:"Γλυκά κύματα", m4_s:"κρέπες &amp; άλλα",
-  m4_1:"Κρέπες με παγωτό", m4_2:"Αμερικάνικα pancakes <b>10 €</b>", m4_3:"Αλμυρά pancakes <b>12 €</b>", m4_4:"Βάφλες &amp; sundae", m4_5:"Μπακλαβάς &amp; καρυδόπιτα",
   note_1:"<b>Περίπου 10–15 € το άτομο.</b> Το φρέσκο ψάρι τιμολογείται καθημερινά — ρωτήστε για την ψαριά της ημέρας. Ψωμί 2 € · πίτα 1 €.",
   note_2:"Στο κατάστημα · Take away · Ανέπαφη παράδοση",
   gal_pill:"ΓΚΑΛΕΡΙ", gal_h2:"Κατευθείαν από τα πιάτα μας", gal_script:"χωρίς φίλτρα",
@@ -120,6 +145,28 @@ el: {
   foot_c:"© 2026 Waves Coffee &amp; Food · Ουρανούπολη, Χαλκιδική", foot_ph:"Φωτογραφίες από την κουζίνα &amp; τους πελάτες μας"
 },
 ro: {
+  pol_1:"Mic dejun",
+  pol_2:"Fast Food",
+  pol_3:"Prânz",
+  pol_4:"Băuturi",
+  a11y_skip:"Salt la conținutul principal",
+  a11y_lang:"Limbă",
+  a11y_langmore:"Mai multe limbi",
+  a11y_burger:"Meniu",
+  a11y_pause:"Oprește bannerul derulant",
+  a11y_play:"Pornește bannerul derulant",
+  map_title:"Waves Coffee & Food pe hartă",
+  alt_hero1:"Platou de fructe de mare cu creveți, calamar, midii și caracatiță la grătar",
+  alt_hero2:"Caracatiță la grătar cu glazură de balsamic",
+  alt_facade:"Terasa Waves Coffee & Food, cu marea încadrată de intrare",
+  alt_interior:"Sala de pe terasa acoperită, cu lămpile din răchită",
+  alt_sign:"Firma Waves Coffee and Food",
+  chips_label:"Salt la o categorie din meniu",
+  drinks_note:"Berea, vinul și băuturile spirtoase sunt în lista tipărită de băuturi — cereți-o ospătarului.",
+  menu_updated:"Prețuri din meniu, iulie 2026",
+  nf_title:"Pagina nu a fost găsită",
+  nf_text:"Pagina asta nu există — dar fructele de mare, da.",
+  nf_home:"Înapoi la pagina principală",
   h1_tail:" — Coffee &amp; Food, restaurant pe plajă în Ouranoupoli, lângă Muntele Athos",
   _title: "Waves Coffee & Food — Restaurant Ouranoupoli, Muntele Athos",
   _desc: "Tavernă pe plajă în Ouranoupoli, lângă feribotul spre Muntele Athos. Fructe de mare, grătar grecesc, mic dejun de la 05:30. 4,9★ pe Google.",
@@ -152,14 +199,6 @@ ro: {
   s4_h:"Calamar întreg la grătar", s4_p:"Crestat și rumenit, cu cartofi și lămâie.",
   menu_pill:"MENIUL", menu_h2:"Mănânci în ritmul mării", menu_script:"meniul complet",
   note_3:"Prețurile sunt cele din meniul tipărit al localului — pot apărea mici modificări de sezon; la masă e valabil întotdeauna meniul zilei.",
-  m1_h:"Din mare", m1_s:"proaspăt în fiecare zi",
-  m1_1:"Caracatiță la grătar", m1_2:"Fritto misto", m1_3:"Langustine", m1_4:"Sardine &amp; gavros la grătar", m1_5:"Peștele zilei",
-  m2_h:"De pe grătar", m2_s:"foc &amp; fum",
-  m2_1:"Platouri mixte la grătar", m2_2:"Coaste &amp; cotlete de porc", m2_3:"Souvlaki &amp; gyros", m2_4:"Burgeri cu cartofi <b>10 €</b>", m2_5:"Pizza gyros",
-  m3_h:"Dimineața &amp; cafea", m3_s:"de la 05:30",
-  m3_1:"Mic dejun grecesc", m3_2:"Omlete &amp; ochiuri", m3_3:"Plăcinte calde cu brânză", m3_4:"Freddo espresso &amp; cappuccino", m3_5:"Fresh de portocale",
-  m4_h:"Valuri dulci", m4_s:"clătite &amp; nu numai",
-  m4_1:"Crepes cu înghețată", m4_2:"Pancakes americane <b>10 €</b>", m4_3:"Pancakes sărate <b>12 €</b>", m4_4:"Vafe &amp; sundae", m4_5:"Baclava &amp; prăjitură cu nuci",
   note_1:"<b>Aproximativ 10–15 € de persoană.</b> Peștele proaspăt are preț zilnic — întreabă de captura zilei. Pâine 2 € · lipie 1 €.",
   note_2:"În local · La pachet · Livrare fără contact",
   gal_pill:"GALERIE", gal_h2:"Direct din farfuriile noastre", gal_script:"fără filtre",
@@ -179,6 +218,28 @@ ro: {
 }
 ,
 bg: {
+  pol_1:"Закуска",
+  pol_2:"Фаст фуд",
+  pol_3:"Обяд",
+  pol_4:"Напитки",
+  a11y_skip:"Към основното съдържание",
+  a11y_lang:"Език",
+  a11y_langmore:"Още езици",
+  a11y_burger:"Меню",
+  a11y_pause:"Спри движещия се банер",
+  a11y_play:"Продължи движещия се банер",
+  map_title:"Waves Coffee & Food на картата",
+  alt_hero1:"Плато с морски дарове – скариди, калмари, миди и печен октопод",
+  alt_hero2:"Октопод на жар с балсамова глазура",
+  alt_facade:"Терасата на Waves Coffee & Food, с гледка към морето през входа",
+  alt_interior:"Покритата тераса с плетените лампи",
+  alt_sign:"Табелата на Waves Coffee and Food",
+  chips_label:"Към категория от менюто",
+  drinks_note:"Бира, вино и алкохол ще намерите в печатната карта за напитки — просто попитайте сервитьора.",
+  menu_updated:"Цени от менюто към юли 2026",
+  nf_title:"Страницата не е намерена",
+  nf_text:"Тази страница не съществува — но морските дарове ги има.",
+  nf_home:"Обратно към началната страница",
   tagline:"☀ Закуска преди ферибота за Света гора — море и вкусна храна на връщане.",
   h1_tail:" — Coffee &amp; Food, ресторант на плажа в Урануполи, до Света гора",
   _title:"Waves Coffee & Food — Таверна в Урануполи, до Света гора",
@@ -240,7 +301,6 @@ bg: {
   g9:"Гофрета с всичко",
   g10:"Гаврос и картофки",
   g11:"Лятна мелба",
-  g12:"Гледката от вашата маса",
   g13:"Цяла ципура на скара", g14:"Октопод в доматен сос", g15:"Лингуини със скариди", g16:"Пица с морски дарове", g17:"Скариди саганаки", g18:"Морски дарове в доматен сос", rev_pill:"ОТЗИВИ",
   rev_h2:"От уста на уста",
   rev_script:"направо от Google",
@@ -281,6 +341,28 @@ bg: {
   foot_ph:"Снимки от нашата кухня и нашите гости"
 },
 sr: {
+  pol_1:"Doručak",
+  pol_2:"Fast Food",
+  pol_3:"Ručak",
+  pol_4:"Pića",
+  a11y_skip:"Pređi na glavni sadržaj",
+  a11y_lang:"Jezik",
+  a11y_langmore:"Više jezika",
+  a11y_burger:"Meni",
+  a11y_pause:"Zaustavi pokretni baner",
+  a11y_play:"Nastavi pokretni baner",
+  map_title:"Waves Coffee & Food na mapi",
+  alt_hero1:"Plato morskih plodova sa škampima, kalamarima, dagnjama i pečenom hobotnicom",
+  alt_hero2:"Hobotnica sa žara u balzamiko glazuri",
+  alt_facade:"Terasa Waves Coffee & Food, s morem koje se vidi kroz ulaz",
+  alt_interior:"Pokrivena terasa sa pletenim lampama",
+  alt_sign:"Tabla Waves Coffee and Food",
+  chips_label:"Pređi na kategoriju menija",
+  drinks_note:"Pivo, vino i žestoka pića su na štampanoj karti pića — samo pitajte osoblje.",
+  menu_updated:"Cene iz menija, jul 2026",
+  nf_title:"Stranica nije pronađena",
+  nf_text:"Ova stranica ne postoji — ali morski plodovi postoje.",
+  nf_home:"Vrati se na početnu",
   tagline:"☀ Doručak pre trajekta za Svetu Goru — obrok kraj mora po povratku.",
   h1_tail:" — Coffee &amp; Food, restoran na plaži u Uranopolisu, kod Svete Gore",
   _title:"Waves Coffee & Food — Taverna u Uranopolisu, Sveta Gora",
@@ -342,7 +424,6 @@ sr: {
   g9:"Vafl, sa svime",
   g10:"Gavros i pomfrit",
   g11:"Letnji sladoledni kup",
-  g12:"Pogled sa vašeg stola",
   g13:"Cela orada sa roštilja", g14:"Hobotnica u paradajz sosu", g15:"Linguine sa škampima", g16:"Pica sa plodovima mora", g17:"Škampi saganaki", g18:"Plodovi mora u paradajz sosu", rev_pill:"RECENZIJE",
   rev_h2:"Šta kažu gosti",
   rev_script:"direktno sa Google-a",
@@ -383,6 +464,28 @@ sr: {
   foot_ph:"Fotografije iz naše kuhinje i od naših gostiju"
 },
 ru: {
+  pol_1:"Завтрак",
+  pol_2:"Фастфуд",
+  pol_3:"Обед",
+  pol_4:"Напитки",
+  a11y_skip:"Перейти к основному содержанию",
+  a11y_lang:"Язык",
+  a11y_langmore:"Другие языки",
+  a11y_burger:"Меню",
+  a11y_pause:"Остановить движущийся баннер",
+  a11y_play:"Возобновить движущийся баннер",
+  map_title:"Waves Coffee & Food на карте",
+  alt_hero1:"Ассорти морепродуктов с креветками, кальмарами, мидиями и осьминогом на гриле",
+  alt_hero2:"Осьминог на углях под бальзамической глазурью",
+  alt_facade:"Терраса Waves Coffee & Food, море видно через вход",
+  alt_interior:"Крытая терраса с плетёными лампами",
+  alt_sign:"Вывеска Waves Coffee and Food",
+  chips_label:"Перейти к категории меню",
+  drinks_note:"Пиво, вино и крепкие напитки есть в печатной карте напитков — просто спросите официанта.",
+  menu_updated:"Цены в меню на июль 2026",
+  nf_title:"Страница не найдена",
+  nf_text:"Этой страницы не существует — а вот морепродукты существуют.",
+  nf_home:"Вернуться на главную",
   tagline:"☀ Завтрак перед паромом на Афон — обед у моря по возвращении.",
   h1_tail:" — Coffee &amp; Food, ресторан на пляже в Уранополисе, рядом с Афоном",
   _title:"Waves Coffee & Food — Таверна в Уранополисе, Афон",
@@ -444,7 +547,6 @@ ru: {
   g9:"Вафля со всем и сразу",
   g10:"Гаврос и картофель фри",
   g11:"Летний сандей",
-  g12:"Вид с вашего столика",
   g13:"Дорада на гриле", g14:"Осьминог в томатном соусе", g15:"Лингвини с креветками", g16:"Пицца с морепродуктами", g17:"Креветки саганаки", g18:"Морепродукты в томатном соусе", rev_pill:"ОТЗЫВЫ",
   rev_h2:"Из первых уст",
   rev_script:"прямо из Google",
@@ -681,12 +783,12 @@ const MENU = [
    },
    {
     "n": {
-     "en": "Gyros (pork or chicken)",
-     "el": "Γύρος (χοιρινός / κοτόπουλο)",
-     "ro": "Gyros (porc sau pui)",
-     "bg": "Гирос (свинско или пилешко)",
-     "sr": "Gyros (svinjetina ili piletina)",
-     "ru": "Гирос (свинина или курица)"
+     "en": "Gyros (pork)",
+     "el": "Γύρος (χοιρινός)",
+     "ro": "Gyros (porc)",
+     "bg": "Гирос (свинско)",
+     "sr": "Gyros (svinjetina)",
+     "ru": "Гирос (свинина)"
     },
     "p": "12"
    },
@@ -2100,12 +2202,26 @@ function renderMenu(lang){
 }
 
 const LPATH = {en:'/', el:'/el/', ro:'/ro/', bg:'/bg/', sr:'/sr/', ru:'/ru/'};
+function renderChips(lang){
+  const box = document.getElementById('fmchips');
+  if(!box) return;
+  box.innerHTML = MENU.map((cat,i)=>`<button type="button" data-cat="${i}">${cat.t[lang]||cat.t.en}</button>`).join('');
+}
+
 function setLang(lang){
   renderMenu(lang);
+  renderChips(lang);
   const dict = I18N[lang] || I18N.en;
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const k = el.getAttribute('data-i18n');
     if(dict[k] !== undefined) el.innerHTML = dict[k];
+  });
+  /* attributes: data-i18n-attr="alt:key" or "aria-label:key;title:key2" */
+  document.querySelectorAll('[data-i18n-attr]').forEach(el=>{
+    el.getAttribute('data-i18n-attr').split(';').forEach(pair=>{
+      const [attr, key] = pair.split(':').map(x=>x.trim());
+      if(attr && dict[key] !== undefined) el.setAttribute(attr, dict[key]);
+    });
   });
   const items = dict._strip;
   const seq = items.map(t=>`<span>${t}</span><span class="sep">✦</span>`).join('');
@@ -2113,26 +2229,33 @@ function setLang(lang){
   document.documentElement.lang = lang === 'sr' ? 'sr-Latn' : lang;
   document.title = dict._title;
   document.getElementById('meta-desc').setAttribute('content', dict._desc);
-  document.querySelectorAll('.lang-sw button').forEach(b=>{
-    const on = b.dataset.lang===lang;
-    b.classList.toggle('on', on);
-    b.setAttribute('aria-pressed', String(on));
+  document.querySelectorAll('.lang-sw a').forEach(a=>{
+    const on = a.dataset.lang===lang;
+    a.classList.toggle('on', on);
+    if(on) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
   });
   try{ localStorage.setItem('wave-lang', lang); }catch(e){}
 }
-document.querySelectorAll('.lang-sw button').forEach(b=>b.addEventListener('click',()=>{
-  const l = b.dataset.lang;
+document.querySelectorAll('.lang-sw a').forEach(a=>a.addEventListener('click',e=>{
+  const l = a.dataset.lang;
   try{ localStorage.setItem('wave-lang', l); }catch(e){}
-  if(location.protocol === 'http:' || location.protocol === 'https:'){
-    location.href = LPATH[l] || '/';
-  } else {
-    setLang(l);
-  }
+  if(location.protocol === 'file:'){ e.preventDefault(); setLang(l); }   // local preview only
 }));
 let saved = null;
 try{ saved = localStorage.getItem('wave-lang'); }catch(e){}
-const FORCE = document.documentElement.getAttribute('data-lang') || null;
-setLang(FORCE || (saved && I18N[saved] ? saved : 'en'));
+const BOOT = document.documentElement.getAttribute('data-lang') || 'en';
+const WANTED = BOOT || (saved && I18N[saved] ? saved : 'en');
+if (WANTED === BOOT) {
+  /* the server already rendered this language: only the live state needs setting */
+  document.querySelectorAll('.lang-sw a').forEach(a=>{
+    const on = a.dataset.lang===BOOT;
+    a.classList.toggle('on', on);
+    if(on) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+  });
+  syncMenuAria();
+} else {
+  setLang(WANTED);
+}
 
 /* ---------------- nav & reveal ---------------- */
 const nav=document.getElementById('nav');
@@ -2156,6 +2279,28 @@ document.getElementById('fullmenu').addEventListener('click', e=>{
   if(!b || !matchMedia('(max-width:640px)').matches) return;
   const open = b.closest('.fm-card').classList.toggle('open');
   b.setAttribute('aria-expanded', String(open));
+});
+/* a chip opens its category and brings it into view */
+document.getElementById('fmchips').addEventListener('click', e=>{
+  const chip = e.target.closest('button[data-cat]');
+  if(!chip) return;
+  const card = document.querySelectorAll('#fullmenu .fm-card')[Number(chip.dataset.cat)];
+  if(!card) return;
+  if(matchMedia('(max-width:640px)').matches && !card.classList.contains('open')){
+    card.classList.add('open');
+    card.querySelector('.fm-t')?.setAttribute('aria-expanded','true');
+  }
+  card.scrollIntoView({block:'start', behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
+});
+/* pause control for the moving banner */
+const stripEl = document.querySelector('.strip');
+const pauseBtn = document.getElementById('strip-pause');
+if(pauseBtn) pauseBtn.addEventListener('click', ()=>{
+  const paused = stripEl.classList.toggle('paused');
+  pauseBtn.setAttribute('aria-pressed', String(paused));
+  const dict = I18N[document.documentElement.getAttribute('data-lang')] || I18N.en;
+  pauseBtn.setAttribute('aria-label', paused ? dict.a11y_play : dict.a11y_pause);
+  pauseBtn.firstElementChild.textContent = paused ? '▶' : '❙❙';
 });
 const mqMenu = matchMedia('(max-width:640px)');
 if(mqMenu.addEventListener) mqMenu.addEventListener('change', syncMenuAria); else mqMenu.addListener(syncMenuAria);

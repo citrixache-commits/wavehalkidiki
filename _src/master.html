@@ -28,11 +28,6 @@
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23262C35'/%3E%3Crect x='6' y='6' width='52' height='52' fill='none' stroke='white' stroke-width='2.5'/%3E%3Cpath d='M33 15c-3 2.4-3 5-.6 7.2 2.2 1.9 2.2 3.9.4 5.8' stroke='white' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M22 32.5h20c0 6.5-4.2 10.3-10 10.3s-10-3.8-10-10.3z' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath d='M42 33.5c3.4 0 5.3 1.7 5.3 4s-2 4.4-5.5 3.4' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M19 47.5c3 2.4 8.3 3.6 13 3.6s10-1.2 13-3.6' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" media="print" data-fonts>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap"></noscript>
 <script type="application/ld+json" id="ld-restaurant">
 {
   "@context": "https://schema.org",
@@ -76,6 +71,7 @@
 }
 </script>
 <style>
+/*__FONTS__*/
 :root{
   --charcoal:#262C35;
   --charcoal-deep:#1D222A;
@@ -85,10 +81,10 @@
   --cream:#FAF6F0;
   --white:#FFFFFF;
   --ink:#22262E;
-  --muted:#6B7280;
-  --serif:'Playfair Display',serif;
-  --script:'Dancing Script',cursive;
-  --sans:'Poppins',sans-serif;
+  --muted:#666C79;
+  --serif:'Playfair Display','Noto Serif',serif;
+  --script:'Dancing Script','Caveat',cursive;
+  --sans:'Poppins','Noto Sans',sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:92px}
@@ -98,10 +94,9 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}
   .reveal{opacity:1!important;transform:none!important;transition:none!important}
   .sig-card,.menu-card,.gal img,.btn{transition:none!important}
 }
-:focus-visible{outline:3px solid var(--orange);outline-offset:2px;border-radius:4px}
+:focus-visible{outline:3px solid var(--orange-deep);outline-offset:2px;border-radius:4px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 /* WCAG contrast on light backgrounds */
-.fm-row .pr{color:var(--orange-deep)}
 .fm-card .script,#menu .sec-head .script,#faq .sec-head .script,#story .script{color:var(--orange-deep)}
 body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.7;font-size:16px}
 img{max-width:100%;display:block}
@@ -207,17 +202,6 @@ nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(29,34,42,.86);bac
 .sig-arrow{position:absolute;top:262px;right:22px;width:52px;height:52px;border-radius:50%;background:var(--orange);display:grid;place-items:center;color:var(--charcoal-deep);font-size:1.2rem;box-shadow:0 8px 20px rgba(0,0,0,.35)}
 
 /* ---------- menu ---------- */
-.menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.menu-card{background:#fff;border-radius:26px;padding:30px 26px;box-shadow:0 14px 34px rgba(38,44,53,.08);transition:transform .3s}
-.menu-card:hover{transform:translateY(-6px)}
-.menu-card .mc-img{width:96px;height:96px;border-radius:50%;overflow:hidden;border:5px solid rgba(240,160,75,.35);margin-bottom:18px}
-.menu-card .mc-img img{width:100%;height:100%;object-fit:cover}
-.menu-card h3{font-size:1.3rem;margin-bottom:2px}
-.menu-card .script{font-size:1.05rem;display:block;margin-bottom:14px}
-.menu-card ul{list-style:none}
-.menu-card li{font-size:.86rem;padding:.42rem 0;border-bottom:1px dashed #e8e0d4;display:flex;justify-content:space-between;gap:10px;color:#3d4350}
-.menu-card li:last-child{border-bottom:0}
-.menu-card li b{font-weight:600;color:var(--orange);white-space:nowrap}
 .menu-note{margin-top:40px;background:var(--charcoal);color:#fff;border-radius:22px;padding:26px 34px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
 .menu-note p{font-size:.92rem;color:#cfd4dc}
 .menu-note p b{color:var(--orange)}
@@ -243,12 +227,13 @@ nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(29,34,42,.86);bac
 li.fm-hdr{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-deep);padding:.95rem 0 .25rem;border-bottom:0}
 
 /* ---------- gallery ---------- */
-.gal{columns:4;column-gap:18px}
+.gal{columns:3;column-gap:18px}
 .gal figure{margin:0 0 18px;border-radius:22px;overflow:hidden;position:relative;break-inside:avoid}
 .gal img{width:100%;height:auto;transition:transform .5s}
 .gal figure:hover img{transform:scale(1.05)}
 .gal figcaption{position:absolute;inset:auto 0 0 0;padding:30px 16px 12px;font-size:.78rem;font-weight:500;color:#fff;background:linear-gradient(transparent,rgba(29,34,42,.85));opacity:0;transition:opacity .3s}
 .gal figure:hover figcaption{opacity:1}
+@media(hover:none){.gal figcaption{opacity:1}}
 
 /* ---------- reviews ---------- */
 .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -292,10 +277,41 @@ footer.site{background:var(--charcoal-deep);color:#a6adb9;padding:54px 0 30px}
 .faq-list details{background:#fff;border-radius:18px;box-shadow:0 10px 26px rgba(38,44,53,.07);margin-bottom:14px;overflow:hidden}
 .faq-list summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;font-weight:600;font-size:.98rem}
 .faq-list summary::-webkit-details-marker{display:none}
-.faq-list summary::after{content:'+';font-family:var(--serif);font-size:1.5rem;color:var(--orange);flex:none;line-height:1}
+.faq-list summary::after{content:'+';font-family:var(--serif);font-size:1.5rem;color:var(--orange-deep);flex:none;line-height:1}
 .faq-list details[open] summary::after{content:'–'}
 .faq-list details p{padding:0 24px 20px;color:var(--muted);font-size:.92rem}
+/* the card clips its own overflow, so draw the ring inside the summary box */
+.faq-list summary:focus-visible{outline-offset:-3px}
 .hero .tagline{display:inline-block;margin:.2rem 0 1.1rem;font-weight:500;color:var(--orange-soft);font-size:1.02rem}
+
+
+/* skip link */
+.skip{position:absolute;left:-9999px;top:0;z-index:99;background:var(--orange);color:var(--charcoal-deep);font-weight:600;font-size:.9rem;padding:.7rem 1.2rem;border-radius:0 0 10px 0}
+.skip:focus{left:0}
+/* the language switcher is a set of links now, styled as the buttons were */
+.lang-sw a{background:none;border:1px solid rgba(255,255,255,.25);color:#dfe3e9;font:600 .68rem var(--sans);letter-spacing:.03em;padding:.5rem .55rem;border-radius:8px;cursor:pointer;transition:all .2s;text-decoration:none;line-height:1}
+.lang-sw a:hover{border-color:var(--orange);color:var(--orange)}
+.lang-sw a.on{background:var(--orange);color:var(--charcoal-deep);border-color:var(--orange)}
+/* pause control for the moving banner (WCAG 2.2.2) */
+.strip{position:relative}
+.strip-pause{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;border:1px solid rgba(29,34,42,.35);background:rgba(255,255,255,.55);color:var(--charcoal-deep);font-size:.6rem;line-height:1;cursor:pointer;display:grid;place-items:center}
+.strip-pause:hover{background:#fff}
+.strip.paused .strip-track{animation-play-state:paused}
+/* a call button that survives the mobile breakpoint */
+.nav-call-sm{display:none;width:44px;height:44px;border-radius:50%;background:var(--orange);color:var(--charcoal-deep);place-items:center;flex:none}
+/* jump straight to a menu category on small screens */
+.fm-chips{display:none;gap:8px;overflow-x:auto;padding:2px 2px 14px;margin-bottom:6px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.fm-chips::-webkit-scrollbar{display:none}
+.fm-chips button{flex:none;background:#fff;border:1px solid #e6dccd;color:#3d4350;font:600 .8rem var(--sans);padding:.55rem .9rem;border-radius:999px;cursor:pointer;white-space:nowrap}
+.fm-chips button:hover{border-color:var(--orange-deep);color:var(--orange-deep)}
+
+
+/* 404 */
+.nf-page{min-height:100vh;display:grid;place-content:center;justify-items:center;text-align:center;gap:14px;padding:40px 24px;background:var(--charcoal);color:#fff}
+.nf-page h1{font-size:clamp(2rem,6vw,3.4rem)}
+.nf-lead{color:#c9cfd8;max-width:34ch}
+.nf-langs{display:flex;gap:10px;color:#8d95a1;font-size:.8rem;letter-spacing:.1em}
+.nf-langs a{color:var(--orange)}
 
 /* ---------- responsive ---------- */
 @media(max-width:1020px){
@@ -304,7 +320,7 @@ footer.site{background:var(--charcoal-deep);color:#a6adb9;padding:54px 0 30px}
   .ring-1{width:360px;height:360px;right:20px}
   .ci-1{width:320px;height:320px;right:40px}
   .ci-2{width:190px;height:190px;right:290px}
-  .sig-grid,.menu-grid{grid-template-columns:repeat(2,1fr)}
+  .sig-grid{grid-template-columns:repeat(2,1fr)}
   .fullmenu{columns:2}
   .gal{columns:3}
   .story-grid{grid-template-columns:1fr;gap:80px}
@@ -316,6 +332,7 @@ footer.site{background:var(--charcoal-deep);color:#a6adb9;padding:54px 0 30px}
 }
 @media(max-width:1180px){
   .nav-links,.nav-call{display:none}
+  .nav-call-sm{display:grid}
   .burger{display:block;padding:12px}
   nav.open .nav-links{display:flex;position:absolute;top:100%;left:0;right:0;background:var(--charcoal-deep);flex-direction:column;padding:18px 24px;gap:16px}
   .lang-sw{margin-left:auto}
@@ -327,23 +344,38 @@ footer.site{background:var(--charcoal-deep);color:#a6adb9;padding:54px 0 30px}
   .fm-card.open .fm-t::after{content:'–'}
   .fm-card ul{display:none}
   .fm-card.open ul{display:block}
-  .nav-in{gap:12px}
-  .logo small{display:none}
-  .lang-sw{margin-left:auto}
-  .nav-in > .lang-sw button{display:none}
-  .nav-in > .lang-sw button[data-lang="en"],.nav-in > .lang-sw button[data-lang="ro"]{display:inline-block}
+  .nav-in{gap:8px}
+  .logo .script{font-size:1.45rem}
+  .logo .badge{width:32px;height:32px}
+  .lang-sw{margin-left:auto;gap:3px;flex-wrap:nowrap}
+  .lang-sw a{padding:.42rem .4rem;font-size:.64rem}
+  .nav-call-sm{width:40px;height:40px}
+  .burger{padding:9px}
+  .nav-in > .lang-sw a{display:none}
+  /* EN + RO always, plus whichever language the visitor is actually reading */
+  .nav-in > .lang-sw a[data-lang="en"],.nav-in > .lang-sw a[data-lang="ro"],.nav-in > .lang-sw a.on{display:inline-block}
+  .fm-chips{display:flex}
   nav.open .nav-links .lang-sw-more{display:flex;flex-wrap:wrap;margin-top:6px}
-  .hero{padding-top:130px}
-  .hero-art{height:400px;max-width:340px}
-  .ring-1{width:280px;height:280px;top:0;left:50%;right:auto;margin-left:-140px}
-  .ci-1{width:250px;height:250px;top:20px;left:50%;right:auto;margin-left:-125px}
-  .ci-2{width:150px;height:150px;right:auto;left:6px;bottom:6px}
+  .hero{padding:94px 0 40px}
+  .hero h1{font-size:clamp(2.8rem,12.5vw,3.4rem)}
+  .hero .script-line{font-size:clamp(1.7rem,7.5vw,2.2rem);margin:.1rem 0 .7rem}
+  /* the tagline already carries the pitch on a phone; the long lead would push the food below the fold */
+  .hero p.lead{display:none}
+  .hero .tagline{font-size:.95rem;margin:.2rem 0 .2rem}
+  .hero-cta{margin:1rem 0 1.1rem;gap:10px}
+  .hero-stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:4px 20px}
+  .hero-stats div strong{font-size:1.1rem}
+  .hero-stats div span{font-size:.7rem}
+  .hero-art{height:320px;max-width:290px;margin-top:10px}
+  .ring-1{width:238px;height:238px;top:0;left:50%;right:auto;margin-left:-119px}
+  .ci-1{width:212px;height:212px;top:17px;left:50%;right:auto;margin-left:-106px}
+  .ci-2{width:126px;height:126px;right:auto;left:4px;bottom:4px}
   .signboard{left:auto;right:0;top:auto;bottom:14px;width:112px}
   .pol-row{gap:14px}
   .pol img{height:128px}
   .pol figcaption{font-size:1.2rem}
   .dots{display:none}
-  .sig-grid,.menu-grid,.feat{grid-template-columns:1fr}
+  .sig-grid,.feat{grid-template-columns:1fr}
   .fullmenu{columns:1}
   .gal{columns:2;column-gap:12px}
   .story-art .float{right:-6px;width:180px;height:180px}
@@ -352,6 +384,8 @@ footer.site{background:var(--charcoal-deep);color:#a6adb9;padding:54px 0 30px}
 
 /* utility classes (kept out of style="" so the CSP can forbid inline styles) */
 picture{display:contents}
+/* no Greek handwriting face exists in this family set: the Greek pages use an italic serif for the same accent role */
+html[lang="el"] .script{font-family:var(--serif);font-style:italic;letter-spacing:.01em}
 .story-h2{font-size:clamp(2.1rem,4vw,3rem);margin:1rem 0 .2rem}
 .story-sc{font-size:1.9rem;margin-bottom:1.2rem}
 .t-muted{color:var(--muted)}
@@ -364,6 +398,7 @@ picture{display:contents}
 </style>
 </head>
 <body>
+<a class="skip" href="#main" data-i18n="a11y_skip">Skip to main content</a>
 
 <nav id="nav">
   <div class="nav-in">
@@ -386,23 +421,24 @@ picture{display:contents}
       <a href="#gallery" data-i18n="nav_gal">Gallery</a>
       <a href="#reviews" data-i18n="nav_rev">Reviews</a>
       <a href="#visit" data-i18n="nav_visit">Visit Us</a>
-      <div class="lang-sw lang-sw-more" role="group" aria-label="More languages">
-        <button data-lang="el" aria-pressed="false">ΕΛ</button>
-        <button data-lang="bg" aria-pressed="false">BG</button>
-        <button data-lang="sr" aria-pressed="false">SR</button>
-        <button data-lang="ru" aria-pressed="false">RU</button>
+      <div class="lang-sw lang-sw-more" role="group" aria-label="More languages" data-i18n-attr="aria-label:a11y_langmore">
+        <a href="/el/" data-lang="el" hreflang="el">ΕΛ</a>
+        <a href="/bg/" data-lang="bg" hreflang="bg">BG</a>
+        <a href="/sr/" data-lang="sr" hreflang="sr-Latn">SR</a>
+        <a href="/ru/" data-lang="ru" hreflang="ru">RU</a>
       </div>
     </div>
-    <div class="lang-sw" id="langsw" role="group" aria-label="Language">
-      <button data-lang="en" aria-pressed="false">EN</button>
-      <button data-lang="el" aria-pressed="false">ΕΛ</button>
-      <button data-lang="ro" aria-pressed="false">RO</button>
-      <button data-lang="bg" aria-pressed="false">BG</button>
-      <button data-lang="sr" aria-pressed="false">SR</button>
-      <button data-lang="ru" aria-pressed="false">RU</button>
+    <div class="lang-sw" id="langsw" role="group" aria-label="Language" data-i18n-attr="aria-label:a11y_lang">
+      <a href="/" data-lang="en" hreflang="en">EN</a>
+      <a href="/el/" data-lang="el" hreflang="el">ΕΛ</a>
+      <a href="/ro/" data-lang="ro" hreflang="ro">RO</a>
+      <a href="/bg/" data-lang="bg" hreflang="bg">BG</a>
+      <a href="/sr/" data-lang="sr" hreflang="sr-Latn">SR</a>
+      <a href="/ru/" data-lang="ru" hreflang="ru">RU</a>
     </div>
     <a class="nav-call" href="tel:+302377071088">☎ +30 2377 071088</a>
-    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
+    <a class="nav-call-sm" href="tel:+302377071088" aria-label="Call us" data-i18n-attr="aria-label:cta_call"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .5 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.5-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1l-2.2 2.2z" fill="currentColor"/></svg></a>
+    <button class="burger" id="burger" aria-label="Menu" data-i18n-attr="aria-label:a11y_burger" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
@@ -416,7 +452,7 @@ picture{display:contents}
       <span class="tagline" data-i18n="tagline">☀ Breakfast before the Mount Athos ferry — seaside meals when you return.</span>
       <div class="hero-cta">
         <a class="btn btn-orange" href="#menu" data-i18n="cta_menu">See the Menu</a>
-        <a class="btn btn-ghost" href="https://maps.app.goo.gl/TWM8Gz17om45NjVWA" target="_blank" rel="noopener" data-i18n="cta_dir">Get Directions</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=40.3255019%2C23.9797725" target="_blank" rel="noopener" data-i18n="cta_dir">Get Directions</a>
       </div>
       <div class="hero-stats">
         <div><strong>4.9 ★</strong><span data-i18n="st_rev">414 Google reviews</span></div>
@@ -426,35 +462,36 @@ picture{display:contents}
     </div>
     <div class="hero-art">
       <div class="ring ring-1"></div>
-      <div class="circle-img ci-1"><img src="/images/seafood-platter-800.jpg" sizes="380px" width="600" height="800" fetchpriority="high" alt="Mixed seafood platter — shrimp, calamari, mussels and grilled octopus"></div>
-      <div class="circle-img ci-2"><img src="/images/octopus-balsamic-800.jpg" sizes="230px" width="600" height="800" alt="Char-grilled octopus with balsamic glaze"></div>
-      <img class="signboard" src="/images/waves-sign-520.jpg" alt="Waves Coffee and Food — the signboard logo" width="520" height="520" loading="lazy">
+      <div class="circle-img ci-1"><img src="/images/seafood-platter-800.jpg" sizes="380px" width="600" height="800" fetchpriority="high" alt="Mixed seafood platter — shrimp, calamari, mussels and grilled octopus" data-i18n-attr="alt:alt_hero1"></div>
+      <div class="circle-img ci-2"><img src="/images/octopus-balsamic-800.jpg" sizes="230px" width="600" height="800" alt="Char-grilled octopus with balsamic glaze" data-i18n-attr="alt:alt_hero2"></div>
+      <img class="signboard" src="/images/waves-sign-520.jpg" alt="Waves Coffee and Food — the signboard logo" data-i18n-attr="alt:alt_sign" width="520" height="520" loading="lazy">
       <div class="dots"></div>
     </div>
   </div>
 </header>
 
-<div class="strip" aria-hidden="true">
-  <div class="strip-track" id="strip-track"></div>
+<div class="strip">
+  <div class="strip-track" id="strip-track" aria-hidden="true"></div>
+  <button class="strip-pause" id="strip-pause" type="button" aria-pressed="false" aria-label="Pause the scrolling banner" data-i18n-attr="aria-label:a11y_pause"><span aria-hidden="true">❙❙</span></button>
 </div>
 
-<main>
+<main id="main">
 
 <section class="polas" aria-label="Breakfast, fast food, lunch and drinks at Waves">
   <div class="wrap pol-row">
-    <figure class="pol reveal pol-r1"><img src="/images/greek-breakfast-800.jpg" sizes="(max-width:640px) 40vw, 150px" alt="Greek breakfast plate" width="600" height="800" loading="lazy"><figcaption>Breakfast</figcaption></figure>
-    <figure class="pol reveal pol-r2"><img src="/images/fried-platter-800.jpg" sizes="(max-width:640px) 40vw, 150px" alt="Fried seafood platter" width="800" height="450" loading="lazy"><figcaption>Fast Food</figcaption></figure>
-    <figure class="pol reveal pol-r3"><img src="/images/grill-platter-800.jpg" sizes="(max-width:640px) 40vw, 150px" alt="Grilled seafood platter" width="600" height="800" loading="lazy"><figcaption>Lunch</figcaption></figure>
-    <figure class="pol reveal pol-r4"><img src="/images/coolers-800.jpg" sizes="(max-width:640px) 40vw, 150px" alt="House coolers and lemonade" width="450" height="800" loading="lazy"><figcaption>Drinks</figcaption></figure>
+    <figure class="pol reveal pol-r1"><img src="/images/greek-breakfast-800.jpg" sizes="(max-width:640px) 40vw, 150px" alt="" width="600" height="800" loading="lazy"><figcaption data-i18n="pol_1">Breakfast</figcaption></figure>
+    <figure class="pol reveal pol-r2"><img src="/images/fried-platter-800.jpg" sizes="(max-width:640px) 40vw, 150px" alt="" data-i18n-attr="alt:s2_h" width="800" height="450" loading="lazy"><figcaption data-i18n="pol_2">Fast Food</figcaption></figure>
+    <figure class="pol reveal pol-r3"><img src="/images/grill-platter-800.jpg" sizes="(max-width:640px) 40vw, 150px" alt="" width="600" height="800" loading="lazy"><figcaption data-i18n="pol_3">Lunch</figcaption></figure>
+    <figure class="pol reveal pol-r4"><img src="/images/coolers-800.jpg" sizes="(max-width:640px) 40vw, 150px" alt="" width="450" height="800" loading="lazy"><figcaption data-i18n="pol_4">Drinks</figcaption></figure>
   </div>
 </section>
 
 <section class="sec" id="story">
   <div class="wrap story-grid">
     <div class="story-art reveal">
-      <svg class="zig" width="90" height="40" viewBox="0 0 90 40" fill="none"><path d="M2 12l11-9 11 9 11-9 11 9 11-9 11 9 11-9" stroke="#262C35" stroke-width="3"/><path d="M2 32l11-9 11 9 11-9 11 9 11-9 11 9 11-9" stroke="#F0A04B" stroke-width="3"/></svg>
-      <div class="main"><img src="/images/facade-800.jpg" sizes="(max-width:1020px) 100vw, 560px" width="600" height="800" alt="Waves Coffee & Food facade with the sea framed through the terrace" loading="lazy"></div>
-      <div class="float"><img src="/images/interior-800.jpg" sizes="240px" width="800" height="450" alt="Covered terrace dining room with wicker lamps" loading="lazy"></div>
+      <svg class="zig" aria-hidden="true" width="90" height="40" viewBox="0 0 90 40" fill="none"><path d="M2 12l11-9 11 9 11-9 11 9 11-9 11 9 11-9" stroke="#262C35" stroke-width="3"/><path d="M2 32l11-9 11 9 11-9 11 9 11-9 11 9 11-9" stroke="#F0A04B" stroke-width="3"/></svg>
+      <div class="main"><img src="/images/facade-800.jpg" sizes="(max-width:1020px) 100vw, 560px" width="600" height="800" alt="Waves Coffee & Food facade with the sea framed through the terrace" data-i18n-attr="alt:alt_facade" loading="lazy"></div>
+      <div class="float"><img src="/images/interior-800.jpg" sizes="240px" width="800" height="450" alt="Covered terrace dining room with wicker lamps" data-i18n-attr="alt:alt_interior" loading="lazy"></div>
     </div>
     <div class="reveal">
       <span class="pill" data-i18n="story_pill">OUR STORY</span>
@@ -462,10 +499,10 @@ picture{display:contents}
       <div class="script story-sc" data-i18n="story_script">where the day begins with the waves</div>
       <p class="t-muted" data-i18n="story_p">Steps from the beach in Ouranoupoli — the last village before Mount Athos — Waves serves the Halkidiki day in full: sunrise coffee and warm pastries, long seaside lunches of grilled fish and octopus, and slow evenings of mixed grills, crepes and cocktails under the wicker lamps.</p>
       <div class="feat">
-        <div><div class="ic">🐟</div><div><h3 data-i18n="f1_h">From the sea, daily</h3><p data-i18n="f1_p">Octopus, calamari, sardines and whole fish, straight to the charcoal.</p></div></div>
-        <div><div class="ic">🔥</div><div><h3 data-i18n="f2_h">The Greek grill</h3><p data-i18n="f2_p">Souvlaki, ribs, bifteki and chops — generous portions, honest prices.</p></div></div>
-        <div><div class="ic">☕</div><div><h3 data-i18n="f3_h">Coffee from 05:30</h3><p data-i18n="f3_p">First freddo before the ferry to Athos leaves the pier.</p></div></div>
-        <div><div class="ic">🌊</div><div><h3 data-i18n="f4_h">Right on the water</h3><p data-i18n="f4_p">Terrace tables with the Singitic Gulf for a horizon.</p></div></div>
+        <div><div class="ic" aria-hidden="true">🐟</div><div><h3 data-i18n="f1_h">From the sea, daily</h3><p data-i18n="f1_p">Octopus, calamari, sardines and whole fish, straight to the charcoal.</p></div></div>
+        <div><div class="ic" aria-hidden="true">🔥</div><div><h3 data-i18n="f2_h">The Greek grill</h3><p data-i18n="f2_p">Souvlaki, ribs, bifteki and chops — generous portions, honest prices.</p></div></div>
+        <div><div class="ic" aria-hidden="true">☕</div><div><h3 data-i18n="f3_h">Coffee from 05:30</h3><p data-i18n="f3_p">First freddo before the ferry to Athos leaves the pier.</p></div></div>
+        <div><div class="ic" aria-hidden="true">🌊</div><div><h3 data-i18n="f4_h">Right on the water</h3><p data-i18n="f4_p">Terrace tables with the Singitic Gulf for a horizon.</p></div></div>
       </div>
     </div>
   </div>
@@ -479,10 +516,10 @@ picture{display:contents}
       <div class="script sc-lg" data-i18n="sig_script">from the Aegean, with love</div>
     </div>
     <div class="sig-grid">
-      <article class="sig-card reveal"><img src="/images/octopus-grill-800.jpg" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px" width="800" height="600" alt="Grilled octopus with balsamic" loading="lazy"><span class="sig-arrow">↗</span><div class="sig-body"><h3 data-i18n="s1_h">Grilled Octopus</h3><p data-i18n="s1_p">Char-grilled tentacle over greens, shaved onion and a balsamic glaze.</p></div></article>
-      <article class="sig-card reveal"><img src="/images/fried-platter-800.jpg" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px" width="800" height="450" alt="Fried seafood platter" loading="lazy"><span class="sig-arrow">↗</span><div class="sig-body"><h3 data-i18n="s2_h">Fisherman's Platter</h3><p data-i18n="s2_p">Calamari, prawns, anchovies, mussels and octopus over oregano fries.</p></div></article>
-      <article class="sig-card reveal"><img src="/images/dorada-platter-800.jpg" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px" width="800" height="600" alt="Whole grilled dorada with grilled vegetables and lemon" loading="lazy"><span class="sig-arrow">↗</span><div class="sig-body"><h3 data-i18n="s3_h">Grilled Sardines</h3><p data-i18n="s3_p">Topped with cherry tomato, onion and herbs — simple, smoky, perfect.</p></div></article>
-      <article class="sig-card reveal"><img src="/images/grilled-squid-800.jpg" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px" width="600" height="800" alt="Whole grilled squid with fries and lemon" loading="lazy"><span class="sig-arrow">↗</span><div class="sig-body"><h3 data-i18n="s4_h">Whole Grilled Squid</h3><p data-i18n="s4_p">Crosshatched and charred, with seasoned fries and lemon.</p></div></article>
+      <article class="sig-card reveal"><img src="/images/octopus-grill-800.jpg" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px" width="800" height="600" alt="Grilled octopus with balsamic" data-i18n-attr="alt:s1_h" loading="lazy"><span class="sig-arrow" aria-hidden="true">↗</span><div class="sig-body"><h3 data-i18n="s1_h">Grilled Octopus</h3><p data-i18n="s1_p">Char-grilled tentacle over greens, shaved onion and a balsamic glaze.</p></div></article>
+      <article class="sig-card reveal"><img src="/images/fried-platter-800.jpg" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px" width="800" height="450" alt="Fried seafood platter" loading="lazy"><span class="sig-arrow" aria-hidden="true">↗</span><div class="sig-body"><h3 data-i18n="s2_h">Fisherman's Platter</h3><p data-i18n="s2_p">Calamari, prawns, anchovies, mussels and octopus over oregano fries.</p></div></article>
+      <article class="sig-card reveal"><img src="/images/dorada-platter-800.jpg" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px" width="800" height="600" alt="Whole grilled dorada with grilled vegetables and lemon" data-i18n-attr="alt:s3_h" loading="lazy"><span class="sig-arrow" aria-hidden="true">↗</span><div class="sig-body"><h3 data-i18n="s3_h">Grilled Sardines</h3><p data-i18n="s3_p">Topped with cherry tomato, onion and herbs — simple, smoky, perfect.</p></div></article>
+      <article class="sig-card reveal"><img src="/images/grilled-squid-800.jpg" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px" width="600" height="800" alt="Whole grilled squid with fries and lemon" data-i18n-attr="alt:s4_h" loading="lazy"><span class="sig-arrow" aria-hidden="true">↗</span><div class="sig-body"><h3 data-i18n="s4_h">Whole Grilled Squid</h3><p data-i18n="s4_p">Crosshatched and charred, with seasoned fries and lemon.</p></div></article>
     </div>
   </div>
 </section>
@@ -494,10 +531,13 @@ picture{display:contents}
       <h2 data-i18n="menu_h2">Eat with the tide</h2>
       <div class="script sc-lg" data-i18n="menu_script">breakfast, lunch &amp; dinner</div>
     </div>
+    <div class="fm-chips" id="fmchips" role="group" aria-label="Jump to a menu category" data-i18n-attr="aria-label:chips_label"></div>
     <div class="fullmenu" id="fullmenu"></div>
     <div class="menu-note reveal">
       <p data-i18n="note_1"><b>Around 10–15 € per person.</b> Fresh fish priced daily — ask for today's catch.</p>
       <p data-i18n="note_2">Dine-in · Takeaway · Contactless delivery</p>
+      <p data-i18n="drinks_note">Beer, wine and spirits are on the printed drinks list — just ask your server.</p>
+      <p class="fine" data-i18n="menu_updated">Menu prices as of July 2026</p>
       <p class="fine" data-i18n="note_3">Prices as shown on our in-house menu — small seasonal changes possible; today's menu always applies at the table.</p>
     </div>
   </div>
@@ -511,23 +551,23 @@ picture{display:contents}
       <div class="script sc-lg" data-i18n="gal_script">no filters needed</div>
     </div>
     <div class="gal">
-      <figure class="reveal"><img src="/images/grill-platter-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Grilled seafood platter with octopus, calamari and prawns" loading="lazy"><figcaption data-i18n="g1">Grill platter for two</figcaption></figure>
-      <figure class="reveal"><img src="/images/coolers-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="450" height="800" alt="Berry coolers and lemonade with mint" loading="lazy"><figcaption data-i18n="g2">House coolers</figcaption></figure>
-      <figure class="reveal"><img src="/images/greek-breakfast-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Greek breakfast with eggs, feta and olives" loading="lazy"><figcaption data-i18n="g3">Greek breakfast</figcaption></figure>
-      <figure class="reveal"><img src="/images/tbone-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Grilled chop with fries and tzatziki" loading="lazy"><figcaption data-i18n="g4">From the charcoal</figcaption></figure>
-      <figure class="reveal"><img src="/images/calamari-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Fried calamari and anchovies with lemon" loading="lazy"><figcaption data-i18n="g5">Fritto misto</figcaption></figure>
-      <figure class="reveal"><img src="/images/gelato-sea-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Gelato cup by the seaside promenade" loading="lazy"><figcaption data-i18n="g6">Gelato by the sea</figcaption></figure>
-      <figure class="reveal"><img src="/images/pizza-wine-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="800" height="600" alt="Pizza with a carafe of white wine" loading="lazy"><figcaption data-i18n="g7">Pizza &amp; local wine</figcaption></figure>
-      <figure class="reveal"><img src="/images/octopus-salad-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Octopus tentacles over salad" loading="lazy"><figcaption data-i18n="g8">Octopus, simply</figcaption></figure>
-      <figure class="reveal"><img src="/images/waffle-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Waffle with chocolate and whipped cream" loading="lazy"><figcaption data-i18n="g9">Waffle, all in</figcaption></figure>
-      <figure class="reveal"><img src="/images/anchovies-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Fried anchovies with fries and lemon" loading="lazy"><figcaption data-i18n="g10">Gavros &amp; fries</figcaption></figure>
-      <figure class="reveal"><img src="/images/sundae-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Sundae with cream, banana and peach" loading="lazy"><figcaption data-i18n="g11">Summer sundae</figcaption></figure>
-      <figure class="reveal"><img src="/images/dorada-platter-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="800" height="600" alt="Whole grilled dorada with grilled vegetables" loading="lazy"><figcaption data-i18n="g13">x</figcaption></figure>
-      <figure class="reveal"><img src="/images/octopus-stew-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Octopus stewed in tomato sauce" loading="lazy"><figcaption data-i18n="g14">x</figcaption></figure>
-      <figure class="reveal"><img src="/images/shrimp-pasta-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Linguine with whole shrimps" loading="lazy"><figcaption data-i18n="g15">x</figcaption></figure>
-      <figure class="reveal"><img src="/images/seafood-pizza-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Seafood pizza with fresh mussels" loading="lazy"><figcaption data-i18n="g16">x</figcaption></figure>
-      <figure class="reveal"><img src="/images/shrimp-saganaki-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Shrimp saganaki in tomato sauce" loading="lazy"><figcaption data-i18n="g17">x</figcaption></figure>
-      <figure class="reveal"><img src="/images/seafood-tomato-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="800" height="600" alt="Mixed seafood in tomato sauce" loading="lazy"><figcaption data-i18n="g18">x</figcaption></figure>
+      <figure class="reveal"><img src="/images/grill-platter-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Grilled seafood platter with octopus, calamari and prawns" data-i18n-attr="alt:g1" loading="lazy"><figcaption data-i18n="g1">Grill platter for two</figcaption></figure>
+      <figure class="reveal"><img src="/images/coolers-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="450" height="800" alt="Berry coolers and lemonade with mint" data-i18n-attr="alt:g2" loading="lazy"><figcaption data-i18n="g2">House coolers</figcaption></figure>
+      <figure class="reveal"><img src="/images/greek-breakfast-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Greek breakfast with eggs, feta and olives" data-i18n-attr="alt:g3" loading="lazy"><figcaption data-i18n="g3">Greek breakfast</figcaption></figure>
+      <figure class="reveal"><img src="/images/tbone-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Grilled chop with fries and tzatziki" data-i18n-attr="alt:g4" loading="lazy"><figcaption data-i18n="g4">From the charcoal</figcaption></figure>
+      <figure class="reveal"><img src="/images/calamari-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Fried calamari and anchovies with lemon" data-i18n-attr="alt:g5" loading="lazy"><figcaption data-i18n="g5">Fritto misto</figcaption></figure>
+      <figure class="reveal"><img src="/images/gelato-sea-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Gelato cup by the seaside promenade" data-i18n-attr="alt:g6" loading="lazy"><figcaption data-i18n="g6">Gelato by the sea</figcaption></figure>
+      <figure class="reveal"><img src="/images/pizza-wine-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="800" height="600" alt="Pizza with a carafe of white wine" data-i18n-attr="alt:g7" loading="lazy"><figcaption data-i18n="g7">Pizza &amp; local wine</figcaption></figure>
+      <figure class="reveal"><img src="/images/octopus-salad-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Octopus tentacles over salad" data-i18n-attr="alt:g8" loading="lazy"><figcaption data-i18n="g8">Octopus, simply</figcaption></figure>
+      <figure class="reveal"><img src="/images/waffle-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Waffle with chocolate and whipped cream" data-i18n-attr="alt:g9" loading="lazy"><figcaption data-i18n="g9">Waffle, all in</figcaption></figure>
+      <figure class="reveal"><img src="/images/anchovies-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Fried anchovies with fries and lemon" data-i18n-attr="alt:g10" loading="lazy"><figcaption data-i18n="g10">Gavros &amp; fries</figcaption></figure>
+      <figure class="reveal"><img src="/images/sundae-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Sundae with cream, banana and peach" data-i18n-attr="alt:g11" loading="lazy"><figcaption data-i18n="g11">Summer sundae</figcaption></figure>
+      <figure class="reveal"><img src="/images/dorada-platter-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="800" height="600" alt="Whole grilled dorada with grilled vegetables" data-i18n-attr="alt:g13" loading="lazy"><figcaption data-i18n="g13">x</figcaption></figure>
+      <figure class="reveal"><img src="/images/octopus-stew-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Octopus stewed in tomato sauce" data-i18n-attr="alt:g14" loading="lazy"><figcaption data-i18n="g14">x</figcaption></figure>
+      <figure class="reveal"><img src="/images/shrimp-pasta-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Linguine with whole shrimps" data-i18n-attr="alt:g15" loading="lazy"><figcaption data-i18n="g15">x</figcaption></figure>
+      <figure class="reveal"><img src="/images/seafood-pizza-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Seafood pizza with fresh mussels" data-i18n-attr="alt:g16" loading="lazy"><figcaption data-i18n="g16">x</figcaption></figure>
+      <figure class="reveal"><img src="/images/shrimp-saganaki-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Shrimp saganaki in tomato sauce" data-i18n-attr="alt:g17" loading="lazy"><figcaption data-i18n="g17">x</figcaption></figure>
+      <figure class="reveal"><img src="/images/seafood-tomato-800.jpg" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="800" height="600" alt="Mixed seafood in tomato sauce" data-i18n-attr="alt:g18" loading="lazy"><figcaption data-i18n="g18">x</figcaption></figure>
     </div>
   </div>
 </section>
@@ -541,19 +581,19 @@ picture{display:contents}
     </div>
     <div class="rev-grid">
       <article class="rev-card reveal">
-        <div class="stars">★★★★★</div>
+        <div class="stars" aria-hidden="true">★★★★★</div>
         <p data-i18n="r1_q">"If you're in Ouranoupoli, this taverna is the best choice in the area. The food is always fresh."</p>
-        <footer><div class="avatar">P</div><div><b>Petru T.</b><span data-i18n="r_lg">Local Guide · Google</span></div></footer>
+        <footer><div class="avatar" aria-hidden="true">P</div><div><b>Petru T.</b><span data-i18n="r_lg">Local Guide · Google</span></div></footer>
       </article>
       <article class="rev-card reveal">
-        <div class="stars">★★★★★</div>
+        <div class="stars" aria-hidden="true">★★★★★</div>
         <p data-i18n="r2_q">"A taverna right on the seafront with fresh, delicious dishes — and the portions are huge."</p>
-        <footer><div class="avatar">C</div><div><b>Cristinel D.</b><span data-i18n="r_lg2">Local Guide · Google</span></div></footer>
+        <footer><div class="avatar" aria-hidden="true">C</div><div><b>Cristinel D.</b><span data-i18n="r_lg2">Local Guide · Google</span></div></footer>
       </article>
       <article class="rev-card reveal">
-        <div class="stars">★★★★★</div>
+        <div class="stars" aria-hidden="true">★★★★★</div>
         <p data-i18n="r3_q">"Fantastic food, the staff is great and we had an amazing time!"</p>
-        <footer><div class="avatar">G</div><div><b data-i18n="r3_n">Google visitor</b><span data-i18n="r3_t">Visitor update · Google</span></div></footer>
+        <footer><div class="avatar" aria-hidden="true">G</div><div><b data-i18n="r3_n">Google visitor</b><span data-i18n="r3_t">Visitor update · Google</span></div></footer>
       </article>
     </div>
     <div class="rev-badge reveal">
@@ -598,16 +638,16 @@ picture{display:contents}
         <span class="pill" data-i18n="v_pill">VISIT US</span>
         <h2 data-i18n="v_h2">Find the waves</h2>
         <div class="script" data-i18n="v_script">we're right on the beach</div>
-        <div class="v-row"><div class="ic">📍</div><div><h3 data-i18n="v_addr_h">Address</h3><p data-i18n="v_addr_p">Ouranoupoli 630 75, Halkidiki, Greece</p></div></div>
-        <div class="v-row"><div class="ic">🕐</div><div><h3 data-i18n="v_open_h">Open every day</h3><p>05:30 – 22:00</p></div></div>
-        <div class="v-row"><div class="ic">☎</div><div><h3 data-i18n="v_ph_h">Phone</h3><p><a href="tel:+302377071088">+30 2377 071088</a></p></div></div>
+        <div class="v-row"><div class="ic" aria-hidden="true">📍</div><div><h3 data-i18n="v_addr_h">Address</h3><p data-i18n="v_addr_p">Ouranoupoli 630 75, Halkidiki, Greece</p></div></div>
+        <div class="v-row"><div class="ic" aria-hidden="true">🕐</div><div><h3 data-i18n="v_open_h">Open every day</h3><p>05:30 – 22:00</p></div></div>
+        <div class="v-row"><div class="ic" aria-hidden="true">☎</div><div><h3 data-i18n="v_ph_h">Phone</h3><p><a href="tel:+302377071088">+30 2377 071088</a></p></div></div>
         <div class="visit-cta">
-          <a class="btn btn-orange" href="https://maps.app.goo.gl/TWM8Gz17om45NjVWA" target="_blank" rel="noopener" data-i18n="cta_dir2">Get Directions</a>
+          <a class="btn btn-orange" href="https://www.google.com/maps/dir/?api=1&amp;destination=40.3255019%2C23.9797725" target="_blank" rel="noopener" data-i18n="cta_dir2">Get Directions</a>
           <a class="btn btn-ghost" href="tel:+302377071088" data-i18n="cta_call">Call Us</a>
         </div>
       </div>
       <div class="visit-map">
-        <iframe title="Waves Coffee & Food on the map" src="https://www.google.com/maps?q=Waves+Coffee+%26+Food,+Ouranoupoli+630+75,+Greece&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <iframe title="Waves Coffee &amp; Food on the map" data-i18n-attr="title:map_title" src="https://www.google.com/maps?q=Waves+Coffee+%26+Food,+Ouranoupoli+630+75,+Greece&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -646,12 +686,31 @@ picture{display:contents}
 </footer>
 
 <script>
-/* fonts: activate the print-media stylesheet without an inline handler */
-document.querySelectorAll('link[data-fonts]').forEach(l => { l.media = 'all'; });
-
 /* ---------------- i18n ---------------- */
 const I18N = {
 en: {
+  pol_1:"Breakfast",
+  pol_2:"Fast Food",
+  pol_3:"Lunch",
+  pol_4:"Drinks",
+  a11y_skip:"Skip to main content",
+  a11y_lang:"Language",
+  a11y_langmore:"More languages",
+  a11y_burger:"Menu",
+  a11y_pause:"Pause the scrolling banner",
+  a11y_play:"Resume the scrolling banner",
+  map_title:"Waves Coffee & Food on the map",
+  alt_hero1:"Mixed seafood platter with shrimp, calamari, mussels and grilled octopus",
+  alt_hero2:"Char-grilled octopus with balsamic glaze",
+  alt_facade:"The Waves Coffee & Food terrace, with the sea framed through the entrance",
+  alt_interior:"The covered terrace dining room with its wicker lamps",
+  alt_sign:"The Waves Coffee and Food signboard",
+  chips_label:"Jump to a menu category",
+  drinks_note:"Beer, wine and spirits are on the printed drinks list — just ask your server.",
+  menu_updated:"Menu prices as of July 2026",
+  nf_title:"Page not found",
+  nf_text:"This page does not exist — but the seafood does.",
+  nf_home:"Back to the homepage",
   h1_tail:" — Coffee &amp; Food, beachfront restaurant in Ouranoupoli, near Mount Athos",
   _title: "Waves Coffee & Food — Ouranoupoli Restaurant by Mount Athos",
   _desc: "Beachfront taverna & café in Ouranoupoli, by the Mount Athos ferry. Fresh seafood, Greek grill, breakfast from 05:30. 4.9★ on Google.",
@@ -684,14 +743,6 @@ en: {
   s4_h:"Whole Grilled Squid", s4_p:"Crosshatched and charred, with seasoned fries and lemon.",
   menu_pill:"THE MENU", menu_h2:"Eat with the tide", menu_script:"the complete menu",
   note_3:"Prices as shown on our in-house menu — small seasonal changes possible; today's menu always applies at the table.",
-  m1_h:"From the Sea", m1_s:"fresh every day",
-  m1_1:"Grilled octopus", m1_2:"Fritto misto", m1_3:"Langoustines", m1_4:"Grilled sardines &amp; gavros", m1_5:"Whole fish of the day",
-  m2_h:"From the Grill", m2_s:"smoke &amp; fire",
-  m2_1:"Mixed grill platters", m2_2:"Pork ribs &amp; chops", m2_3:"Souvlaki &amp; gyros", m2_4:"Burgers with potatoes <b>10 €</b>", m2_5:"Gyros pizza",
-  m3_h:"Morning &amp; Coffee", m3_s:"from 05:30",
-  m3_1:"Greek breakfast plates", m3_2:"Omelettes &amp; fried eggs", m3_3:"Warm cheese pies", m3_4:"Freddo espresso &amp; cappuccino", m3_5:"Fresh orange juice",
-  m4_h:"Sweet Waves", m4_s:"crepes &amp; more",
-  m4_1:"Crepes with ice cream", m4_2:"American pancakes <b>10 €</b>", m4_3:"Savory pancakes <b>12 €</b>", m4_4:"Waffles &amp; sundaes", m4_5:"Baklava &amp; walnut cake",
   note_1:"<b>Around 10–15 € per person.</b> Fresh fish priced daily — ask for today's catch. Bread 2 € · pita 1 €.",
   note_2:"Dine-in · Takeaway · Contactless delivery",
   gal_pill:"GALLERY", gal_h2:"Straight from our plates", gal_script:"no filters needed",
@@ -710,6 +761,28 @@ en: {
   foot_c:"© 2026 Waves Coffee &amp; Food · Ouranoupoli, Halkidiki", foot_ph:"Photos from our kitchen &amp; guests"
 },
 el: {
+  pol_1:"Πρωινό",
+  pol_2:"Fast Food",
+  pol_3:"Μεσημεριανό",
+  pol_4:"Ποτά",
+  a11y_skip:"Μετάβαση στο κύριο περιεχόμενο",
+  a11y_lang:"Γλώσσα",
+  a11y_langmore:"Περισσότερες γλώσσες",
+  a11y_burger:"Μενού",
+  a11y_pause:"Παύση κυλιόμενου banner",
+  a11y_play:"Συνέχιση κυλιόμενου banner",
+  map_title:"Το Waves Coffee & Food στον χάρτη",
+  alt_hero1:"Θαλασσινή πιατέλα με γαρίδες, καλαμάρι, μύδια και ψητό χταπόδι",
+  alt_hero2:"Χταπόδι στα κάρβουνα με κρέμα βαλσάμικου",
+  alt_facade:"Η βεράντα του Waves Coffee & Food, με τη θάλασσα να φαίνεται μέσα από την είσοδο",
+  alt_interior:"Ο σκεπαστός χώρος της βεράντας με τα ψάθινα φωτιστικά",
+  alt_sign:"Η πινακίδα του Waves Coffee and Food",
+  chips_label:"Μετάβαση σε κατηγορία μενού",
+  drinks_note:"Μπίρα, κρασί και ποτά υπάρχουν στον έντυπο κατάλογο ποτών — ζητήστε τον από το προσωπικό.",
+  menu_updated:"Τιμές καταλόγου, Ιούλιος 2026",
+  nf_title:"Η σελίδα δεν βρέθηκε",
+  nf_text:"Αυτή η σελίδα δεν υπάρχει — τα θαλασσινά όμως υπάρχουν.",
+  nf_home:"Επιστροφή στην αρχική",
   h1_tail:" — Coffee &amp; Food, παραλιακή ταβέρνα στην Ουρανούπολη, δίπλα στο Άγιο Όρος",
   _title: "Waves Coffee & Food — Ταβέρνα στην Ουρανούπολη, Άγιο Όρος",
   _desc: "Παραλιακή ταβέρνα και καφέ στην Ουρανούπολη, δίπλα στο καράβι για το Άγιο Όρος. Φρέσκα θαλασσινά, σχάρα, πρωινό από 05:30. 4,9★ στο Google.",
@@ -742,14 +815,6 @@ el: {
   s4_h:"Ολόκληρο καλαμάρι σχάρας", s4_p:"Χαρακωμένο και καψαλισμένο, με πατάτες και λεμόνι.",
   menu_pill:"ΤΟ ΜΕΝΟΥ", menu_h2:"Στον ρυθμό του κύματος", menu_script:"όλο το μενού",
   note_3:"Οι τιμές όπως αναγράφονται στον κατάλογο του καταστήματος — ενδέχεται μικρές εποχιακές αλλαγές· ισχύει πάντα ο κατάλογος στο τραπέζι.",
-  m1_h:"Από τη θάλασσα", m1_s:"φρέσκο κάθε μέρα",
-  m1_1:"Χταπόδι σχάρας", m1_2:"Fritto misto", m1_3:"Καραβίδες", m1_4:"Σαρδέλες &amp; γαύρος σχάρας", m1_5:"Ψάρι ημέρας",
-  m2_h:"Από τη σχάρα", m2_s:"φωτιά &amp; κάπνα",
-  m2_1:"Ποικιλίες σχάρας", m2_2:"Παϊδάκια &amp; μπριζόλες", m2_3:"Σουβλάκι &amp; γύρος", m2_4:"Burgers με πατάτες <b>10 €</b>", m2_5:"Πίτσα γύρος",
-  m3_h:"Πρωινό &amp; καφές", m3_s:"από τις 05:30",
-  m3_1:"Ελληνικά πρωινά", m3_2:"Ομελέτες &amp; αυγά τηγανητά", m3_3:"Ζεστές τυρόπιτες", m3_4:"Freddo espresso &amp; cappuccino", m3_5:"Φρέσκος χυμός πορτοκάλι",
-  m4_h:"Γλυκά κύματα", m4_s:"κρέπες &amp; άλλα",
-  m4_1:"Κρέπες με παγωτό", m4_2:"Αμερικάνικα pancakes <b>10 €</b>", m4_3:"Αλμυρά pancakes <b>12 €</b>", m4_4:"Βάφλες &amp; sundae", m4_5:"Μπακλαβάς &amp; καρυδόπιτα",
   note_1:"<b>Περίπου 10–15 € το άτομο.</b> Το φρέσκο ψάρι τιμολογείται καθημερινά — ρωτήστε για την ψαριά της ημέρας. Ψωμί 2 € · πίτα 1 €.",
   note_2:"Στο κατάστημα · Take away · Ανέπαφη παράδοση",
   gal_pill:"ΓΚΑΛΕΡΙ", gal_h2:"Κατευθείαν από τα πιάτα μας", gal_script:"χωρίς φίλτρα",
@@ -768,6 +833,28 @@ el: {
   foot_c:"© 2026 Waves Coffee &amp; Food · Ουρανούπολη, Χαλκιδική", foot_ph:"Φωτογραφίες από την κουζίνα &amp; τους πελάτες μας"
 },
 ro: {
+  pol_1:"Mic dejun",
+  pol_2:"Fast Food",
+  pol_3:"Prânz",
+  pol_4:"Băuturi",
+  a11y_skip:"Salt la conținutul principal",
+  a11y_lang:"Limbă",
+  a11y_langmore:"Mai multe limbi",
+  a11y_burger:"Meniu",
+  a11y_pause:"Oprește bannerul derulant",
+  a11y_play:"Pornește bannerul derulant",
+  map_title:"Waves Coffee & Food pe hartă",
+  alt_hero1:"Platou de fructe de mare cu creveți, calamar, midii și caracatiță la grătar",
+  alt_hero2:"Caracatiță la grătar cu glazură de balsamic",
+  alt_facade:"Terasa Waves Coffee & Food, cu marea încadrată de intrare",
+  alt_interior:"Sala de pe terasa acoperită, cu lămpile din răchită",
+  alt_sign:"Firma Waves Coffee and Food",
+  chips_label:"Salt la o categorie din meniu",
+  drinks_note:"Berea, vinul și băuturile spirtoase sunt în lista tipărită de băuturi — cereți-o ospătarului.",
+  menu_updated:"Prețuri din meniu, iulie 2026",
+  nf_title:"Pagina nu a fost găsită",
+  nf_text:"Pagina asta nu există — dar fructele de mare, da.",
+  nf_home:"Înapoi la pagina principală",
   h1_tail:" — Coffee &amp; Food, restaurant pe plajă în Ouranoupoli, lângă Muntele Athos",
   _title: "Waves Coffee & Food — Restaurant Ouranoupoli, Muntele Athos",
   _desc: "Tavernă pe plajă în Ouranoupoli, lângă feribotul spre Muntele Athos. Fructe de mare, grătar grecesc, mic dejun de la 05:30. 4,9★ pe Google.",
@@ -800,14 +887,6 @@ ro: {
   s4_h:"Calamar întreg la grătar", s4_p:"Crestat și rumenit, cu cartofi și lămâie.",
   menu_pill:"MENIUL", menu_h2:"Mănânci în ritmul mării", menu_script:"meniul complet",
   note_3:"Prețurile sunt cele din meniul tipărit al localului — pot apărea mici modificări de sezon; la masă e valabil întotdeauna meniul zilei.",
-  m1_h:"Din mare", m1_s:"proaspăt în fiecare zi",
-  m1_1:"Caracatiță la grătar", m1_2:"Fritto misto", m1_3:"Langustine", m1_4:"Sardine &amp; gavros la grătar", m1_5:"Peștele zilei",
-  m2_h:"De pe grătar", m2_s:"foc &amp; fum",
-  m2_1:"Platouri mixte la grătar", m2_2:"Coaste &amp; cotlete de porc", m2_3:"Souvlaki &amp; gyros", m2_4:"Burgeri cu cartofi <b>10 €</b>", m2_5:"Pizza gyros",
-  m3_h:"Dimineața &amp; cafea", m3_s:"de la 05:30",
-  m3_1:"Mic dejun grecesc", m3_2:"Omlete &amp; ochiuri", m3_3:"Plăcinte calde cu brânză", m3_4:"Freddo espresso &amp; cappuccino", m3_5:"Fresh de portocale",
-  m4_h:"Valuri dulci", m4_s:"clătite &amp; nu numai",
-  m4_1:"Crepes cu înghețată", m4_2:"Pancakes americane <b>10 €</b>", m4_3:"Pancakes sărate <b>12 €</b>", m4_4:"Vafe &amp; sundae", m4_5:"Baclava &amp; prăjitură cu nuci",
   note_1:"<b>Aproximativ 10–15 € de persoană.</b> Peștele proaspăt are preț zilnic — întreabă de captura zilei. Pâine 2 € · lipie 1 €.",
   note_2:"În local · La pachet · Livrare fără contact",
   gal_pill:"GALERIE", gal_h2:"Direct din farfuriile noastre", gal_script:"fără filtre",
@@ -827,6 +906,28 @@ ro: {
 }
 ,
 bg: {
+  pol_1:"Закуска",
+  pol_2:"Фаст фуд",
+  pol_3:"Обяд",
+  pol_4:"Напитки",
+  a11y_skip:"Към основното съдържание",
+  a11y_lang:"Език",
+  a11y_langmore:"Още езици",
+  a11y_burger:"Меню",
+  a11y_pause:"Спри движещия се банер",
+  a11y_play:"Продължи движещия се банер",
+  map_title:"Waves Coffee & Food на картата",
+  alt_hero1:"Плато с морски дарове – скариди, калмари, миди и печен октопод",
+  alt_hero2:"Октопод на жар с балсамова глазура",
+  alt_facade:"Терасата на Waves Coffee & Food, с гледка към морето през входа",
+  alt_interior:"Покритата тераса с плетените лампи",
+  alt_sign:"Табелата на Waves Coffee and Food",
+  chips_label:"Към категория от менюто",
+  drinks_note:"Бира, вино и алкохол ще намерите в печатната карта за напитки — просто попитайте сервитьора.",
+  menu_updated:"Цени от менюто към юли 2026",
+  nf_title:"Страницата не е намерена",
+  nf_text:"Тази страница не съществува — но морските дарове ги има.",
+  nf_home:"Обратно към началната страница",
   tagline:"☀ Закуска преди ферибота за Света гора — море и вкусна храна на връщане.",
   h1_tail:" — Coffee &amp; Food, ресторант на плажа в Урануполи, до Света гора",
   _title:"Waves Coffee & Food — Таверна в Урануполи, до Света гора",
@@ -888,7 +989,6 @@ bg: {
   g9:"Гофрета с всичко",
   g10:"Гаврос и картофки",
   g11:"Лятна мелба",
-  g12:"Гледката от вашата маса",
   g13:"Цяла ципура на скара", g14:"Октопод в доматен сос", g15:"Лингуини със скариди", g16:"Пица с морски дарове", g17:"Скариди саганаки", g18:"Морски дарове в доматен сос", rev_pill:"ОТЗИВИ",
   rev_h2:"От уста на уста",
   rev_script:"направо от Google",
@@ -929,6 +1029,28 @@ bg: {
   foot_ph:"Снимки от нашата кухня и нашите гости"
 },
 sr: {
+  pol_1:"Doručak",
+  pol_2:"Fast Food",
+  pol_3:"Ručak",
+  pol_4:"Pića",
+  a11y_skip:"Pređi na glavni sadržaj",
+  a11y_lang:"Jezik",
+  a11y_langmore:"Više jezika",
+  a11y_burger:"Meni",
+  a11y_pause:"Zaustavi pokretni baner",
+  a11y_play:"Nastavi pokretni baner",
+  map_title:"Waves Coffee & Food na mapi",
+  alt_hero1:"Plato morskih plodova sa škampima, kalamarima, dagnjama i pečenom hobotnicom",
+  alt_hero2:"Hobotnica sa žara u balzamiko glazuri",
+  alt_facade:"Terasa Waves Coffee & Food, s morem koje se vidi kroz ulaz",
+  alt_interior:"Pokrivena terasa sa pletenim lampama",
+  alt_sign:"Tabla Waves Coffee and Food",
+  chips_label:"Pređi na kategoriju menija",
+  drinks_note:"Pivo, vino i žestoka pića su na štampanoj karti pića — samo pitajte osoblje.",
+  menu_updated:"Cene iz menija, jul 2026",
+  nf_title:"Stranica nije pronađena",
+  nf_text:"Ova stranica ne postoji — ali morski plodovi postoje.",
+  nf_home:"Vrati se na početnu",
   tagline:"☀ Doručak pre trajekta za Svetu Goru — obrok kraj mora po povratku.",
   h1_tail:" — Coffee &amp; Food, restoran na plaži u Uranopolisu, kod Svete Gore",
   _title:"Waves Coffee & Food — Taverna u Uranopolisu, Sveta Gora",
@@ -990,7 +1112,6 @@ sr: {
   g9:"Vafl, sa svime",
   g10:"Gavros i pomfrit",
   g11:"Letnji sladoledni kup",
-  g12:"Pogled sa vašeg stola",
   g13:"Cela orada sa roštilja", g14:"Hobotnica u paradajz sosu", g15:"Linguine sa škampima", g16:"Pica sa plodovima mora", g17:"Škampi saganaki", g18:"Plodovi mora u paradajz sosu", rev_pill:"RECENZIJE",
   rev_h2:"Šta kažu gosti",
   rev_script:"direktno sa Google-a",
@@ -1031,6 +1152,28 @@ sr: {
   foot_ph:"Fotografije iz naše kuhinje i od naših gostiju"
 },
 ru: {
+  pol_1:"Завтрак",
+  pol_2:"Фастфуд",
+  pol_3:"Обед",
+  pol_4:"Напитки",
+  a11y_skip:"Перейти к основному содержанию",
+  a11y_lang:"Язык",
+  a11y_langmore:"Другие языки",
+  a11y_burger:"Меню",
+  a11y_pause:"Остановить движущийся баннер",
+  a11y_play:"Возобновить движущийся баннер",
+  map_title:"Waves Coffee & Food на карте",
+  alt_hero1:"Ассорти морепродуктов с креветками, кальмарами, мидиями и осьминогом на гриле",
+  alt_hero2:"Осьминог на углях под бальзамической глазурью",
+  alt_facade:"Терраса Waves Coffee & Food, море видно через вход",
+  alt_interior:"Крытая терраса с плетёными лампами",
+  alt_sign:"Вывеска Waves Coffee and Food",
+  chips_label:"Перейти к категории меню",
+  drinks_note:"Пиво, вино и крепкие напитки есть в печатной карте напитков — просто спросите официанта.",
+  menu_updated:"Цены в меню на июль 2026",
+  nf_title:"Страница не найдена",
+  nf_text:"Этой страницы не существует — а вот морепродукты существуют.",
+  nf_home:"Вернуться на главную",
   tagline:"☀ Завтрак перед паромом на Афон — обед у моря по возвращении.",
   h1_tail:" — Coffee &amp; Food, ресторан на пляже в Уранополисе, рядом с Афоном",
   _title:"Waves Coffee & Food — Таверна в Уранополисе, Афон",
@@ -1092,7 +1235,6 @@ ru: {
   g9:"Вафля со всем и сразу",
   g10:"Гаврос и картофель фри",
   g11:"Летний сандей",
-  g12:"Вид с вашего столика",
   g13:"Дорада на гриле", g14:"Осьминог в томатном соусе", g15:"Лингвини с креветками", g16:"Пицца с морепродуктами", g17:"Креветки саганаки", g18:"Морепродукты в томатном соусе", rev_pill:"ОТЗЫВЫ",
   rev_h2:"Из первых уст",
   rev_script:"прямо из Google",
@@ -1329,12 +1471,12 @@ const MENU = [
    },
    {
     "n": {
-     "en": "Gyros (pork or chicken)",
-     "el": "Γύρος (χοιρινός / κοτόπουλο)",
-     "ro": "Gyros (porc sau pui)",
-     "bg": "Гирос (свинско или пилешко)",
-     "sr": "Gyros (svinjetina ili piletina)",
-     "ru": "Гирос (свинина или курица)"
+     "en": "Gyros (pork)",
+     "el": "Γύρος (χοιρινός)",
+     "ro": "Gyros (porc)",
+     "bg": "Гирос (свинско)",
+     "sr": "Gyros (svinjetina)",
+     "ru": "Гирос (свинина)"
     },
     "p": "12"
    },
@@ -2748,12 +2890,26 @@ function renderMenu(lang){
 }
 
 const LPATH = {en:'/', el:'/el/', ro:'/ro/', bg:'/bg/', sr:'/sr/', ru:'/ru/'};
+function renderChips(lang){
+  const box = document.getElementById('fmchips');
+  if(!box) return;
+  box.innerHTML = MENU.map((cat,i)=>`<button type="button" data-cat="${i}">${cat.t[lang]||cat.t.en}</button>`).join('');
+}
+
 function setLang(lang){
   renderMenu(lang);
+  renderChips(lang);
   const dict = I18N[lang] || I18N.en;
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const k = el.getAttribute('data-i18n');
     if(dict[k] !== undefined) el.innerHTML = dict[k];
+  });
+  /* attributes: data-i18n-attr="alt:key" or "aria-label:key;title:key2" */
+  document.querySelectorAll('[data-i18n-attr]').forEach(el=>{
+    el.getAttribute('data-i18n-attr').split(';').forEach(pair=>{
+      const [attr, key] = pair.split(':').map(x=>x.trim());
+      if(attr && dict[key] !== undefined) el.setAttribute(attr, dict[key]);
+    });
   });
   const items = dict._strip;
   const seq = items.map(t=>`<span>${t}</span><span class="sep">✦</span>`).join('');
@@ -2761,26 +2917,33 @@ function setLang(lang){
   document.documentElement.lang = lang === 'sr' ? 'sr-Latn' : lang;
   document.title = dict._title;
   document.getElementById('meta-desc').setAttribute('content', dict._desc);
-  document.querySelectorAll('.lang-sw button').forEach(b=>{
-    const on = b.dataset.lang===lang;
-    b.classList.toggle('on', on);
-    b.setAttribute('aria-pressed', String(on));
+  document.querySelectorAll('.lang-sw a').forEach(a=>{
+    const on = a.dataset.lang===lang;
+    a.classList.toggle('on', on);
+    if(on) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
   });
   try{ localStorage.setItem('wave-lang', lang); }catch(e){}
 }
-document.querySelectorAll('.lang-sw button').forEach(b=>b.addEventListener('click',()=>{
-  const l = b.dataset.lang;
+document.querySelectorAll('.lang-sw a').forEach(a=>a.addEventListener('click',e=>{
+  const l = a.dataset.lang;
   try{ localStorage.setItem('wave-lang', l); }catch(e){}
-  if(location.protocol === 'http:' || location.protocol === 'https:'){
-    location.href = LPATH[l] || '/';
-  } else {
-    setLang(l);
-  }
+  if(location.protocol === 'file:'){ e.preventDefault(); setLang(l); }   // local preview only
 }));
 let saved = null;
 try{ saved = localStorage.getItem('wave-lang'); }catch(e){}
-const FORCE = document.documentElement.getAttribute('data-lang') || null;
-setLang(FORCE || (saved && I18N[saved] ? saved : 'en'));
+const BOOT = document.documentElement.getAttribute('data-lang') || 'en';
+const WANTED = BOOT || (saved && I18N[saved] ? saved : 'en');
+if (WANTED === BOOT) {
+  /* the server already rendered this language: only the live state needs setting */
+  document.querySelectorAll('.lang-sw a').forEach(a=>{
+    const on = a.dataset.lang===BOOT;
+    a.classList.toggle('on', on);
+    if(on) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+  });
+  syncMenuAria();
+} else {
+  setLang(WANTED);
+}
 
 /* ---------------- nav & reveal ---------------- */
 const nav=document.getElementById('nav');
@@ -2804,6 +2967,28 @@ document.getElementById('fullmenu').addEventListener('click', e=>{
   if(!b || !matchMedia('(max-width:640px)').matches) return;
   const open = b.closest('.fm-card').classList.toggle('open');
   b.setAttribute('aria-expanded', String(open));
+});
+/* a chip opens its category and brings it into view */
+document.getElementById('fmchips').addEventListener('click', e=>{
+  const chip = e.target.closest('button[data-cat]');
+  if(!chip) return;
+  const card = document.querySelectorAll('#fullmenu .fm-card')[Number(chip.dataset.cat)];
+  if(!card) return;
+  if(matchMedia('(max-width:640px)').matches && !card.classList.contains('open')){
+    card.classList.add('open');
+    card.querySelector('.fm-t')?.setAttribute('aria-expanded','true');
+  }
+  card.scrollIntoView({block:'start', behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
+});
+/* pause control for the moving banner */
+const stripEl = document.querySelector('.strip');
+const pauseBtn = document.getElementById('strip-pause');
+if(pauseBtn) pauseBtn.addEventListener('click', ()=>{
+  const paused = stripEl.classList.toggle('paused');
+  pauseBtn.setAttribute('aria-pressed', String(paused));
+  const dict = I18N[document.documentElement.getAttribute('data-lang')] || I18N.en;
+  pauseBtn.setAttribute('aria-label', paused ? dict.a11y_play : dict.a11y_pause);
+  pauseBtn.firstElementChild.textContent = paused ? '▶' : '❙❙';
 });
 const mqMenu = matchMedia('(max-width:640px)');
 if(mqMenu.addEventListener) mqMenu.addEventListener('change', syncMenuAria); else mqMenu.addListener(syncMenuAria);

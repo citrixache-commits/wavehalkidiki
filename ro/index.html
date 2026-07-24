@@ -28,39 +28,1095 @@
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23262C35'/%3E%3Crect x='6' y='6' width='52' height='52' fill='none' stroke='white' stroke-width='2.5'/%3E%3Cpath d='M33 15c-3 2.4-3 5-.6 7.2 2.2 1.9 2.2 3.9.4 5.8' stroke='white' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M22 32.5h20c0 6.5-4.2 10.3-10 10.3s-10-3.8-10-10.3z' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath d='M42 33.5c3.4 0 5.3 1.7 5.3 4s-2 4.4-5.5 3.4' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M19 47.5c3 2.4 8.3 3.6 13 3.6s10-1.2 13-3.6' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" media="print" data-fonts>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap"></noscript>
 <script type="application/ld+json" id="ld-restaurant">
 {
-  "@context": "https://schema.org",
-  "@type": "Restaurant",
-  "@id": "https://waveshalkidiki.vercel.app/#restaurant",
-  "name": "Waves Coffee & Food",
-  "url": "https://waveshalkidiki.vercel.app/ro/",
-  "image": "https://waveshalkidiki.vercel.app/images/facade.jpg",
-  "servesCuisine": ["Greek", "Seafood", "Grill", "Café"],
-  "priceRange": "€10–15",
-  "telephone": "+302377071088",
-  "address": {
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://waveshalkidiki.vercel.app/#website",
+   "url": "https://waveshalkidiki.vercel.app/",
+   "name": "Waves Coffee & Food",
+   "publisher": {
+    "@id": "https://waveshalkidiki.vercel.app/#restaurant"
+   },
+   "inLanguage": "ro"
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://waveshalkidiki.vercel.app/ro/#webpage",
+   "url": "https://waveshalkidiki.vercel.app/ro/",
+   "name": "Waves Coffee & Food — Restaurant Ouranoupoli, Muntele Athos",
+   "description": "Tavernă pe plajă în Ouranoupoli, lângă feribotul spre Muntele Athos. Fructe de mare, grătar grecesc, mic dejun de la 05:30. 4,9★ pe Google.",
+   "isPartOf": {
+    "@id": "https://waveshalkidiki.vercel.app/#website"
+   },
+   "about": {
+    "@id": "https://waveshalkidiki.vercel.app/#restaurant"
+   },
+   "inLanguage": "ro",
+   "primaryImageOfPage": "https://waveshalkidiki.vercel.app/images/og-1200x630.jpg"
+  },
+  {
+   "@type": "Restaurant",
+   "@id": "https://waveshalkidiki.vercel.app/#restaurant",
+   "name": "Waves Coffee & Food",
+   "description": "Tavernă pe plajă în Ouranoupoli, lângă feribotul spre Muntele Athos. Fructe de mare, grătar grecesc, mic dejun de la 05:30. 4,9★ pe Google.",
+   "url": "https://waveshalkidiki.vercel.app/",
+   "image": [
+    "https://waveshalkidiki.vercel.app/images/fried-platter-800.jpg",
+    "https://waveshalkidiki.vercel.app/images/octopus-grill-800.jpg",
+    "https://waveshalkidiki.vercel.app/images/greek-salad-800.jpg"
+   ],
+   "servesCuisine": [
+    "Greek",
+    "Seafood",
+    "Grill",
+    "Café"
+   ],
+   "priceRange": "€10–15",
+   "currenciesAccepted": "EUR",
+   "telephone": "+302377071088",
+   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Ouranoupoli",
     "postalCode": "630 75",
     "addressRegion": "Halkidiki",
     "addressCountry": "GR"
-  },
-  "geo": { "@type": "GeoCoordinates", "latitude": 40.3255019, "longitude": 23.9797725 },
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "05:30",
-    "closes": "22:00"
-  }],
-  "hasMenu": "https://waveshalkidiki.vercel.app/ro/#menu",
-  "acceptsReservations": true,
-  "sameAs": ["https://maps.app.goo.gl/TWM8Gz17om45NjVWA"]
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 40.3255019,
+    "longitude": 23.9797725
+   },
+   "hasMap": "https://maps.app.goo.gl/TWM8Gz17om45NjVWA",
+   "openingHoursSpecification": [
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+     ],
+     "opens": "05:30",
+     "closes": "22:00"
+    }
+   ],
+   "hasMenu": {
+    "@type": "Menu",
+    "@id": "https://waveshalkidiki.vercel.app/#menu",
+    "name": "Waves Coffee & Food menu",
+    "inLanguage": "ro",
+    "hasMenuSection": [
+     {
+      "@type": "MenuSection",
+      "name": "Din mare",
+      "hasMenuItem": [
+       {
+        "@type": "MenuItem",
+        "name": "Caracatiță la grătar",
+        "offers": {
+         "@type": "Offer",
+         "price": "18",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Calamar la grătar",
+        "offers": {
+         "@type": "Offer",
+         "price": "20",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Calamari prăjiți",
+        "offers": {
+         "@type": "Offer",
+         "price": "14",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Hamsii prăjite (gavros)",
+        "offers": {
+         "@type": "Offer",
+         "price": "12",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Creveți",
+        "offers": {
+         "@type": "Offer",
+         "price": "18",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Paste cu creveți",
+        "offers": {
+         "@type": "Offer",
+         "price": "18",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Spaghete cu fructe de mare",
+        "offers": {
+         "@type": "Offer",
+         "price": "18",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Mix de fructe de mare",
+        "offers": {
+         "@type": "Offer",
+         "price": "23",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Doradă",
+        "offers": {
+         "@type": "Offer",
+         "price": "22",
+         "priceCurrency": "EUR"
+        }
+       }
+      ]
+     },
+     {
+      "@type": "MenuSection",
+      "name": "De pe grătar",
+      "hasMenuItem": [
+       {
+        "@type": "MenuItem",
+        "name": "Cotlete de miel",
+        "offers": {
+         "@type": "Offer",
+         "price": "20",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Cotlet de porc",
+        "offers": {
+         "@type": "Offer",
+         "price": "12",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Coaste de porc",
+        "offers": {
+         "@type": "Offer",
+         "price": "12",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Frigărui souvlaki",
+        "offers": {
+         "@type": "Offer",
+         "price": "12",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Gyros (porc)",
+        "offers": {
+         "@type": "Offer",
+         "price": "12",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Gyros de pui / mix",
+        "offers": {
+         "@type": "Offer",
+         "price": "13",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Bifteki (biftec grecesc)",
+        "offers": {
+         "@type": "Offer",
+         "price": "12",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Suzukaki",
+        "offers": {
+         "@type": "Offer",
+         "price": "12",
+         "priceCurrency": "EUR"
+        }
+       }
+      ]
+     },
+     {
+      "@type": "MenuSection",
+      "name": "Burgeri",
+      "hasMenuItem": [
+       {
+        "@type": "MenuItem",
+        "name": "Classic Burger",
+        "description": "sos, roșii, salată, cheddar, ketchup",
+        "offers": {
+         "@type": "Offer",
+         "price": "8",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Golden Burger",
+        "description": "cașcaval ras, bacon, roșii, salată, maioneză",
+        "offers": {
+         "@type": "Offer",
+         "price": "8",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Texas BBQ Burger",
+        "description": "cheddar, bacon, salată, roșii, sos BBQ",
+        "offers": {
+         "@type": "Offer",
+         "price": "8",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Angus Burger",
+        "description": "Philadelphia, salată, roșii, cheddar, bacon, ketchup",
+        "offers": {
+         "@type": "Offer",
+         "price": "8",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Crispy Chicken Burger",
+        "description": "șnițel de pui, cheddar, roșii, salată, sos crispy, bacon",
+        "offers": {
+         "@type": "Offer",
+         "price": "8",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Orice burger cu cartofi",
+        "offers": {
+         "@type": "Offer",
+         "price": "10",
+         "priceCurrency": "EUR"
+        }
+       }
+      ]
+     },
+     {
+      "@type": "MenuSection",
+      "name": "Sandvișuri & gustări",
+      "hasMenuItem": [
+       {
+        "@type": "MenuItem",
+        "name": "Baghetă albă cu pui",
+        "description": "maioneză, parmezan, rucola",
+        "offers": {
+         "@type": "Offer",
+         "price": "7",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Baghetă integrală",
+        "description": "maioneză, salată, curcan, roșii, feta",
+        "offers": {
+         "@type": "Offer",
+         "price": "6",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Baghetă grecească",
+        "description": "salată, feta, roșii, castraveți, măsline",
+        "offers": {
+         "@type": "Offer",
+         "price": "6",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Croissant sărat",
+        "description": "gouda, curcan, roșii, maioneză",
+        "offers": {
+         "@type": "Offer",
+         "price": "6",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Club sandwich",
+        "offers": {
+         "@type": "Offer",
+         "price": "10",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Club sandwich cu pui",
+        "offers": {
+         "@type": "Offer",
+         "price": "12",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Nuggets de pui",
+        "offers": {
+         "@type": "Offer",
+         "price": "11",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Cartofi prăjiți",
+        "offers": {
+         "@type": "Offer",
+         "price": "6",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Sandviș cu gyros",
+        "offers": {
+         "@type": "Offer",
+         "price": "5",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Hot dog",
+        "offers": {
+         "@type": "Offer",
+         "price": "5",
+         "priceCurrency": "EUR"
+        }
+       }
+      ]
+     },
+     {
+      "@type": "MenuSection",
+      "name": "Supe & ciorbe",
+      "hasMenuItem": [
+       {
+        "@type": "MenuItem",
+        "name": "Supă de fructe de mare",
+        "offers": {
+         "@type": "Offer",
+         "price": "18",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Ciorbă de pește",
+        "offers": {
+         "@type": "Offer",
+         "price": "12",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Supă de ciuperci",
+        "offers": {
+         "@type": "Offer",
+         "price": "9",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Supă de legume",
+        "offers": {
+         "@type": "Offer",
+         "price": "8",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Supă de roșii",
+        "offers": {
+         "@type": "Offer",
+         "price": "8",
+         "priceCurrency": "EUR"
+        }
+       }
+      ]
+     },
+     {
+      "@type": "MenuSection",
+      "name": "Salate",
+      "hasMenuItem": [
+       {
+        "@type": "MenuItem",
+        "name": "Salată grecească",
+        "offers": {
+         "@type": "Offer",
+         "price": "12",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Salată Caesar",
+        "offers": {
+         "@type": "Offer",
+         "price": "13",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Salată cu ton",
+        "offers": {
+         "@type": "Offer",
+         "price": "13",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Salată verde",
+        "offers": {
+         "@type": "Offer",
+         "price": "10",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Bougiourdi (feta picantă la cuptor)",
+        "offers": {
+         "@type": "Offer",
+         "price": "8",
+         "priceCurrency": "EUR"
+        }
+       }
+      ]
+     },
+     {
+      "@type": "MenuSection",
+      "name": "Pizza",
+      "hasMenuItem": [
+       {
+        "@type": "MenuItem",
+        "name": "Specială",
+        "offers": {
+         "@type": "Offer",
+         "price": "15",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Margherita",
+        "description": "mozzarella & sos de roșii",
+        "offers": {
+         "@type": "Offer",
+         "price": "12",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Pizza cu ton",
+        "offers": {
+         "@type": "Offer",
+         "price": "15",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Pizza cu gyros",
+        "offers": {
+         "@type": "Offer",
+         "price": "15",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Pizza cu pepperoni",
+        "offers": {
+         "@type": "Offer",
+         "price": "15",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Pizza de post",
+        "offers": {
+         "@type": "Offer",
+         "price": "12",
+         "priceCurrency": "EUR"
+        }
+       }
+      ]
+     },
+     {
+      "@type": "MenuSection",
+      "name": "Mic dejun & plăcinte",
+      "hasMenuItem": [
+       {
+        "@type": "MenuItem",
+        "name": "Bougatsa (cremă / brânză / spanac / spanac & brânză / carne tocată)",
+        "offers": {
+         "@type": "Offer",
+         "price": "3",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Plăcintă cu cârnați / șuncă & brânză / cartofi",
+        "offers": {
+         "@type": "Offer",
+         "price": "3",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Croissant",
+        "offers": {
+         "@type": "Offer",
+         "price": "3",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Mic dejun WAVES (platou complet)",
+        "offers": {
+         "@type": "Offer",
+         "price": "15",
+         "priceCurrency": "EUR"
+        }
+       }
+      ]
+     },
+     {
+      "@type": "MenuSection",
+      "name": "Omlete & ouă",
+      "hasMenuItem": [
+       {
+        "@type": "MenuItem",
+        "name": "Ochiuri",
+        "offers": {
+         "@type": "Offer",
+         "price": "12",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Omletă cu cârnați sau bacon",
+        "offers": {
+         "@type": "Offer",
+         "price": "12",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Omletă de legume",
+        "offers": {
+         "@type": "Offer",
+         "price": "12",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Ouă scrambled",
+        "offers": {
+         "@type": "Offer",
+         "price": "13",
+         "priceCurrency": "EUR"
+        }
+       }
+      ]
+     },
+     {
+      "@type": "MenuSection",
+      "name": "Clătite sărate",
+      "hasMenuItem": [
+       {
+        "@type": "MenuItem",
+        "name": "Vegetariană",
+        "description": "gouda, roșii, ciuperci, măsline, ardei",
+        "offers": {
+         "@type": "Offer",
+         "price": "8",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Light",
+        "description": "gouda, curcan, roșii, porumb, ardei",
+        "offers": {
+         "@type": "Offer",
+         "price": "8",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Chef",
+        "description": "gouda, curcan, porumb, ou, roșii, salată verde",
+        "offers": {
+         "@type": "Offer",
+         "price": "9",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Caesar",
+        "description": "gouda, pui, porumb, parmezan",
+        "offers": {
+         "@type": "Offer",
+         "price": "9",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Specială",
+        "description": "gouda, șuncă, bacon, ciuperci, roșii, maioneză",
+        "offers": {
+         "@type": "Offer",
+         "price": "9",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Clătită cu gyros",
+        "offers": {
+         "@type": "Offer",
+         "price": "10",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Clătită cu carne tocată",
+        "offers": {
+         "@type": "Offer",
+         "price": "10",
+         "priceCurrency": "EUR"
+        }
+       }
+      ]
+     },
+     {
+      "@type": "MenuSection",
+      "name": "Clătite dulci",
+      "hasMenuItem": [
+       {
+        "@type": "MenuItem",
+        "name": "Banoffee",
+        "description": "merenda, biscuiți, banană, sirop de caramel",
+        "offers": {
+         "@type": "Offer",
+         "price": "9",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Albă",
+        "description": "pralină albă, căpșuni, biscuiți",
+        "offers": {
+         "@type": "Offer",
+         "price": "8",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Oreo Madness",
+        "description": "pralină albă, merenda, biscuiți Oreo",
+        "offers": {
+         "@type": "Offer",
+         "price": "8",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Caprice",
+        "description": "merenda, pralină albă, Caprice",
+        "offers": {
+         "@type": "Offer",
+         "price": "8",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Albă ca Zăpada",
+        "description": "ciocolată albă, cocos, banană",
+        "offers": {
+         "@type": "Offer",
+         "price": "8",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Bueno",
+        "description": "pralină Bueno, biscuiți",
+        "offers": {
+         "@type": "Offer",
+         "price": "7",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Ciocolată",
+        "description": "merenda, biscuiți",
+        "offers": {
+         "@type": "Offer",
+         "price": "6",
+         "priceCurrency": "EUR"
+        }
+       }
+      ]
+     },
+     {
+      "@type": "MenuSection",
+      "name": "Pancakes",
+      "hasMenuItem": [
+       {
+        "@type": "MenuItem",
+        "name": "Cu miere, banane și nuci",
+        "offers": {
+         "@type": "Offer",
+         "price": "10",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Bueno",
+        "offers": {
+         "@type": "Offer",
+         "price": "10",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Oreo",
+        "offers": {
+         "@type": "Offer",
+         "price": "10",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Ciocolată albă și căpșuni",
+        "offers": {
+         "@type": "Offer",
+         "price": "10",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Cu biscuiți",
+        "offers": {
+         "@type": "Offer",
+         "price": "10",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Pancakes sărate",
+        "offers": {
+         "@type": "Offer",
+         "price": "12",
+         "priceCurrency": "EUR"
+        }
+       }
+      ]
+     },
+     {
+      "@type": "MenuSection",
+      "name": "Dulciuri & înghețată",
+      "hasMenuItem": [
+       {
+        "@type": "MenuItem",
+        "name": "Baclava",
+        "offers": {
+         "@type": "Offer",
+         "price": "3",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Ekmek kantaifi",
+        "offers": {
+         "@type": "Offer",
+         "price": "3",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Kantaifi",
+        "offers": {
+         "@type": "Offer",
+         "price": "2",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Înghețată (cupa)",
+        "description": "vanilie, ciocolată, căpșuni, smochine, cookies, banană",
+        "offers": {
+         "@type": "Offer",
+         "price": "1.50",
+         "priceCurrency": "EUR"
+        }
+       }
+      ]
+     },
+     {
+      "@type": "MenuSection",
+      "name": "Cafea & băuturi",
+      "hasMenuItem": [
+       {
+        "@type": "MenuItem",
+        "name": "Espresso / ristretto / macchiato",
+        "offers": {
+         "@type": "Offer",
+         "price": "2.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Espresso dublu / lungo",
+        "offers": {
+         "@type": "Offer",
+         "price": "3",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Americano",
+        "offers": {
+         "@type": "Offer",
+         "price": "3",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Cappuccino / latte",
+        "offers": {
+         "@type": "Offer",
+         "price": "3",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Freddo espresso / freddo cappuccino",
+        "offers": {
+         "@type": "Offer",
+         "price": "3",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Nes / frappe / cafea la filtru",
+        "offers": {
+         "@type": "Offer",
+         "price": "2.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Cafea grecească",
+        "offers": {
+         "@type": "Offer",
+         "price": "1.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Cafea grecească dublă",
+        "offers": {
+         "@type": "Offer",
+         "price": "2",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Ciocolată caldă / rece",
+        "offers": {
+         "@type": "Offer",
+         "price": "3",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Ceai cald",
+        "offers": {
+         "@type": "Offer",
+         "price": "2",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Granita (căpșuni, lămâie)",
+        "offers": {
+         "@type": "Offer",
+         "price": "3.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Milkshake",
+        "offers": {
+         "@type": "Offer",
+         "price": "3.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Suc (vișine, portocale, piersici, măr, exotic)",
+        "offers": {
+         "@type": "Offer",
+         "price": "3",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Coca-Cola / Fanta / Sprite / Schweppes / Fuze Tea 330ml",
+        "offers": {
+         "@type": "Offer",
+         "price": "2",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Coca-Cola / Fanta 500ml",
+        "offers": {
+         "@type": "Offer",
+         "price": "2.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Apă 500ml",
+        "offers": {
+         "@type": "Offer",
+         "price": "0.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Apă 1,5L",
+        "offers": {
+         "@type": "Offer",
+         "price": "1",
+         "priceCurrency": "EUR"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "acceptsReservations": true,
+   "knowsLanguage": [
+    "el",
+    "en",
+    "ro",
+    "bg",
+    "sr",
+    "ru"
+   ],
+   "sameAs": [
+    "https://maps.app.goo.gl/TWM8Gz17om45NjVWA"
+   ]
+  }
+ ]
 }
 </script>
 <script type="application/ld+json" id="ld-faq">
@@ -104,9 +1160,10 @@
  ]
 }
 </script>
-<link rel="stylesheet" href="/assets/style.cb0a4e90.css">
+<link rel="stylesheet" href="/assets/style.b186d9d1.css">
 </head>
 <body>
+<a class="skip" href="#main" data-i18n="a11y_skip">Salt la conținutul principal</a>
 
 <nav id="nav">
   <div class="nav-in">
@@ -129,23 +1186,24 @@
       <a href="#gallery" data-i18n="nav_gal">Galerie</a>
       <a href="#reviews" data-i18n="nav_rev">Recenzii</a>
       <a href="#visit" data-i18n="nav_visit">Vizitează-ne</a>
-      <div class="lang-sw lang-sw-more" role="group" aria-label="More languages">
-        <button data-lang="el" aria-pressed="false">ΕΛ</button>
-        <button data-lang="bg" aria-pressed="false">BG</button>
-        <button data-lang="sr" aria-pressed="false">SR</button>
-        <button data-lang="ru" aria-pressed="false">RU</button>
+      <div class="lang-sw lang-sw-more" role="group" aria-label="Mai multe limbi" data-i18n-attr="aria-label:a11y_langmore">
+        <a href="/el/" data-lang="el" hreflang="el">ΕΛ</a>
+        <a href="/bg/" data-lang="bg" hreflang="bg">BG</a>
+        <a href="/sr/" data-lang="sr" hreflang="sr-Latn">SR</a>
+        <a href="/ru/" data-lang="ru" hreflang="ru">RU</a>
       </div>
     </div>
-    <div class="lang-sw" id="langsw" role="group" aria-label="Language">
-      <button data-lang="en" aria-pressed="false">EN</button>
-      <button data-lang="el" aria-pressed="false">ΕΛ</button>
-      <button data-lang="ro" aria-pressed="false">RO</button>
-      <button data-lang="bg" aria-pressed="false">BG</button>
-      <button data-lang="sr" aria-pressed="false">SR</button>
-      <button data-lang="ru" aria-pressed="false">RU</button>
+    <div class="lang-sw" id="langsw" role="group" aria-label="Limbă" data-i18n-attr="aria-label:a11y_lang">
+      <a href="/" data-lang="en" hreflang="en">EN</a>
+      <a href="/el/" data-lang="el" hreflang="el">ΕΛ</a>
+      <a href="/ro/" data-lang="ro" hreflang="ro">RO</a>
+      <a href="/bg/" data-lang="bg" hreflang="bg">BG</a>
+      <a href="/sr/" data-lang="sr" hreflang="sr-Latn">SR</a>
+      <a href="/ru/" data-lang="ru" hreflang="ru">RU</a>
     </div>
     <a class="nav-call" href="tel:+302377071088">☎ +30 2377 071088</a>
-    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
+    <a class="nav-call-sm" href="tel:+302377071088" aria-label="Sună-ne" data-i18n-attr="aria-label:cta_call"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .5 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.5-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1l-2.2 2.2z" fill="currentColor"/></svg></a>
+    <button class="burger" id="burger" aria-label="Meniu" data-i18n-attr="aria-label:a11y_burger" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
@@ -159,7 +1217,7 @@
       <span class="tagline" data-i18n="tagline">☀ Mic dejun înainte de feribotul spre Muntele Athos — masă lângă mare la întoarcere.</span>
       <div class="hero-cta">
         <a class="btn btn-orange" href="#menu" data-i18n="cta_menu">Vezi meniul</a>
-        <a class="btn btn-ghost" href="https://maps.app.goo.gl/TWM8Gz17om45NjVWA" target="_blank" rel="noopener" data-i18n="cta_dir">Cum ajungi</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=40.3255019%2C23.9797725" target="_blank" rel="noopener" data-i18n="cta_dir">Cum ajungi</a>
       </div>
       <div class="hero-stats">
         <div><strong>4.9 ★</strong><span data-i18n="st_rev">414 recenzii Google</span></div>
@@ -169,35 +1227,36 @@
     </div>
     <div class="hero-art">
       <div class="ring ring-1"></div>
-      <div class="circle-img ci-1"><picture><source type="image/avif" srcset="/images/seafood-platter-500.avif?v=552b6790 500w, /images/seafood-platter-800.avif?v=a383035c 600w" sizes="380px"><source type="image/webp" srcset="/images/seafood-platter-500.webp?v=bc06801f 500w, /images/seafood-platter-800.webp?v=1ee051a1 600w" sizes="380px"><img src="/images/seafood-platter-800.jpg?v=55320703" sizes="380px" width="600" height="800" fetchpriority="high" alt="Mixed seafood platter — shrimp, calamari, mussels and grilled octopus" srcset="/images/seafood-platter-500.jpg 500w, /images/seafood-platter-800.jpg 600w"></picture></div>
-      <div class="circle-img ci-2"><picture><source type="image/avif" srcset="/images/octopus-balsamic-500.avif?v=d729394b 500w, /images/octopus-balsamic-800.avif?v=6e136138 600w" sizes="230px"><source type="image/webp" srcset="/images/octopus-balsamic-500.webp?v=ac07d5f4 500w, /images/octopus-balsamic-800.webp?v=3dcc1177 600w" sizes="230px"><img src="/images/octopus-balsamic-800.jpg?v=4bed03b0" sizes="230px" width="600" height="800" alt="Char-grilled octopus with balsamic glaze" srcset="/images/octopus-balsamic-500.jpg 500w, /images/octopus-balsamic-800.jpg 600w"></picture></div>
-      <picture><source type="image/avif" srcset="/images/waves-sign-520.avif?v=9b879188"><source type="image/webp" srcset="/images/waves-sign-520.webp?v=ab4f768b"><img class="signboard" src="/images/waves-sign-520.jpg?v=9431960a" alt="Waves Coffee and Food — the signboard logo" width="520" height="520" loading="lazy"></picture>
+      <div class="circle-img ci-1"><picture><source type="image/avif" srcset="/images/seafood-platter-500.avif?v=552b6790 500w, /images/seafood-platter-800.avif?v=a383035c 600w" sizes="380px"><source type="image/webp" srcset="/images/seafood-platter-500.webp?v=bc06801f 500w, /images/seafood-platter-800.webp?v=1ee051a1 600w" sizes="380px"><img src="/images/seafood-platter-800.jpg?v=55320703" sizes="380px" width="600" height="800" fetchpriority="high" alt="Platou de fructe de mare cu creveți, calamar, midii și caracatiță la grătar" data-i18n-attr="alt:alt_hero1" srcset="/images/seafood-platter-500.jpg 500w, /images/seafood-platter-800.jpg 600w"></picture></div>
+      <div class="circle-img ci-2"><picture><source type="image/avif" srcset="/images/octopus-balsamic-500.avif?v=d729394b 500w, /images/octopus-balsamic-800.avif?v=6e136138 600w" sizes="230px"><source type="image/webp" srcset="/images/octopus-balsamic-500.webp?v=ac07d5f4 500w, /images/octopus-balsamic-800.webp?v=3dcc1177 600w" sizes="230px"><img src="/images/octopus-balsamic-800.jpg?v=4bed03b0" sizes="230px" width="600" height="800" alt="Caracatiță la grătar cu glazură de balsamic" data-i18n-attr="alt:alt_hero2" srcset="/images/octopus-balsamic-500.jpg 500w, /images/octopus-balsamic-800.jpg 600w"></picture></div>
+      <picture><source type="image/avif" srcset="/images/waves-sign-520.avif?v=9b879188"><source type="image/webp" srcset="/images/waves-sign-520.webp?v=ab4f768b"><img class="signboard" src="/images/waves-sign-520.jpg?v=9431960a" alt="Firma Waves Coffee and Food" data-i18n-attr="alt:alt_sign" width="520" height="520" loading="lazy"></picture>
       <div class="dots"></div>
     </div>
   </div>
 </header>
 
-<div class="strip" aria-hidden="true">
-  <div class="strip-track" id="strip-track"><span>Pește proaspăt zilnic</span><span class="sep">✦</span><span>Grătar pe cărbuni</span><span class="sep">✦</span><span>Mic dejun de la 05:30</span><span class="sep">✦</span><span>Clătite făcute în casă</span><span class="sep">✦</span><span>Freddo lângă mare</span><span class="sep">✦</span><span>Pește proaspăt zilnic</span><span class="sep">✦</span><span>Grătar pe cărbuni</span><span class="sep">✦</span><span>Mic dejun de la 05:30</span><span class="sep">✦</span><span>Clătite făcute în casă</span><span class="sep">✦</span><span>Freddo lângă mare</span><span class="sep">✦</span></div>
+<div class="strip">
+  <div class="strip-track" id="strip-track" aria-hidden="true"><span>Pește proaspăt zilnic</span><span class="sep">✦</span><span>Grătar pe cărbuni</span><span class="sep">✦</span><span>Mic dejun de la 05:30</span><span class="sep">✦</span><span>Clătite făcute în casă</span><span class="sep">✦</span><span>Freddo lângă mare</span><span class="sep">✦</span><span>Pește proaspăt zilnic</span><span class="sep">✦</span><span>Grătar pe cărbuni</span><span class="sep">✦</span><span>Mic dejun de la 05:30</span><span class="sep">✦</span><span>Clătite făcute în casă</span><span class="sep">✦</span><span>Freddo lângă mare</span><span class="sep">✦</span><span>Pește proaspăt zilnic</span><span class="sep">✦</span><span>Grătar pe cărbuni</span><span class="sep">✦</span><span>Mic dejun de la 05:30</span><span class="sep">✦</span><span>Clătite făcute în casă</span><span class="sep">✦</span><span>Freddo lângă mare</span><span class="sep">✦</span><span>Pește proaspăt zilnic</span><span class="sep">✦</span><span>Grătar pe cărbuni</span><span class="sep">✦</span><span>Mic dejun de la 05:30</span><span class="sep">✦</span><span>Clătite făcute în casă</span><span class="sep">✦</span><span>Freddo lângă mare</span><span class="sep">✦</span></div>
+  <button class="strip-pause" id="strip-pause" type="button" aria-pressed="false" aria-label="Oprește bannerul derulant" data-i18n-attr="aria-label:a11y_pause"><span aria-hidden="true">❙❙</span></button>
 </div>
 
-<main>
+<main id="main">
 
 <section class="polas" aria-label="Breakfast, fast food, lunch and drinks at Waves">
   <div class="wrap pol-row">
-    <figure class="pol reveal pol-r1"><picture><source type="image/avif" srcset="/images/greek-breakfast-500.avif?v=746232c9 500w, /images/greek-breakfast-800.avif?v=347361ae 600w" sizes="(max-width:640px) 40vw, 150px"><source type="image/webp" srcset="/images/greek-breakfast-500.webp?v=ecb883cc 500w, /images/greek-breakfast-800.webp?v=a6bfef93 600w" sizes="(max-width:640px) 40vw, 150px"><img src="/images/greek-breakfast-800.jpg?v=c34ba376" sizes="(max-width:640px) 40vw, 150px" alt="Greek breakfast plate" width="600" height="800" loading="lazy" srcset="/images/greek-breakfast-500.jpg 500w, /images/greek-breakfast-800.jpg 600w"></picture><figcaption>Breakfast</figcaption></figure>
-    <figure class="pol reveal pol-r2"><picture><source type="image/avif" srcset="/images/fried-platter-500.avif?v=380c8a98 500w, /images/fried-platter-800.avif?v=f2b2cdc7 800w" sizes="(max-width:640px) 40vw, 150px"><source type="image/webp" srcset="/images/fried-platter-500.webp?v=4e0593c4 500w, /images/fried-platter-800.webp?v=28a3a450 800w" sizes="(max-width:640px) 40vw, 150px"><img src="/images/fried-platter-800.jpg?v=8bb4ff12" sizes="(max-width:640px) 40vw, 150px" alt="Fried seafood platter" width="800" height="450" loading="lazy" srcset="/images/fried-platter-500.jpg 500w, /images/fried-platter-800.jpg 800w"></picture><figcaption>Fast Food</figcaption></figure>
-    <figure class="pol reveal pol-r3"><picture><source type="image/avif" srcset="/images/grill-platter-500.avif?v=24304391 500w, /images/grill-platter-800.avif?v=3af80950 600w" sizes="(max-width:640px) 40vw, 150px"><source type="image/webp" srcset="/images/grill-platter-500.webp?v=0c7f6e39 500w, /images/grill-platter-800.webp?v=55534da3 600w" sizes="(max-width:640px) 40vw, 150px"><img src="/images/grill-platter-800.jpg?v=a1ed6278" sizes="(max-width:640px) 40vw, 150px" alt="Grilled seafood platter" width="600" height="800" loading="lazy" srcset="/images/grill-platter-500.jpg 500w, /images/grill-platter-800.jpg 600w"></picture><figcaption>Lunch</figcaption></figure>
-    <figure class="pol reveal pol-r4"><picture><source type="image/avif" srcset="/images/coolers-300.avif?v=4cf0f250 300w, /images/coolers-500.avif?v=7dc7a9e6 449w, /images/coolers-800.avif?v=7dc7a9e6 449w" sizes="(max-width:640px) 40vw, 150px"><source type="image/webp" srcset="/images/coolers-300.webp?v=0d7bf7df 300w, /images/coolers-500.webp?v=7da76cc3 449w, /images/coolers-800.webp?v=7da76cc3 449w" sizes="(max-width:640px) 40vw, 150px"><img src="/images/coolers-800.jpg?v=08314b7f" sizes="(max-width:640px) 40vw, 150px" alt="House coolers and lemonade" width="450" height="800" loading="lazy" srcset="/images/coolers-300.jpg 300w, /images/coolers-500.jpg 449w, /images/coolers-800.jpg 449w"></picture><figcaption>Drinks</figcaption></figure>
+    <figure class="pol reveal pol-r1"><picture><source type="image/avif" srcset="/images/greek-breakfast-500.avif?v=746232c9 500w, /images/greek-breakfast-800.avif?v=347361ae 600w" sizes="(max-width:640px) 40vw, 150px"><source type="image/webp" srcset="/images/greek-breakfast-500.webp?v=ecb883cc 500w, /images/greek-breakfast-800.webp?v=a6bfef93 600w" sizes="(max-width:640px) 40vw, 150px"><img src="/images/greek-breakfast-800.jpg?v=c34ba376" sizes="(max-width:640px) 40vw, 150px" alt="" width="600" height="800" loading="lazy" srcset="/images/greek-breakfast-500.jpg 500w, /images/greek-breakfast-800.jpg 600w"></picture><figcaption data-i18n="pol_1">Mic dejun</figcaption></figure>
+    <figure class="pol reveal pol-r2"><picture><source type="image/avif" srcset="/images/fried-platter-500.avif?v=380c8a98 500w, /images/fried-platter-800.avif?v=f2b2cdc7 800w" sizes="(max-width:640px) 40vw, 150px"><source type="image/webp" srcset="/images/fried-platter-500.webp?v=4e0593c4 500w, /images/fried-platter-800.webp?v=28a3a450 800w" sizes="(max-width:640px) 40vw, 150px"><img src="/images/fried-platter-800.jpg?v=8bb4ff12" sizes="(max-width:640px) 40vw, 150px" alt="Platoul pescarului" data-i18n-attr="alt:s2_h" width="800" height="450" loading="lazy" srcset="/images/fried-platter-500.jpg 500w, /images/fried-platter-800.jpg 800w"></picture><figcaption data-i18n="pol_2">Fast Food</figcaption></figure>
+    <figure class="pol reveal pol-r3"><picture><source type="image/avif" srcset="/images/grill-platter-500.avif?v=24304391 500w, /images/grill-platter-800.avif?v=3af80950 600w" sizes="(max-width:640px) 40vw, 150px"><source type="image/webp" srcset="/images/grill-platter-500.webp?v=0c7f6e39 500w, /images/grill-platter-800.webp?v=55534da3 600w" sizes="(max-width:640px) 40vw, 150px"><img src="/images/grill-platter-800.jpg?v=a1ed6278" sizes="(max-width:640px) 40vw, 150px" alt="" width="600" height="800" loading="lazy" srcset="/images/grill-platter-500.jpg 500w, /images/grill-platter-800.jpg 600w"></picture><figcaption data-i18n="pol_3">Prânz</figcaption></figure>
+    <figure class="pol reveal pol-r4"><picture><source type="image/avif" srcset="/images/coolers-300.avif?v=4cf0f250 300w, /images/coolers-500.avif?v=7dc7a9e6 449w, /images/coolers-800.avif?v=7dc7a9e6 449w" sizes="(max-width:640px) 40vw, 150px"><source type="image/webp" srcset="/images/coolers-300.webp?v=0d7bf7df 300w, /images/coolers-500.webp?v=7da76cc3 449w, /images/coolers-800.webp?v=7da76cc3 449w" sizes="(max-width:640px) 40vw, 150px"><img src="/images/coolers-800.jpg?v=08314b7f" sizes="(max-width:640px) 40vw, 150px" alt="" width="450" height="800" loading="lazy" srcset="/images/coolers-300.jpg 300w, /images/coolers-500.jpg 449w, /images/coolers-800.jpg 449w"></picture><figcaption data-i18n="pol_4">Băuturi</figcaption></figure>
   </div>
 </section>
 
 <section class="sec" id="story">
   <div class="wrap story-grid">
     <div class="story-art reveal">
-      <svg class="zig" width="90" height="40" viewBox="0 0 90 40" fill="none"><path d="M2 12l11-9 11 9 11-9 11 9 11-9 11 9 11-9" stroke="#262C35" stroke-width="3"/><path d="M2 32l11-9 11 9 11-9 11 9 11-9 11 9 11-9" stroke="#F0A04B" stroke-width="3"/></svg>
-      <div class="main"><picture><source type="image/avif" srcset="/images/facade-500.avif?v=d479a217 500w, /images/facade-800.avif?v=d5f0bd90 600w" sizes="(max-width:1020px) 100vw, 560px"><source type="image/webp" srcset="/images/facade-500.webp?v=0fc07f33 500w, /images/facade-800.webp?v=cddc46e8 600w" sizes="(max-width:1020px) 100vw, 560px"><img src="/images/facade-800.jpg?v=c81b613a" sizes="(max-width:1020px) 100vw, 560px" width="600" height="800" alt="Waves Coffee & Food facade with the sea framed through the terrace" loading="lazy" srcset="/images/facade-500.jpg 500w, /images/facade-800.jpg 600w"></picture></div>
-      <div class="float"><picture><source type="image/avif" srcset="/images/interior-500.avif?v=92f81938 500w, /images/interior-800.avif?v=85a52d92 800w" sizes="240px"><source type="image/webp" srcset="/images/interior-500.webp?v=c900dd57 500w, /images/interior-800.webp?v=49ad90a2 800w" sizes="240px"><img src="/images/interior-800.jpg?v=69bfa8e6" sizes="240px" width="800" height="450" alt="Covered terrace dining room with wicker lamps" loading="lazy" srcset="/images/interior-500.jpg 500w, /images/interior-800.jpg 800w"></picture></div>
+      <svg class="zig" aria-hidden="true" width="90" height="40" viewBox="0 0 90 40" fill="none"><path d="M2 12l11-9 11 9 11-9 11 9 11-9 11 9 11-9" stroke="#262C35" stroke-width="3"/><path d="M2 32l11-9 11 9 11-9 11 9 11-9 11 9 11-9" stroke="#F0A04B" stroke-width="3"/></svg>
+      <div class="main"><picture><source type="image/avif" srcset="/images/facade-500.avif?v=d479a217 500w, /images/facade-800.avif?v=d5f0bd90 600w" sizes="(max-width:1020px) 100vw, 560px"><source type="image/webp" srcset="/images/facade-500.webp?v=0fc07f33 500w, /images/facade-800.webp?v=cddc46e8 600w" sizes="(max-width:1020px) 100vw, 560px"><img src="/images/facade-800.jpg?v=c81b613a" sizes="(max-width:1020px) 100vw, 560px" width="600" height="800" alt="Terasa Waves Coffee &amp; Food, cu marea încadrată de intrare" data-i18n-attr="alt:alt_facade" loading="lazy" srcset="/images/facade-500.jpg 500w, /images/facade-800.jpg 600w"></picture></div>
+      <div class="float"><picture><source type="image/avif" srcset="/images/interior-500.avif?v=92f81938 500w, /images/interior-800.avif?v=85a52d92 800w" sizes="240px"><source type="image/webp" srcset="/images/interior-500.webp?v=c900dd57 500w, /images/interior-800.webp?v=49ad90a2 800w" sizes="240px"><img src="/images/interior-800.jpg?v=69bfa8e6" sizes="240px" width="800" height="450" alt="Sala de pe terasa acoperită, cu lămpile din răchită" data-i18n-attr="alt:alt_interior" loading="lazy" srcset="/images/interior-500.jpg 500w, /images/interior-800.jpg 800w"></picture></div>
     </div>
     <div class="reveal">
       <span class="pill" data-i18n="story_pill">POVESTEA NOASTRĂ</span>
@@ -205,10 +1264,10 @@
       <div class="script story-sc" data-i18n="story_script">unde ziua începe cu valurile</div>
       <p class="t-muted" data-i18n="story_p">La câțiva pași de plaja din Ouranoupoli — ultimul sat înainte de Muntele Athos — Waves servește întreaga zi din Halkidiki: cafea la răsărit și patiserie caldă, prânzuri lungi lângă mare cu pește la grătar și caracatiță, și seri tihnite cu grătar, clătite și cocktailuri sub lămpile de rattan.</p>
       <div class="feat">
-        <div><div class="ic">🐟</div><div><h3 data-i18n="f1_h">Din mare, zilnic</h3><p data-i18n="f1_p">Caracatiță, calamar, sardine și pește întreg, direct pe cărbuni.</p></div></div>
-        <div><div class="ic">🔥</div><div><h3 data-i18n="f2_h">Grătar grecesc</h3><p data-i18n="f2_p">Souvlaki, coaste, bifteki și cotlete — porții generoase, prețuri corecte.</p></div></div>
-        <div><div class="ic">☕</div><div><h3 data-i18n="f3_h">Cafea de la 05:30</h3><p data-i18n="f3_p">Primul freddo înainte să plece feribotul spre Athos.</p></div></div>
-        <div><div class="ic">🌊</div><div><h3 data-i18n="f4_h">Chiar pe malul apei</h3><p data-i18n="f4_p">Mese pe terasă cu golful Singitic drept orizont.</p></div></div>
+        <div><div class="ic" aria-hidden="true">🐟</div><div><h3 data-i18n="f1_h">Din mare, zilnic</h3><p data-i18n="f1_p">Caracatiță, calamar, sardine și pește întreg, direct pe cărbuni.</p></div></div>
+        <div><div class="ic" aria-hidden="true">🔥</div><div><h3 data-i18n="f2_h">Grătar grecesc</h3><p data-i18n="f2_p">Souvlaki, coaste, bifteki și cotlete — porții generoase, prețuri corecte.</p></div></div>
+        <div><div class="ic" aria-hidden="true">☕</div><div><h3 data-i18n="f3_h">Cafea de la 05:30</h3><p data-i18n="f3_p">Primul freddo înainte să plece feribotul spre Athos.</p></div></div>
+        <div><div class="ic" aria-hidden="true">🌊</div><div><h3 data-i18n="f4_h">Chiar pe malul apei</h3><p data-i18n="f4_p">Mese pe terasă cu golful Singitic drept orizont.</p></div></div>
       </div>
     </div>
   </div>
@@ -222,10 +1281,10 @@
       <div class="script sc-lg" data-i18n="sig_script">din Egeea, cu drag</div>
     </div>
     <div class="sig-grid">
-      <article class="sig-card reveal"><picture><source type="image/avif" srcset="/images/octopus-grill-500.avif?v=8d5b9025 500w, /images/octopus-grill-800.avif?v=bd52a7ea 800w" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px"><source type="image/webp" srcset="/images/octopus-grill-500.webp?v=8df92352 500w, /images/octopus-grill-800.webp?v=ca1b45da 800w" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px"><img src="/images/octopus-grill-800.jpg?v=8f40e3ca" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px" width="800" height="600" alt="Grilled octopus with balsamic" loading="lazy" srcset="/images/octopus-grill-500.jpg 500w, /images/octopus-grill-800.jpg 800w"></picture><span class="sig-arrow">↗</span><div class="sig-body"><h3 data-i18n="s1_h">Caracatiță la grătar</h3><p data-i18n="s1_p">Tentacul fript pe verdețuri, ceapă și glazură balsamică.</p></div></article>
-      <article class="sig-card reveal"><picture><source type="image/avif" srcset="/images/fried-platter-500.avif?v=380c8a98 500w, /images/fried-platter-800.avif?v=f2b2cdc7 800w" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px"><source type="image/webp" srcset="/images/fried-platter-500.webp?v=4e0593c4 500w, /images/fried-platter-800.webp?v=28a3a450 800w" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px"><img src="/images/fried-platter-800.jpg?v=8bb4ff12" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px" width="800" height="450" alt="Fried seafood platter" loading="lazy" srcset="/images/fried-platter-500.jpg 500w, /images/fried-platter-800.jpg 800w"></picture><span class="sig-arrow">↗</span><div class="sig-body"><h3 data-i18n="s2_h">Platoul pescarului</h3><p data-i18n="s2_p">Calamari, creveți, hamsii, midii și caracatiță peste cartofi cu oregano.</p></div></article>
-      <article class="sig-card reveal"><picture><source type="image/avif" srcset="/images/dorada-platter-500.avif?v=38fbf22e 500w, /images/dorada-platter-800.avif?v=4788ee7b 800w" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px"><source type="image/webp" srcset="/images/dorada-platter-500.webp?v=b2374737 500w, /images/dorada-platter-800.webp?v=3b412c12 800w" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px"><img src="/images/dorada-platter-800.jpg?v=8d4eba5d" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px" width="800" height="600" alt="Whole grilled dorada with grilled vegetables and lemon" loading="lazy" srcset="/images/dorada-platter-500.jpg 500w, /images/dorada-platter-800.jpg 800w"></picture><span class="sig-arrow">↗</span><div class="sig-body"><h3 data-i18n="s3_h">Doradă la grătar</h3><p data-i18n="s3_p">Doradă proaspătă, întreagă, pe cărbuni, cu legume la grătar și lămâie.</p></div></article>
-      <article class="sig-card reveal"><picture><source type="image/avif" srcset="/images/grilled-squid-500.avif?v=8a577a84 500w, /images/grilled-squid-800.avif?v=5ea362d8 600w" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px"><source type="image/webp" srcset="/images/grilled-squid-500.webp?v=b779182d 500w, /images/grilled-squid-800.webp?v=03f97bc0 600w" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px"><img src="/images/grilled-squid-800.jpg?v=c37118a9" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px" width="600" height="800" alt="Whole grilled squid with fries and lemon" loading="lazy" srcset="/images/grilled-squid-500.jpg 500w, /images/grilled-squid-800.jpg 600w"></picture><span class="sig-arrow">↗</span><div class="sig-body"><h3 data-i18n="s4_h">Calamar întreg la grătar</h3><p data-i18n="s4_p">Crestat și rumenit, cu cartofi și lămâie.</p></div></article>
+      <article class="sig-card reveal"><picture><source type="image/avif" srcset="/images/octopus-grill-500.avif?v=8d5b9025 500w, /images/octopus-grill-800.avif?v=bd52a7ea 800w" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px"><source type="image/webp" srcset="/images/octopus-grill-500.webp?v=8df92352 500w, /images/octopus-grill-800.webp?v=ca1b45da 800w" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px"><img src="/images/octopus-grill-800.jpg?v=8f40e3ca" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px" width="800" height="600" alt="Caracatiță la grătar" data-i18n-attr="alt:s1_h" loading="lazy" srcset="/images/octopus-grill-500.jpg 500w, /images/octopus-grill-800.jpg 800w"></picture><span class="sig-arrow" aria-hidden="true">↗</span><div class="sig-body"><h3 data-i18n="s1_h">Caracatiță la grătar</h3><p data-i18n="s1_p">Tentacul fript pe verdețuri, ceapă și glazură balsamică.</p></div></article>
+      <article class="sig-card reveal"><picture><source type="image/avif" srcset="/images/fried-platter-500.avif?v=380c8a98 500w, /images/fried-platter-800.avif?v=f2b2cdc7 800w" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px"><source type="image/webp" srcset="/images/fried-platter-500.webp?v=4e0593c4 500w, /images/fried-platter-800.webp?v=28a3a450 800w" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px"><img src="/images/fried-platter-800.jpg?v=8bb4ff12" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px" width="800" height="450" alt="Fried seafood platter" loading="lazy" srcset="/images/fried-platter-500.jpg 500w, /images/fried-platter-800.jpg 800w"></picture><span class="sig-arrow" aria-hidden="true">↗</span><div class="sig-body"><h3 data-i18n="s2_h">Platoul pescarului</h3><p data-i18n="s2_p">Calamari, creveți, hamsii, midii și caracatiță peste cartofi cu oregano.</p></div></article>
+      <article class="sig-card reveal"><picture><source type="image/avif" srcset="/images/dorada-platter-500.avif?v=38fbf22e 500w, /images/dorada-platter-800.avif?v=4788ee7b 800w" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px"><source type="image/webp" srcset="/images/dorada-platter-500.webp?v=b2374737 500w, /images/dorada-platter-800.webp?v=3b412c12 800w" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px"><img src="/images/dorada-platter-800.jpg?v=8d4eba5d" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px" width="800" height="600" alt="Doradă la grătar" data-i18n-attr="alt:s3_h" loading="lazy" srcset="/images/dorada-platter-500.jpg 500w, /images/dorada-platter-800.jpg 800w"></picture><span class="sig-arrow" aria-hidden="true">↗</span><div class="sig-body"><h3 data-i18n="s3_h">Doradă la grătar</h3><p data-i18n="s3_p">Doradă proaspătă, întreagă, pe cărbuni, cu legume la grătar și lămâie.</p></div></article>
+      <article class="sig-card reveal"><picture><source type="image/avif" srcset="/images/grilled-squid-500.avif?v=8a577a84 500w, /images/grilled-squid-800.avif?v=5ea362d8 600w" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px"><source type="image/webp" srcset="/images/grilled-squid-500.webp?v=b779182d 500w, /images/grilled-squid-800.webp?v=03f97bc0 600w" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px"><img src="/images/grilled-squid-800.jpg?v=c37118a9" sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 280px" width="600" height="800" alt="Calamar întreg la grătar" data-i18n-attr="alt:s4_h" loading="lazy" srcset="/images/grilled-squid-500.jpg 500w, /images/grilled-squid-800.jpg 600w"></picture><span class="sig-arrow" aria-hidden="true">↗</span><div class="sig-body"><h3 data-i18n="s4_h">Calamar întreg la grătar</h3><p data-i18n="s4_p">Crestat și rumenit, cu cartofi și lămâie.</p></div></article>
     </div>
   </div>
 </section>
@@ -237,10 +1296,13 @@
       <h2 data-i18n="menu_h2">Mănânci în ritmul mării</h2>
       <div class="script sc-lg" data-i18n="menu_script">meniul complet</div>
     </div>
-    <div class="fullmenu" id="fullmenu"><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/seafood-grill-300.avif?v=d9e63df7"><source type="image/webp" srcset="/images/seafood-grill-300.webp?v=5e59076c"><img src="/images/seafood-grill-300.jpg?v=10a11e9a" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Din mare</button></h3><span class="script">proaspăt, la grătar</span><ul><li><div class="fm-row"><span class="nm">Caracatiță la grătar</span><span class="ld"></span><span class="pr">18 €</span></div></li><li><div class="fm-row"><span class="nm">Calamar la grătar</span><span class="ld"></span><span class="pr">20 €</span></div></li><li><div class="fm-row"><span class="nm">Calamari prăjiți</span><span class="ld"></span><span class="pr">14 €</span></div></li><li><div class="fm-row"><span class="nm">Hamsii prăjite (gavros)</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Creveți</span><span class="ld"></span><span class="pr">18 €</span></div></li><li><div class="fm-row"><span class="nm">Paste cu creveți</span><span class="ld"></span><span class="pr">18 €</span></div></li><li><div class="fm-row"><span class="nm">Spaghete cu fructe de mare</span><span class="ld"></span><span class="pr">18 €</span></div></li><li><div class="fm-row"><span class="nm">Mix de fructe de mare</span><span class="ld"></span><span class="pr">23 €</span></div></li><li><div class="fm-row"><span class="nm">Doradă</span><span class="ld"></span><span class="pr">22 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/pork-ribs-300.avif?v=ca4319cc"><source type="image/webp" srcset="/images/pork-ribs-300.webp?v=9ef9ef1f"><img src="/images/pork-ribs-300.jpg?v=1808bdd7" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">De pe grătar</button></h3><span class="script">pe cărbuni</span><ul><li><div class="fm-row"><span class="nm">Cotlete de miel</span><span class="ld"></span><span class="pr">20 €</span></div></li><li><div class="fm-row"><span class="nm">Cotlet de porc</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Coaste de porc</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Frigărui souvlaki</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Gyros (porc sau pui)</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Gyros de pui / mix</span><span class="ld"></span><span class="pr">13 €</span></div></li><li><div class="fm-row"><span class="nm">Bifteki (biftec grecesc)</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Suzukaki</span><span class="ld"></span><span class="pr">12 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/burger-classic-300.avif?v=9895a5c3"><source type="image/webp" srcset="/images/burger-classic-300.webp?v=2cd02ed7"><img src="/images/burger-classic-300.jpg?v=bf92f10d" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Burgeri</button></h3><span class="script">clasicii</span><ul><li><div class="fm-row"><span class="nm">Classic Burger</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">sos, roșii, salată, cheddar, ketchup</div></li><li><div class="fm-row"><span class="nm">Golden Burger</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">cașcaval ras, bacon, roșii, salată, maioneză</div></li><li><div class="fm-row"><span class="nm">Texas BBQ Burger</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">cheddar, bacon, salată, roșii, sos BBQ</div></li><li><div class="fm-row"><span class="nm">Angus Burger</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">Philadelphia, salată, roșii, cheddar, bacon, ketchup</div></li><li><div class="fm-row"><span class="nm">Crispy Chicken Burger</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">șnițel de pui, cheddar, roșii, salată, sos crispy, bacon</div></li><li><div class="fm-row"><span class="nm">Orice burger cu cartofi</span><span class="ld"></span><span class="pr">10 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/nuggets-300.avif?v=6c8e9045"><source type="image/webp" srcset="/images/nuggets-300.webp?v=6eb413c7"><img src="/images/nuggets-300.jpg?v=b02f7f30" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Sandvișuri &amp; gustări</button></h3><span class="script">rapid, la pachet</span><ul><li><div class="fm-row"><span class="nm">Baghetă albă cu pui</span><span class="ld"></span><span class="pr">7 €</span></div><div class="fm-desc">maioneză, parmezan, rucola</div></li><li><div class="fm-row"><span class="nm">Baghetă integrală</span><span class="ld"></span><span class="pr">6 €</span></div><div class="fm-desc">maioneză, salată, curcan, roșii, feta</div></li><li><div class="fm-row"><span class="nm">Baghetă grecească</span><span class="ld"></span><span class="pr">6 €</span></div><div class="fm-desc">salată, feta, roșii, castraveți, măsline</div></li><li><div class="fm-row"><span class="nm">Croissant sărat</span><span class="ld"></span><span class="pr">6 €</span></div><div class="fm-desc">gouda, curcan, roșii, maioneză</div></li><li><div class="fm-row"><span class="nm">Club sandwich</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Club sandwich cu pui</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Nuggets de pui</span><span class="ld"></span><span class="pr">11 €</span></div></li><li><div class="fm-row"><span class="nm">Cartofi prăjiți</span><span class="ld"></span><span class="pr">6 €</span></div></li><li><div class="fm-row"><span class="nm">Sandviș cu gyros</span><span class="ld"></span><span class="pr">5 €</span></div></li><li><div class="fm-row"><span class="nm">Hot dog</span><span class="ld"></span><span class="pr">5 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/soups-300.avif?v=c064c153"><source type="image/webp" srcset="/images/soups-300.webp?v=3807d04c"><img src="/images/soups-300.jpg?v=86ff43d4" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Supe &amp; ciorbe</button></h3><span class="script">calde, din oală</span><ul><li><div class="fm-row"><span class="nm">Supă de fructe de mare</span><span class="ld"></span><span class="pr">18 €</span></div></li><li><div class="fm-row"><span class="nm">Ciorbă de pește</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Supă de ciuperci</span><span class="ld"></span><span class="pr">9 €</span></div></li><li><div class="fm-row"><span class="nm">Supă de legume</span><span class="ld"></span><span class="pr">8 €</span></div></li><li><div class="fm-row"><span class="nm">Supă de roșii</span><span class="ld"></span><span class="pr">8 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/greek-salad-300.avif?v=ed7fe793"><source type="image/webp" srcset="/images/greek-salad-300.webp?v=49b519e9"><img src="/images/greek-salad-300.jpg?v=6a67cf0f" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Salate</button></h3><span class="script">proaspete</span><ul><li><div class="fm-row"><span class="nm">Salată grecească</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Salată Caesar</span><span class="ld"></span><span class="pr">13 €</span></div></li><li><div class="fm-row"><span class="nm">Salată cu ton</span><span class="ld"></span><span class="pr">13 €</span></div></li><li><div class="fm-row"><span class="nm">Salată verde</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Bougiourdi (feta picantă la cuptor)</span><span class="ld"></span><span class="pr">8 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/pizza-wine-300.avif?v=9f0527fb"><source type="image/webp" srcset="/images/pizza-wine-300.webp?v=41e36fe1"><img src="/images/pizza-wine-300.jpg?v=d20c2821" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Pizza</button></h3><span class="script">pe vatră</span><ul><li><div class="fm-row"><span class="nm">Specială</span><span class="ld"></span><span class="pr">15 €</span></div></li><li><div class="fm-row"><span class="nm">Margherita</span><span class="ld"></span><span class="pr">12 €</span></div><div class="fm-desc">mozzarella &amp; sos de roșii</div></li><li><div class="fm-row"><span class="nm">Pizza cu ton</span><span class="ld"></span><span class="pr">15 €</span></div></li><li><div class="fm-row"><span class="nm">Pizza cu gyros</span><span class="ld"></span><span class="pr">15 €</span></div></li><li><div class="fm-row"><span class="nm">Pizza cu pepperoni</span><span class="ld"></span><span class="pr">15 €</span></div></li><li><div class="fm-row"><span class="nm">Pizza de post</span><span class="ld"></span><span class="pr">12 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/pies-300.avif?v=89b2e261"><source type="image/webp" srcset="/images/pies-300.webp?v=dfa7261d"><img src="/images/pies-300.jpg?v=38559705" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Mic dejun &amp; plăcinte</button></h3><span class="script">calde de la 05:30</span><ul><li><div class="fm-row"><span class="nm">Bougatsa (cremă / brânză / spanac / spanac &amp; brânză / carne tocată)</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Plăcintă cu cârnați / șuncă &amp; brânză / cartofi</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Croissant</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Mic dejun WAVES (platou complet)</span><span class="ld"></span><span class="pr">15 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/breakfast-eggs-300.avif?v=2f7f132d"><source type="image/webp" srcset="/images/breakfast-eggs-300.webp?v=88187edb"><img src="/images/breakfast-eggs-300.jpg?v=6e372370" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Omlete &amp; ouă</button></h3><span class="script">de la 05:30</span><ul><li><div class="fm-row"><span class="nm">Ochiuri</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Omletă cu cârnați sau bacon</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Omletă de legume</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Ouă scrambled</span><span class="ld"></span><span class="pr">13 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/savory-crepe-300.avif?v=e2c06978"><source type="image/webp" srcset="/images/savory-crepe-300.webp?v=22c56ef8"><img src="/images/savory-crepe-300.jpg?v=d65d9892" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Clătite sărate</button></h3><span class="script">făcute în casă</span><ul><li><div class="fm-row"><span class="nm">Vegetariană</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">gouda, roșii, ciuperci, măsline, ardei</div></li><li><div class="fm-row"><span class="nm">Light</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">gouda, curcan, roșii, porumb, ardei</div></li><li><div class="fm-row"><span class="nm">Chef</span><span class="ld"></span><span class="pr">9 €</span></div><div class="fm-desc">gouda, curcan, porumb, ou, roșii, salată verde</div></li><li><div class="fm-row"><span class="nm">Caesar</span><span class="ld"></span><span class="pr">9 €</span></div><div class="fm-desc">gouda, pui, porumb, parmezan</div></li><li><div class="fm-row"><span class="nm">Specială</span><span class="ld"></span><span class="pr">9 €</span></div><div class="fm-desc">gouda, șuncă, bacon, ciuperci, roșii, maioneză</div></li><li><div class="fm-row"><span class="nm">Clătită cu gyros</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Clătită cu carne tocată</span><span class="ld"></span><span class="pr">10 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/waffle-300.avif?v=ff67cb4c"><source type="image/webp" srcset="/images/waffle-300.webp?v=e9636bef"><img src="/images/waffle-300.jpg?v=56cd3591" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Clătite dulci</button></h3><span class="script">partea dulce</span><ul><li><div class="fm-row"><span class="nm">Banoffee</span><span class="ld"></span><span class="pr">9 €</span></div><div class="fm-desc">merenda, biscuiți, banană, sirop de caramel</div></li><li><div class="fm-row"><span class="nm">Albă</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">pralină albă, căpșuni, biscuiți</div></li><li><div class="fm-row"><span class="nm">Oreo Madness</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">pralină albă, merenda, biscuiți Oreo</div></li><li><div class="fm-row"><span class="nm">Caprice</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">merenda, pralină albă, Caprice</div></li><li><div class="fm-row"><span class="nm">Albă ca Zăpada</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">ciocolată albă, cocos, banană</div></li><li><div class="fm-row"><span class="nm">Bueno</span><span class="ld"></span><span class="pr">7 €</span></div><div class="fm-desc">pralină Bueno, biscuiți</div></li><li><div class="fm-row"><span class="nm">Ciocolată</span><span class="ld"></span><span class="pr">6 €</span></div><div class="fm-desc">merenda, biscuiți</div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/pancakes-kinder-300.avif?v=095bb37e"><source type="image/webp" srcset="/images/pancakes-kinder-300.webp?v=23312ae2"><img src="/images/pancakes-kinder-300.jpg?v=7cc7f20e" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Pancakes</button></h3><span class="script">americane</span><ul><li><div class="fm-row"><span class="nm">Cu miere, banane și nuci</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Bueno</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Oreo</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Ciocolată albă și căpșuni</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Cu biscuiți</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Pancakes sărate</span><span class="ld"></span><span class="pr">12 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/sundae-300.avif?v=4e577275"><source type="image/webp" srcset="/images/sundae-300.webp?v=843cb615"><img src="/images/sundae-300.jpg?v=04e27fc2" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Dulciuri &amp; înghețată</button></h3><span class="script">clasice grecești</span><ul><li><div class="fm-row"><span class="nm">Baclava</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Ekmek kantaifi</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Kantaifi</span><span class="ld"></span><span class="pr">2 €</span></div></li><li><div class="fm-row"><span class="nm">Înghețată (cupa)</span><span class="ld"></span><span class="pr">1.50 €</span></div><div class="fm-desc">vanilie, ciocolată, căpșuni, smochine, cookies, banană</div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/coolers-300.avif?v=4cf0f250"><source type="image/webp" srcset="/images/coolers-300.webp?v=0d7bf7df"><img src="/images/coolers-300.jpg?v=50e48720" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Cafea &amp; băuturi</button></h3><span class="script">din zori</span><ul><li class="fm-hdr">Cafea</li><li><div class="fm-row"><span class="nm">Espresso / ristretto / macchiato</span><span class="ld"></span><span class="pr">2.50 €</span></div></li><li><div class="fm-row"><span class="nm">Espresso dublu / lungo</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Americano</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Cappuccino / latte</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Freddo espresso / freddo cappuccino</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Nes / frappe / cafea la filtru</span><span class="ld"></span><span class="pr">2.50 €</span></div></li><li><div class="fm-row"><span class="nm">Cafea grecească</span><span class="ld"></span><span class="pr">1.50 €</span></div></li><li><div class="fm-row"><span class="nm">Cafea grecească dublă</span><span class="ld"></span><span class="pr">2 €</span></div></li><li class="fm-hdr">Băuturi calde &amp; reci</li><li><div class="fm-row"><span class="nm">Ciocolată caldă / rece</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Ceai cald</span><span class="ld"></span><span class="pr">2 €</span></div></li><li><div class="fm-row"><span class="nm">Granita (căpșuni, lămâie)</span><span class="ld"></span><span class="pr">3.50 €</span></div></li><li><div class="fm-row"><span class="nm">Milkshake</span><span class="ld"></span><span class="pr">3.50 €</span></div></li><li><div class="fm-row"><span class="nm">Suc (vișine, portocale, piersici, măr, exotic)</span><span class="ld"></span><span class="pr">3 €</span></div></li><li class="fm-hdr">Răcoritoare</li><li><div class="fm-row"><span class="nm">Coca-Cola / Fanta / Sprite / Schweppes / Fuze Tea 330ml</span><span class="ld"></span><span class="pr">2 €</span></div></li><li><div class="fm-row"><span class="nm">Coca-Cola / Fanta 500ml</span><span class="ld"></span><span class="pr">2.50 €</span></div></li><li><div class="fm-row"><span class="nm">Apă 500ml</span><span class="ld"></span><span class="pr">0.50 €</span></div></li><li><div class="fm-row"><span class="nm">Apă 1,5L</span><span class="ld"></span><span class="pr">1 €</span></div></li></ul></div></div>
+    <div class="fm-chips" id="fmchips" role="group" aria-label="Salt la o categorie din meniu" data-i18n-attr="aria-label:chips_label"><button type="button" data-cat="0">Din mare</button><button type="button" data-cat="1">De pe grătar</button><button type="button" data-cat="2">Burgeri</button><button type="button" data-cat="3">Sandvișuri &amp; gustări</button><button type="button" data-cat="4">Supe &amp; ciorbe</button><button type="button" data-cat="5">Salate</button><button type="button" data-cat="6">Pizza</button><button type="button" data-cat="7">Mic dejun &amp; plăcinte</button><button type="button" data-cat="8">Omlete &amp; ouă</button><button type="button" data-cat="9">Clătite sărate</button><button type="button" data-cat="10">Clătite dulci</button><button type="button" data-cat="11">Pancakes</button><button type="button" data-cat="12">Dulciuri &amp; înghețată</button><button type="button" data-cat="13">Cafea &amp; băuturi</button></div>
+    <div class="fullmenu" id="fullmenu"><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/seafood-grill-300.avif?v=d9e63df7"><source type="image/webp" srcset="/images/seafood-grill-300.webp?v=5e59076c"><img src="/images/seafood-grill-300.jpg?v=10a11e9a" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Din mare</button></h3><span class="script">proaspăt, la grătar</span><ul><li><div class="fm-row"><span class="nm">Caracatiță la grătar</span><span class="ld"></span><span class="pr">18 €</span></div></li><li><div class="fm-row"><span class="nm">Calamar la grătar</span><span class="ld"></span><span class="pr">20 €</span></div></li><li><div class="fm-row"><span class="nm">Calamari prăjiți</span><span class="ld"></span><span class="pr">14 €</span></div></li><li><div class="fm-row"><span class="nm">Hamsii prăjite (gavros)</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Creveți</span><span class="ld"></span><span class="pr">18 €</span></div></li><li><div class="fm-row"><span class="nm">Paste cu creveți</span><span class="ld"></span><span class="pr">18 €</span></div></li><li><div class="fm-row"><span class="nm">Spaghete cu fructe de mare</span><span class="ld"></span><span class="pr">18 €</span></div></li><li><div class="fm-row"><span class="nm">Mix de fructe de mare</span><span class="ld"></span><span class="pr">23 €</span></div></li><li><div class="fm-row"><span class="nm">Doradă</span><span class="ld"></span><span class="pr">22 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/pork-ribs-300.avif?v=ca4319cc"><source type="image/webp" srcset="/images/pork-ribs-300.webp?v=9ef9ef1f"><img src="/images/pork-ribs-300.jpg?v=1808bdd7" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">De pe grătar</button></h3><span class="script">pe cărbuni</span><ul><li><div class="fm-row"><span class="nm">Cotlete de miel</span><span class="ld"></span><span class="pr">20 €</span></div></li><li><div class="fm-row"><span class="nm">Cotlet de porc</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Coaste de porc</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Frigărui souvlaki</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Gyros (porc)</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Gyros de pui / mix</span><span class="ld"></span><span class="pr">13 €</span></div></li><li><div class="fm-row"><span class="nm">Bifteki (biftec grecesc)</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Suzukaki</span><span class="ld"></span><span class="pr">12 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/burger-classic-300.avif?v=9895a5c3"><source type="image/webp" srcset="/images/burger-classic-300.webp?v=2cd02ed7"><img src="/images/burger-classic-300.jpg?v=bf92f10d" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Burgeri</button></h3><span class="script">clasicii</span><ul><li><div class="fm-row"><span class="nm">Classic Burger</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">sos, roșii, salată, cheddar, ketchup</div></li><li><div class="fm-row"><span class="nm">Golden Burger</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">cașcaval ras, bacon, roșii, salată, maioneză</div></li><li><div class="fm-row"><span class="nm">Texas BBQ Burger</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">cheddar, bacon, salată, roșii, sos BBQ</div></li><li><div class="fm-row"><span class="nm">Angus Burger</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">Philadelphia, salată, roșii, cheddar, bacon, ketchup</div></li><li><div class="fm-row"><span class="nm">Crispy Chicken Burger</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">șnițel de pui, cheddar, roșii, salată, sos crispy, bacon</div></li><li><div class="fm-row"><span class="nm">Orice burger cu cartofi</span><span class="ld"></span><span class="pr">10 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/nuggets-300.avif?v=6c8e9045"><source type="image/webp" srcset="/images/nuggets-300.webp?v=6eb413c7"><img src="/images/nuggets-300.jpg?v=b02f7f30" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Sandvișuri &amp; gustări</button></h3><span class="script">rapid, la pachet</span><ul><li><div class="fm-row"><span class="nm">Baghetă albă cu pui</span><span class="ld"></span><span class="pr">7 €</span></div><div class="fm-desc">maioneză, parmezan, rucola</div></li><li><div class="fm-row"><span class="nm">Baghetă integrală</span><span class="ld"></span><span class="pr">6 €</span></div><div class="fm-desc">maioneză, salată, curcan, roșii, feta</div></li><li><div class="fm-row"><span class="nm">Baghetă grecească</span><span class="ld"></span><span class="pr">6 €</span></div><div class="fm-desc">salată, feta, roșii, castraveți, măsline</div></li><li><div class="fm-row"><span class="nm">Croissant sărat</span><span class="ld"></span><span class="pr">6 €</span></div><div class="fm-desc">gouda, curcan, roșii, maioneză</div></li><li><div class="fm-row"><span class="nm">Club sandwich</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Club sandwich cu pui</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Nuggets de pui</span><span class="ld"></span><span class="pr">11 €</span></div></li><li><div class="fm-row"><span class="nm">Cartofi prăjiți</span><span class="ld"></span><span class="pr">6 €</span></div></li><li><div class="fm-row"><span class="nm">Sandviș cu gyros</span><span class="ld"></span><span class="pr">5 €</span></div></li><li><div class="fm-row"><span class="nm">Hot dog</span><span class="ld"></span><span class="pr">5 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/soups-300.avif?v=c064c153"><source type="image/webp" srcset="/images/soups-300.webp?v=3807d04c"><img src="/images/soups-300.jpg?v=86ff43d4" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Supe &amp; ciorbe</button></h3><span class="script">calde, din oală</span><ul><li><div class="fm-row"><span class="nm">Supă de fructe de mare</span><span class="ld"></span><span class="pr">18 €</span></div></li><li><div class="fm-row"><span class="nm">Ciorbă de pește</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Supă de ciuperci</span><span class="ld"></span><span class="pr">9 €</span></div></li><li><div class="fm-row"><span class="nm">Supă de legume</span><span class="ld"></span><span class="pr">8 €</span></div></li><li><div class="fm-row"><span class="nm">Supă de roșii</span><span class="ld"></span><span class="pr">8 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/greek-salad-300.avif?v=ed7fe793"><source type="image/webp" srcset="/images/greek-salad-300.webp?v=49b519e9"><img src="/images/greek-salad-300.jpg?v=6a67cf0f" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Salate</button></h3><span class="script">proaspete</span><ul><li><div class="fm-row"><span class="nm">Salată grecească</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Salată Caesar</span><span class="ld"></span><span class="pr">13 €</span></div></li><li><div class="fm-row"><span class="nm">Salată cu ton</span><span class="ld"></span><span class="pr">13 €</span></div></li><li><div class="fm-row"><span class="nm">Salată verde</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Bougiourdi (feta picantă la cuptor)</span><span class="ld"></span><span class="pr">8 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/pizza-wine-300.avif?v=9f0527fb"><source type="image/webp" srcset="/images/pizza-wine-300.webp?v=41e36fe1"><img src="/images/pizza-wine-300.jpg?v=d20c2821" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Pizza</button></h3><span class="script">pe vatră</span><ul><li><div class="fm-row"><span class="nm">Specială</span><span class="ld"></span><span class="pr">15 €</span></div></li><li><div class="fm-row"><span class="nm">Margherita</span><span class="ld"></span><span class="pr">12 €</span></div><div class="fm-desc">mozzarella &amp; sos de roșii</div></li><li><div class="fm-row"><span class="nm">Pizza cu ton</span><span class="ld"></span><span class="pr">15 €</span></div></li><li><div class="fm-row"><span class="nm">Pizza cu gyros</span><span class="ld"></span><span class="pr">15 €</span></div></li><li><div class="fm-row"><span class="nm">Pizza cu pepperoni</span><span class="ld"></span><span class="pr">15 €</span></div></li><li><div class="fm-row"><span class="nm">Pizza de post</span><span class="ld"></span><span class="pr">12 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/pies-300.avif?v=89b2e261"><source type="image/webp" srcset="/images/pies-300.webp?v=dfa7261d"><img src="/images/pies-300.jpg?v=38559705" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Mic dejun &amp; plăcinte</button></h3><span class="script">calde de la 05:30</span><ul><li><div class="fm-row"><span class="nm">Bougatsa (cremă / brânză / spanac / spanac &amp; brânză / carne tocată)</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Plăcintă cu cârnați / șuncă &amp; brânză / cartofi</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Croissant</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Mic dejun WAVES (platou complet)</span><span class="ld"></span><span class="pr">15 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/breakfast-eggs-300.avif?v=2f7f132d"><source type="image/webp" srcset="/images/breakfast-eggs-300.webp?v=88187edb"><img src="/images/breakfast-eggs-300.jpg?v=6e372370" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Omlete &amp; ouă</button></h3><span class="script">de la 05:30</span><ul><li><div class="fm-row"><span class="nm">Ochiuri</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Omletă cu cârnați sau bacon</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Omletă de legume</span><span class="ld"></span><span class="pr">12 €</span></div></li><li><div class="fm-row"><span class="nm">Ouă scrambled</span><span class="ld"></span><span class="pr">13 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/savory-crepe-300.avif?v=e2c06978"><source type="image/webp" srcset="/images/savory-crepe-300.webp?v=22c56ef8"><img src="/images/savory-crepe-300.jpg?v=d65d9892" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Clătite sărate</button></h3><span class="script">făcute în casă</span><ul><li><div class="fm-row"><span class="nm">Vegetariană</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">gouda, roșii, ciuperci, măsline, ardei</div></li><li><div class="fm-row"><span class="nm">Light</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">gouda, curcan, roșii, porumb, ardei</div></li><li><div class="fm-row"><span class="nm">Chef</span><span class="ld"></span><span class="pr">9 €</span></div><div class="fm-desc">gouda, curcan, porumb, ou, roșii, salată verde</div></li><li><div class="fm-row"><span class="nm">Caesar</span><span class="ld"></span><span class="pr">9 €</span></div><div class="fm-desc">gouda, pui, porumb, parmezan</div></li><li><div class="fm-row"><span class="nm">Specială</span><span class="ld"></span><span class="pr">9 €</span></div><div class="fm-desc">gouda, șuncă, bacon, ciuperci, roșii, maioneză</div></li><li><div class="fm-row"><span class="nm">Clătită cu gyros</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Clătită cu carne tocată</span><span class="ld"></span><span class="pr">10 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/waffle-300.avif?v=ff67cb4c"><source type="image/webp" srcset="/images/waffle-300.webp?v=e9636bef"><img src="/images/waffle-300.jpg?v=56cd3591" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Clătite dulci</button></h3><span class="script">partea dulce</span><ul><li><div class="fm-row"><span class="nm">Banoffee</span><span class="ld"></span><span class="pr">9 €</span></div><div class="fm-desc">merenda, biscuiți, banană, sirop de caramel</div></li><li><div class="fm-row"><span class="nm">Albă</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">pralină albă, căpșuni, biscuiți</div></li><li><div class="fm-row"><span class="nm">Oreo Madness</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">pralină albă, merenda, biscuiți Oreo</div></li><li><div class="fm-row"><span class="nm">Caprice</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">merenda, pralină albă, Caprice</div></li><li><div class="fm-row"><span class="nm">Albă ca Zăpada</span><span class="ld"></span><span class="pr">8 €</span></div><div class="fm-desc">ciocolată albă, cocos, banană</div></li><li><div class="fm-row"><span class="nm">Bueno</span><span class="ld"></span><span class="pr">7 €</span></div><div class="fm-desc">pralină Bueno, biscuiți</div></li><li><div class="fm-row"><span class="nm">Ciocolată</span><span class="ld"></span><span class="pr">6 €</span></div><div class="fm-desc">merenda, biscuiți</div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/pancakes-kinder-300.avif?v=095bb37e"><source type="image/webp" srcset="/images/pancakes-kinder-300.webp?v=23312ae2"><img src="/images/pancakes-kinder-300.jpg?v=7cc7f20e" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Pancakes</button></h3><span class="script">americane</span><ul><li><div class="fm-row"><span class="nm">Cu miere, banane și nuci</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Bueno</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Oreo</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Ciocolată albă și căpșuni</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Cu biscuiți</span><span class="ld"></span><span class="pr">10 €</span></div></li><li><div class="fm-row"><span class="nm">Pancakes sărate</span><span class="ld"></span><span class="pr">12 €</span></div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/sundae-300.avif?v=4e577275"><source type="image/webp" srcset="/images/sundae-300.webp?v=843cb615"><img src="/images/sundae-300.jpg?v=04e27fc2" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Dulciuri &amp; înghețată</button></h3><span class="script">clasice grecești</span><ul><li><div class="fm-row"><span class="nm">Baclava</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Ekmek kantaifi</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Kantaifi</span><span class="ld"></span><span class="pr">2 €</span></div></li><li><div class="fm-row"><span class="nm">Înghețată (cupa)</span><span class="ld"></span><span class="pr">1.50 €</span></div><div class="fm-desc">vanilie, ciocolată, căpșuni, smochine, cookies, banană</div></li></ul></div><div class="fm-card"><div class="mc-img"><picture><source type="image/avif" srcset="/images/coolers-300.avif?v=4cf0f250"><source type="image/webp" srcset="/images/coolers-300.webp?v=0d7bf7df"><img src="/images/coolers-300.jpg?v=50e48720" alt="" loading="lazy"></picture></div><h3><button type="button" class="fm-t" aria-expanded="true">Cafea &amp; băuturi</button></h3><span class="script">din zori</span><ul><li class="fm-hdr">Cafea</li><li><div class="fm-row"><span class="nm">Espresso / ristretto / macchiato</span><span class="ld"></span><span class="pr">2.50 €</span></div></li><li><div class="fm-row"><span class="nm">Espresso dublu / lungo</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Americano</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Cappuccino / latte</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Freddo espresso / freddo cappuccino</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Nes / frappe / cafea la filtru</span><span class="ld"></span><span class="pr">2.50 €</span></div></li><li><div class="fm-row"><span class="nm">Cafea grecească</span><span class="ld"></span><span class="pr">1.50 €</span></div></li><li><div class="fm-row"><span class="nm">Cafea grecească dublă</span><span class="ld"></span><span class="pr">2 €</span></div></li><li class="fm-hdr">Băuturi calde &amp; reci</li><li><div class="fm-row"><span class="nm">Ciocolată caldă / rece</span><span class="ld"></span><span class="pr">3 €</span></div></li><li><div class="fm-row"><span class="nm">Ceai cald</span><span class="ld"></span><span class="pr">2 €</span></div></li><li><div class="fm-row"><span class="nm">Granita (căpșuni, lămâie)</span><span class="ld"></span><span class="pr">3.50 €</span></div></li><li><div class="fm-row"><span class="nm">Milkshake</span><span class="ld"></span><span class="pr">3.50 €</span></div></li><li><div class="fm-row"><span class="nm">Suc (vișine, portocale, piersici, măr, exotic)</span><span class="ld"></span><span class="pr">3 €</span></div></li><li class="fm-hdr">Răcoritoare</li><li><div class="fm-row"><span class="nm">Coca-Cola / Fanta / Sprite / Schweppes / Fuze Tea 330ml</span><span class="ld"></span><span class="pr">2 €</span></div></li><li><div class="fm-row"><span class="nm">Coca-Cola / Fanta 500ml</span><span class="ld"></span><span class="pr">2.50 €</span></div></li><li><div class="fm-row"><span class="nm">Apă 500ml</span><span class="ld"></span><span class="pr">0.50 €</span></div></li><li><div class="fm-row"><span class="nm">Apă 1,5L</span><span class="ld"></span><span class="pr">1 €</span></div></li></ul></div></div>
     <div class="menu-note reveal">
       <p data-i18n="note_1"><b>Aproximativ 10–15 € de persoană.</b> Peștele proaspăt are preț zilnic — întreabă de captura zilei. Pâine 2 € · lipie 1 €.</p>
       <p data-i18n="note_2">În local · La pachet · Livrare fără contact</p>
+      <p data-i18n="drinks_note">Berea, vinul și băuturile spirtoase sunt în lista tipărită de băuturi — cereți-o ospătarului.</p>
+      <p class="fine" data-i18n="menu_updated">Prețuri din meniu, iulie 2026</p>
       <p class="fine" data-i18n="note_3">Prețurile sunt cele din meniul tipărit al localului — pot apărea mici modificări de sezon; la masă e valabil întotdeauna meniul zilei.</p>
     </div>
   </div>
@@ -254,23 +1316,23 @@
       <div class="script sc-lg" data-i18n="gal_script">fără filtre</div>
     </div>
     <div class="gal">
-      <figure class="reveal"><picture><source type="image/avif" srcset="/images/grill-platter-500.avif?v=24304391 500w, /images/grill-platter-800.avif?v=3af80950 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/grill-platter-500.webp?v=0c7f6e39 500w, /images/grill-platter-800.webp?v=55534da3 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/grill-platter-800.jpg?v=a1ed6278" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Grilled seafood platter with octopus, calamari and prawns" loading="lazy" srcset="/images/grill-platter-500.jpg 500w, /images/grill-platter-800.jpg 600w"></picture><figcaption data-i18n="g1">Platou la grătar pentru doi</figcaption></figure>
-      <figure class="reveal"><picture><source type="image/avif" srcset="/images/coolers-300.avif?v=4cf0f250 300w, /images/coolers-500.avif?v=7dc7a9e6 449w, /images/coolers-800.avif?v=7dc7a9e6 449w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/coolers-300.webp?v=0d7bf7df 300w, /images/coolers-500.webp?v=7da76cc3 449w, /images/coolers-800.webp?v=7da76cc3 449w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/coolers-800.jpg?v=08314b7f" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="450" height="800" alt="Berry coolers and lemonade with mint" loading="lazy" srcset="/images/coolers-300.jpg 300w, /images/coolers-500.jpg 449w, /images/coolers-800.jpg 449w"></picture><figcaption data-i18n="g2">Limonade de casă</figcaption></figure>
-      <figure class="reveal"><picture><source type="image/avif" srcset="/images/greek-breakfast-500.avif?v=746232c9 500w, /images/greek-breakfast-800.avif?v=347361ae 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/greek-breakfast-500.webp?v=ecb883cc 500w, /images/greek-breakfast-800.webp?v=a6bfef93 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/greek-breakfast-800.jpg?v=c34ba376" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Greek breakfast with eggs, feta and olives" loading="lazy" srcset="/images/greek-breakfast-500.jpg 500w, /images/greek-breakfast-800.jpg 600w"></picture><figcaption data-i18n="g3">Mic dejun grecesc</figcaption></figure>
-      <figure class="reveal"><picture><source type="image/avif" srcset="/images/tbone-500.avif?v=44a98cf0 500w, /images/tbone-800.avif?v=db03e2af 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/tbone-500.webp?v=f013cc49 500w, /images/tbone-800.webp?v=a71c1439 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/tbone-800.jpg?v=a00f6845" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Grilled chop with fries and tzatziki" loading="lazy" srcset="/images/tbone-500.jpg 500w, /images/tbone-800.jpg 600w"></picture><figcaption data-i18n="g4">De pe cărbuni</figcaption></figure>
-      <figure class="reveal"><picture><source type="image/avif" srcset="/images/calamari-500.avif?v=bbbc9a9c 500w, /images/calamari-800.avif?v=f145f7f3 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/calamari-500.webp?v=30b13c66 500w, /images/calamari-800.webp?v=7309e868 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/calamari-800.jpg?v=e73f289d" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Fried calamari and anchovies with lemon" loading="lazy" srcset="/images/calamari-500.jpg 500w, /images/calamari-800.jpg 600w"></picture><figcaption data-i18n="g5">Fritto misto</figcaption></figure>
-      <figure class="reveal"><picture><source type="image/avif" srcset="/images/gelato-sea-500.avif?v=59d0eb82 500w, /images/gelato-sea-800.avif?v=40f50479 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/gelato-sea-500.webp?v=f7d31f8e 500w, /images/gelato-sea-800.webp?v=504c8d23 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/gelato-sea-800.jpg?v=a44c8c2f" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Gelato cup by the seaside promenade" loading="lazy" srcset="/images/gelato-sea-500.jpg 500w, /images/gelato-sea-800.jpg 600w"></picture><figcaption data-i18n="g6">Înghețată lângă mare</figcaption></figure>
-      <figure class="reveal"><picture><source type="image/avif" srcset="/images/pizza-wine-300.avif?v=9f0527fb 300w, /images/pizza-wine-500.avif?v=4dff3dd4 500w, /images/pizza-wine-800.avif?v=1e5a22ae 800w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/pizza-wine-300.webp?v=41e36fe1 300w, /images/pizza-wine-500.webp?v=a2e687df 500w, /images/pizza-wine-800.webp?v=a8e3b54f 800w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/pizza-wine-800.jpg?v=271b122a" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="800" height="600" alt="Pizza with a carafe of white wine" loading="lazy" srcset="/images/pizza-wine-300.jpg 300w, /images/pizza-wine-500.jpg 500w, /images/pizza-wine-800.jpg 800w"></picture><figcaption data-i18n="g7">Pizza &amp; vin local</figcaption></figure>
-      <figure class="reveal"><picture><source type="image/avif" srcset="/images/octopus-salad-500.avif?v=356f9e3d 500w, /images/octopus-salad-800.avif?v=a44fd68d 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/octopus-salad-500.webp?v=69f3453b 500w, /images/octopus-salad-800.webp?v=3d065c36 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/octopus-salad-800.jpg?v=96ad2b9e" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Octopus tentacles over salad" loading="lazy" srcset="/images/octopus-salad-500.jpg 500w, /images/octopus-salad-800.jpg 600w"></picture><figcaption data-i18n="g8">Caracatiță, simplu</figcaption></figure>
-      <figure class="reveal"><picture><source type="image/avif" srcset="/images/waffle-300.avif?v=ff67cb4c 300w, /images/waffle-500.avif?v=94880cde 500w, /images/waffle-800.avif?v=6fb54bb8 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/waffle-300.webp?v=e9636bef 300w, /images/waffle-500.webp?v=83ad9b72 500w, /images/waffle-800.webp?v=5f6b1970 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/waffle-800.jpg?v=69500b6a" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Waffle with chocolate and whipped cream" loading="lazy" srcset="/images/waffle-300.jpg 300w, /images/waffle-500.jpg 500w, /images/waffle-800.jpg 600w"></picture><figcaption data-i18n="g9">Vafă cu de toate</figcaption></figure>
-      <figure class="reveal"><picture><source type="image/avif" srcset="/images/anchovies-500.avif?v=c49f8f9b 500w, /images/anchovies-800.avif?v=a88a5d74 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/anchovies-500.webp?v=d87f8f14 500w, /images/anchovies-800.webp?v=f02b3124 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/anchovies-800.jpg?v=f160688f" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Fried anchovies with fries and lemon" loading="lazy" srcset="/images/anchovies-500.jpg 500w, /images/anchovies-800.jpg 600w"></picture><figcaption data-i18n="g10">Gavros &amp; cartofi</figcaption></figure>
-      <figure class="reveal"><picture><source type="image/avif" srcset="/images/sundae-300.avif?v=4e577275 300w, /images/sundae-500.avif?v=ac33acb0 500w, /images/sundae-800.avif?v=14482f27 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/sundae-300.webp?v=843cb615 300w, /images/sundae-500.webp?v=7d3cad7e 500w, /images/sundae-800.webp?v=0e60ba68 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/sundae-800.jpg?v=6a05261d" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Sundae with cream, banana and peach" loading="lazy" srcset="/images/sundae-300.jpg 300w, /images/sundae-500.jpg 500w, /images/sundae-800.jpg 600w"></picture><figcaption data-i18n="g11">Sundae de vară</figcaption></figure>
-      <figure class="reveal"><picture><source type="image/avif" srcset="/images/dorada-platter-500.avif?v=38fbf22e 500w, /images/dorada-platter-800.avif?v=4788ee7b 800w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/dorada-platter-500.webp?v=b2374737 500w, /images/dorada-platter-800.webp?v=3b412c12 800w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/dorada-platter-800.jpg?v=8d4eba5d" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="800" height="600" alt="Whole grilled dorada with grilled vegetables" loading="lazy" srcset="/images/dorada-platter-500.jpg 500w, /images/dorada-platter-800.jpg 800w"></picture><figcaption data-i18n="g13">Doradă întreagă la grătar</figcaption></figure>
-      <figure class="reveal"><picture><source type="image/avif" srcset="/images/octopus-stew-500.avif?v=b0f3c652 500w, /images/octopus-stew-800.avif?v=8d000ddf 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/octopus-stew-500.webp?v=ebe584b7 500w, /images/octopus-stew-800.webp?v=90485cf4 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/octopus-stew-800.jpg?v=6ee32b57" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Octopus stewed in tomato sauce" loading="lazy" srcset="/images/octopus-stew-500.jpg 500w, /images/octopus-stew-800.jpg 600w"></picture><figcaption data-i18n="g14">Caracatiță în sos de roșii</figcaption></figure>
-      <figure class="reveal"><picture><source type="image/avif" srcset="/images/shrimp-pasta-500.avif?v=11652a00 500w, /images/shrimp-pasta-800.avif?v=945e0d0e 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/shrimp-pasta-500.webp?v=7857432b 500w, /images/shrimp-pasta-800.webp?v=9717733b 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/shrimp-pasta-800.jpg?v=10cecd7b" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Linguine with whole shrimps" loading="lazy" srcset="/images/shrimp-pasta-500.jpg 500w, /images/shrimp-pasta-800.jpg 600w"></picture><figcaption data-i18n="g15">Linguine cu creveți</figcaption></figure>
-      <figure class="reveal"><picture><source type="image/avif" srcset="/images/seafood-pizza-500.avif?v=abd2dc16 500w, /images/seafood-pizza-800.avif?v=536bff15 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/seafood-pizza-500.webp?v=b620f51e 500w, /images/seafood-pizza-800.webp?v=45df1e94 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/seafood-pizza-800.jpg?v=061b6fec" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Seafood pizza with fresh mussels" loading="lazy" srcset="/images/seafood-pizza-500.jpg 500w, /images/seafood-pizza-800.jpg 600w"></picture><figcaption data-i18n="g16">Pizza cu fructe de mare</figcaption></figure>
-      <figure class="reveal"><picture><source type="image/avif" srcset="/images/shrimp-saganaki-500.avif?v=dea9f97d 500w, /images/shrimp-saganaki-800.avif?v=54d79992 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/shrimp-saganaki-500.webp?v=d415c3f6 500w, /images/shrimp-saganaki-800.webp?v=d33cbed0 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/shrimp-saganaki-800.jpg?v=aff0303b" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Shrimp saganaki in tomato sauce" loading="lazy" srcset="/images/shrimp-saganaki-500.jpg 500w, /images/shrimp-saganaki-800.jpg 600w"></picture><figcaption data-i18n="g17">Creveți saganaki</figcaption></figure>
-      <figure class="reveal"><picture><source type="image/avif" srcset="/images/seafood-tomato-500.avif?v=7a35bfbe 500w, /images/seafood-tomato-800.avif?v=abceef5c 800w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/seafood-tomato-500.webp?v=729b235e 500w, /images/seafood-tomato-800.webp?v=63860ae5 800w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/seafood-tomato-800.jpg?v=8f810e36" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="800" height="600" alt="Mixed seafood in tomato sauce" loading="lazy" srcset="/images/seafood-tomato-500.jpg 500w, /images/seafood-tomato-800.jpg 800w"></picture><figcaption data-i18n="g18">Fructe de mare în sos de roșii</figcaption></figure>
+      <figure class="reveal"><picture><source type="image/avif" srcset="/images/grill-platter-500.avif?v=24304391 500w, /images/grill-platter-800.avif?v=3af80950 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/grill-platter-500.webp?v=0c7f6e39 500w, /images/grill-platter-800.webp?v=55534da3 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/grill-platter-800.jpg?v=a1ed6278" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Platou la grătar pentru doi" data-i18n-attr="alt:g1" loading="lazy" srcset="/images/grill-platter-500.jpg 500w, /images/grill-platter-800.jpg 600w"></picture><figcaption data-i18n="g1">Platou la grătar pentru doi</figcaption></figure>
+      <figure class="reveal"><picture><source type="image/avif" srcset="/images/coolers-300.avif?v=4cf0f250 300w, /images/coolers-500.avif?v=7dc7a9e6 449w, /images/coolers-800.avif?v=7dc7a9e6 449w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/coolers-300.webp?v=0d7bf7df 300w, /images/coolers-500.webp?v=7da76cc3 449w, /images/coolers-800.webp?v=7da76cc3 449w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/coolers-800.jpg?v=08314b7f" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="450" height="800" alt="Limonade de casă" data-i18n-attr="alt:g2" loading="lazy" srcset="/images/coolers-300.jpg 300w, /images/coolers-500.jpg 449w, /images/coolers-800.jpg 449w"></picture><figcaption data-i18n="g2">Limonade de casă</figcaption></figure>
+      <figure class="reveal"><picture><source type="image/avif" srcset="/images/greek-breakfast-500.avif?v=746232c9 500w, /images/greek-breakfast-800.avif?v=347361ae 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/greek-breakfast-500.webp?v=ecb883cc 500w, /images/greek-breakfast-800.webp?v=a6bfef93 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/greek-breakfast-800.jpg?v=c34ba376" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Mic dejun grecesc" data-i18n-attr="alt:g3" loading="lazy" srcset="/images/greek-breakfast-500.jpg 500w, /images/greek-breakfast-800.jpg 600w"></picture><figcaption data-i18n="g3">Mic dejun grecesc</figcaption></figure>
+      <figure class="reveal"><picture><source type="image/avif" srcset="/images/tbone-500.avif?v=44a98cf0 500w, /images/tbone-800.avif?v=db03e2af 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/tbone-500.webp?v=f013cc49 500w, /images/tbone-800.webp?v=a71c1439 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/tbone-800.jpg?v=a00f6845" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="De pe cărbuni" data-i18n-attr="alt:g4" loading="lazy" srcset="/images/tbone-500.jpg 500w, /images/tbone-800.jpg 600w"></picture><figcaption data-i18n="g4">De pe cărbuni</figcaption></figure>
+      <figure class="reveal"><picture><source type="image/avif" srcset="/images/calamari-500.avif?v=bbbc9a9c 500w, /images/calamari-800.avif?v=f145f7f3 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/calamari-500.webp?v=30b13c66 500w, /images/calamari-800.webp?v=7309e868 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/calamari-800.jpg?v=e73f289d" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Fritto misto" data-i18n-attr="alt:g5" loading="lazy" srcset="/images/calamari-500.jpg 500w, /images/calamari-800.jpg 600w"></picture><figcaption data-i18n="g5">Fritto misto</figcaption></figure>
+      <figure class="reveal"><picture><source type="image/avif" srcset="/images/gelato-sea-500.avif?v=59d0eb82 500w, /images/gelato-sea-800.avif?v=40f50479 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/gelato-sea-500.webp?v=f7d31f8e 500w, /images/gelato-sea-800.webp?v=504c8d23 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/gelato-sea-800.jpg?v=a44c8c2f" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Înghețată lângă mare" data-i18n-attr="alt:g6" loading="lazy" srcset="/images/gelato-sea-500.jpg 500w, /images/gelato-sea-800.jpg 600w"></picture><figcaption data-i18n="g6">Înghețată lângă mare</figcaption></figure>
+      <figure class="reveal"><picture><source type="image/avif" srcset="/images/pizza-wine-300.avif?v=9f0527fb 300w, /images/pizza-wine-500.avif?v=4dff3dd4 500w, /images/pizza-wine-800.avif?v=1e5a22ae 800w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/pizza-wine-300.webp?v=41e36fe1 300w, /images/pizza-wine-500.webp?v=a2e687df 500w, /images/pizza-wine-800.webp?v=a8e3b54f 800w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/pizza-wine-800.jpg?v=271b122a" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="800" height="600" alt="Pizza &amp;amp; vin local" data-i18n-attr="alt:g7" loading="lazy" srcset="/images/pizza-wine-300.jpg 300w, /images/pizza-wine-500.jpg 500w, /images/pizza-wine-800.jpg 800w"></picture><figcaption data-i18n="g7">Pizza &amp; vin local</figcaption></figure>
+      <figure class="reveal"><picture><source type="image/avif" srcset="/images/octopus-salad-500.avif?v=356f9e3d 500w, /images/octopus-salad-800.avif?v=a44fd68d 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/octopus-salad-500.webp?v=69f3453b 500w, /images/octopus-salad-800.webp?v=3d065c36 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/octopus-salad-800.jpg?v=96ad2b9e" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Caracatiță, simplu" data-i18n-attr="alt:g8" loading="lazy" srcset="/images/octopus-salad-500.jpg 500w, /images/octopus-salad-800.jpg 600w"></picture><figcaption data-i18n="g8">Caracatiță, simplu</figcaption></figure>
+      <figure class="reveal"><picture><source type="image/avif" srcset="/images/waffle-300.avif?v=ff67cb4c 300w, /images/waffle-500.avif?v=94880cde 500w, /images/waffle-800.avif?v=6fb54bb8 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/waffle-300.webp?v=e9636bef 300w, /images/waffle-500.webp?v=83ad9b72 500w, /images/waffle-800.webp?v=5f6b1970 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/waffle-800.jpg?v=69500b6a" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Vafă cu de toate" data-i18n-attr="alt:g9" loading="lazy" srcset="/images/waffle-300.jpg 300w, /images/waffle-500.jpg 500w, /images/waffle-800.jpg 600w"></picture><figcaption data-i18n="g9">Vafă cu de toate</figcaption></figure>
+      <figure class="reveal"><picture><source type="image/avif" srcset="/images/anchovies-500.avif?v=c49f8f9b 500w, /images/anchovies-800.avif?v=a88a5d74 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/anchovies-500.webp?v=d87f8f14 500w, /images/anchovies-800.webp?v=f02b3124 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/anchovies-800.jpg?v=f160688f" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Gavros &amp;amp; cartofi" data-i18n-attr="alt:g10" loading="lazy" srcset="/images/anchovies-500.jpg 500w, /images/anchovies-800.jpg 600w"></picture><figcaption data-i18n="g10">Gavros &amp; cartofi</figcaption></figure>
+      <figure class="reveal"><picture><source type="image/avif" srcset="/images/sundae-300.avif?v=4e577275 300w, /images/sundae-500.avif?v=ac33acb0 500w, /images/sundae-800.avif?v=14482f27 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/sundae-300.webp?v=843cb615 300w, /images/sundae-500.webp?v=7d3cad7e 500w, /images/sundae-800.webp?v=0e60ba68 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/sundae-800.jpg?v=6a05261d" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Sundae de vară" data-i18n-attr="alt:g11" loading="lazy" srcset="/images/sundae-300.jpg 300w, /images/sundae-500.jpg 500w, /images/sundae-800.jpg 600w"></picture><figcaption data-i18n="g11">Sundae de vară</figcaption></figure>
+      <figure class="reveal"><picture><source type="image/avif" srcset="/images/dorada-platter-500.avif?v=38fbf22e 500w, /images/dorada-platter-800.avif?v=4788ee7b 800w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/dorada-platter-500.webp?v=b2374737 500w, /images/dorada-platter-800.webp?v=3b412c12 800w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/dorada-platter-800.jpg?v=8d4eba5d" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="800" height="600" alt="Doradă întreagă la grătar" data-i18n-attr="alt:g13" loading="lazy" srcset="/images/dorada-platter-500.jpg 500w, /images/dorada-platter-800.jpg 800w"></picture><figcaption data-i18n="g13">Doradă întreagă la grătar</figcaption></figure>
+      <figure class="reveal"><picture><source type="image/avif" srcset="/images/octopus-stew-500.avif?v=b0f3c652 500w, /images/octopus-stew-800.avif?v=8d000ddf 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/octopus-stew-500.webp?v=ebe584b7 500w, /images/octopus-stew-800.webp?v=90485cf4 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/octopus-stew-800.jpg?v=6ee32b57" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Caracatiță în sos de roșii" data-i18n-attr="alt:g14" loading="lazy" srcset="/images/octopus-stew-500.jpg 500w, /images/octopus-stew-800.jpg 600w"></picture><figcaption data-i18n="g14">Caracatiță în sos de roșii</figcaption></figure>
+      <figure class="reveal"><picture><source type="image/avif" srcset="/images/shrimp-pasta-500.avif?v=11652a00 500w, /images/shrimp-pasta-800.avif?v=945e0d0e 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/shrimp-pasta-500.webp?v=7857432b 500w, /images/shrimp-pasta-800.webp?v=9717733b 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/shrimp-pasta-800.jpg?v=10cecd7b" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Linguine cu creveți" data-i18n-attr="alt:g15" loading="lazy" srcset="/images/shrimp-pasta-500.jpg 500w, /images/shrimp-pasta-800.jpg 600w"></picture><figcaption data-i18n="g15">Linguine cu creveți</figcaption></figure>
+      <figure class="reveal"><picture><source type="image/avif" srcset="/images/seafood-pizza-500.avif?v=abd2dc16 500w, /images/seafood-pizza-800.avif?v=536bff15 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/seafood-pizza-500.webp?v=b620f51e 500w, /images/seafood-pizza-800.webp?v=45df1e94 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/seafood-pizza-800.jpg?v=061b6fec" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Pizza cu fructe de mare" data-i18n-attr="alt:g16" loading="lazy" srcset="/images/seafood-pizza-500.jpg 500w, /images/seafood-pizza-800.jpg 600w"></picture><figcaption data-i18n="g16">Pizza cu fructe de mare</figcaption></figure>
+      <figure class="reveal"><picture><source type="image/avif" srcset="/images/shrimp-saganaki-500.avif?v=dea9f97d 500w, /images/shrimp-saganaki-800.avif?v=54d79992 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/shrimp-saganaki-500.webp?v=d415c3f6 500w, /images/shrimp-saganaki-800.webp?v=d33cbed0 600w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/shrimp-saganaki-800.jpg?v=aff0303b" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="600" height="800" alt="Creveți saganaki" data-i18n-attr="alt:g17" loading="lazy" srcset="/images/shrimp-saganaki-500.jpg 500w, /images/shrimp-saganaki-800.jpg 600w"></picture><figcaption data-i18n="g17">Creveți saganaki</figcaption></figure>
+      <figure class="reveal"><picture><source type="image/avif" srcset="/images/seafood-tomato-500.avif?v=7a35bfbe 500w, /images/seafood-tomato-800.avif?v=abceef5c 800w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><source type="image/webp" srcset="/images/seafood-tomato-500.webp?v=729b235e 500w, /images/seafood-tomato-800.webp?v=63860ae5 800w" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px"><img src="/images/seafood-tomato-800.jpg?v=8f810e36" sizes="(max-width:640px) 50vw, (max-width:1020px) 33vw, 280px" width="800" height="600" alt="Fructe de mare în sos de roșii" data-i18n-attr="alt:g18" loading="lazy" srcset="/images/seafood-tomato-500.jpg 500w, /images/seafood-tomato-800.jpg 800w"></picture><figcaption data-i18n="g18">Fructe de mare în sos de roșii</figcaption></figure>
     </div>
   </div>
 </section>
@@ -284,19 +1346,19 @@
     </div>
     <div class="rev-grid">
       <article class="rev-card reveal">
-        <div class="stars">★★★★★</div>
+        <div class="stars" aria-hidden="true">★★★★★</div>
         <p data-i18n="r1_q">„Dacă ești în Uranopoli, această tavernă este cea mai bună alegere din zonă. Mâncarea este mereu proaspătă.”</p>
-        <footer><div class="avatar">P</div><div><b>Petru T.</b><span data-i18n="r_lg">Local Guide · Google</span></div></footer>
+        <footer><div class="avatar" aria-hidden="true">P</div><div><b>Petru T.</b><span data-i18n="r_lg">Local Guide · Google</span></div></footer>
       </article>
       <article class="rev-card reveal">
-        <div class="stars">★★★★★</div>
+        <div class="stars" aria-hidden="true">★★★★★</div>
         <p data-i18n="r2_q">„O tavernă pe malul mării cu preparate proaspete și delicioase — iar porțiile sunt foarte mari.”</p>
-        <footer><div class="avatar">C</div><div><b>Cristinel D.</b><span data-i18n="r_lg2">Local Guide · Google</span></div></footer>
+        <footer><div class="avatar" aria-hidden="true">C</div><div><b>Cristinel D.</b><span data-i18n="r_lg2">Local Guide · Google</span></div></footer>
       </article>
       <article class="rev-card reveal">
-        <div class="stars">★★★★★</div>
+        <div class="stars" aria-hidden="true">★★★★★</div>
         <p data-i18n="r3_q">„Mâncare fantastică, personal de treabă — ne-am simțit minunat!”</p>
-        <footer><div class="avatar">G</div><div><b data-i18n="r3_n">Vizitator Google</b><span data-i18n="r3_t">Actualizare vizitator · Google</span></div></footer>
+        <footer><div class="avatar" aria-hidden="true">G</div><div><b data-i18n="r3_n">Vizitator Google</b><span data-i18n="r3_t">Actualizare vizitator · Google</span></div></footer>
       </article>
     </div>
     <div class="rev-badge reveal">
@@ -341,16 +1403,16 @@
         <span class="pill" data-i18n="v_pill">VIZITEAZĂ-NE</span>
         <h2 data-i18n="v_h2">Găsește valurile</h2>
         <div class="script" data-i18n="v_script">suntem chiar pe plajă</div>
-        <div class="v-row"><div class="ic">📍</div><div><h3 data-i18n="v_addr_h">Adresă</h3><p data-i18n="v_addr_p">Ouranoupoli 630 75, Halkidiki, Grecia</p></div></div>
-        <div class="v-row"><div class="ic">🕐</div><div><h3 data-i18n="v_open_h">Deschis zilnic</h3><p>05:30 – 22:00</p></div></div>
-        <div class="v-row"><div class="ic">☎</div><div><h3 data-i18n="v_ph_h">Telefon</h3><p><a href="tel:+302377071088">+30 2377 071088</a></p></div></div>
+        <div class="v-row"><div class="ic" aria-hidden="true">📍</div><div><h3 data-i18n="v_addr_h">Adresă</h3><p data-i18n="v_addr_p">Ouranoupoli 630 75, Halkidiki, Grecia</p></div></div>
+        <div class="v-row"><div class="ic" aria-hidden="true">🕐</div><div><h3 data-i18n="v_open_h">Deschis zilnic</h3><p>05:30 – 22:00</p></div></div>
+        <div class="v-row"><div class="ic" aria-hidden="true">☎</div><div><h3 data-i18n="v_ph_h">Telefon</h3><p><a href="tel:+302377071088">+30 2377 071088</a></p></div></div>
         <div class="visit-cta">
-          <a class="btn btn-orange" href="https://maps.app.goo.gl/TWM8Gz17om45NjVWA" target="_blank" rel="noopener" data-i18n="cta_dir2">Cum ajungi</a>
+          <a class="btn btn-orange" href="https://www.google.com/maps/dir/?api=1&amp;destination=40.3255019%2C23.9797725" target="_blank" rel="noopener" data-i18n="cta_dir2">Cum ajungi</a>
           <a class="btn btn-ghost" href="tel:+302377071088" data-i18n="cta_call">Sună-ne</a>
         </div>
       </div>
       <div class="visit-map">
-        <iframe title="Waves Coffee & Food on the map" src="https://www.google.com/maps?q=Waves+Coffee+%26+Food,+Ouranoupoli+630+75,+Greece&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <iframe title="Waves Coffee &amp; Food pe hartă" data-i18n-attr="title:map_title" src="https://www.google.com/maps?q=Waves+Coffee+%26+Food,+Ouranoupoli+630+75,+Greece&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -388,6 +1450,6 @@
   </div>
 </footer>
 
-<script src="/assets/app.c3ef2e15.js" defer></script>
+<script src="/assets/app.d785c2c0.js" defer></script>
 </body>
 </html>

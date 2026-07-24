@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 20
 
-      - name: Rebuild every page from _src/master.html
+      - name: Rebuild everything from _src/master.html
         run: node scripts/build.mjs
 
       - name: Generated files must match what is committed (deterministic build)
@@ -22,11 +22,21 @@ jobs:
 
       - name: Static files exist
         run: |
-          test -f robots.txt && test -f sitemap.xml && test -f favicon.png && test -f apple-touch-icon.png
-          test -f images/og-1200x630.jpg
+          test -f robots.txt && test -f sitemap.xml && test -f 404.html
+          test -f favicon.png && test -f apple-touch-icon.png && test -f images/og-1200x630.jpg
+          test -f fonts/fonts.css && ls fonts/*.woff2 >/dev/null
           ls assets/style.*.css assets/app.*.js >/dev/null
 
-      - name: Every page carries the SEO essentials
+      - name: No inline code, no third-party assets, no placeholders
+        run: |
+          PAGES="index.html el/index.html ro/index.html bg/index.html sr/index.html ru/index.html"
+          ! grep -l 'style="' $PAGES
+          ! grep -lE '<script>|onload=|onclick=' $PAGES
+          ! grep -l 'fonts.googleapis.com\|fonts.gstatic.com' $PAGES
+          ! grep -rn 'Grilled Sardines' index.html el ro bg sr ru
+          ! grep -rnE 'data-i18n="[a-z0-9_]+">x<' index.html el ro bg sr ru
+
+      - name: Every page carries the SEO and a11y essentials
         run: |
           for f in index.html el/index.html ro/index.html bg/index.html sr/index.html ru/index.html; do
             grep -q 'rel="canonical"' "$f"
@@ -34,52 +44,63 @@ jobs:
             grep -q '"@type": "Restaurant"' "$f"
             grep -q '"@type": "FAQPage"' "$f"
             grep -q '<h1>' "$f"
+            grep -q 'class="skip"' "$f"
+            grep -q '<main id="main">' "$f"
+            grep -q '<a href="/el/" data-lang="el"' "$f"
           done
 
-      - name: No inline code (the CSP forbids it) and no placeholder text
-        run: |
-          ! grep -l 'style="' index.html el/index.html ro/index.html bg/index.html sr/index.html ru/index.html
-          ! grep -lE '<script>|onload=|onclick=' index.html el/index.html ro/index.html bg/index.html sr/index.html ru/index.html
-          ! grep -rn 'data-i18n="g1[0-9]">x<' index.html el ro bg sr ru
-          ! grep -rn 'Grilled Sardines' index.html el ro bg sr ru
-
-      - name: Referenced assets all exist, and images ship modern formats
+      - name: Referenced assets exist and every image ships AVIF
         run: |
           node -e '
             const fs=require("fs");
-            const pages=["index.html","el/index.html","ro/index.html","bg/index.html","sr/index.html","ru/index.html"];
-            let missing=0, jpgOnly=0;
+            const pages=["index.html","el/index.html","ro/index.html","bg/index.html","sr/index.html","ru/index.html","404.html"];
+            let missing=0, noavif=0;
             for (const p of pages) {
               const html=fs.readFileSync(p,"utf8");
-              for (const m of html.matchAll(/(?:src|href)="(\/(?:images|assets)\/[^"?]+)/g)) {
+              for (const m of html.matchAll(/(?:src|href)="(\/(?:images|assets|fonts)\/[^"?]+)/g))
                 if (!fs.existsSync("."+m[1])) { console.error("MISSING "+m[1]+" (in "+p+")"); missing++; }
-              }
-              for (const m of html.matchAll(/srcset="([^"]+)"/g)) {
+              for (const m of html.matchAll(/srcset="([^"]+)"/g))
                 for (const cand of m[1].split(",")) {
                   const u=cand.trim().split(/\s+/)[0].split("?")[0];
                   if (u.startsWith("/") && !fs.existsSync("."+u)) { console.error("MISSING "+u+" (in "+p+")"); missing++; }
                 }
-              }
-              for (const m of html.matchAll(/<img[^>]+src="\/images\/([a-z0-9-]+)\.jpg/g)) {
-                if (!fs.existsSync("images/"+m[1]+".avif")) { console.error("NO AVIF for "+m[1]+" (in "+p+")"); jpgOnly++; }
-              }
+              for (const m of html.matchAll(/<img[^>]+src="\/images\/([a-z0-9-]+)\.jpg/g))
+                if (!fs.existsSync("images/"+m[1]+".avif")) { console.error("NO AVIF for "+m[1]); noavif++; }
             }
-            if (missing||jpgOnly) process.exit(1);
-            console.log("all referenced assets exist and have modern formats");
+            if (missing||noavif) process.exit(1);
+            console.log("assets complete, modern formats present");
           '
 
-      - name: Prices are identical across all six languages
+      - name: Structured data parses and describes the whole menu
+        run: |
+          node -e '
+            const fs=require("fs");
+            for (const [lang,p] of Object.entries({en:"index.html",el:"el/index.html",ro:"ro/index.html",bg:"bg/index.html",sr:"sr/index.html",ru:"ru/index.html"})) {
+              const html=fs.readFileSync(p,"utf8");
+              const blocks=[...html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1]));
+              const graph=blocks[0]["@graph"];
+              const r=graph.find(n=>n["@type"]==="Restaurant");
+              const items=r.hasMenu.hasMenuSection.reduce((a,s)=>a+s.hasMenuItem.length,0);
+              if (graph.length!==3) throw new Error(lang+": expected WebSite+WebPage+Restaurant");
+              if (r.hasMenu.hasMenuSection.length!==14) throw new Error(lang+": expected 14 menu sections");
+              if (items!==98) throw new Error(lang+": expected 98 menu items, got "+items);
+              if (blocks[1].mainEntity.length!==4) throw new Error(lang+": expected 4 FAQ entries");
+            }
+            console.log("structured data valid on all six pages: 14 sections / 98 items / 4 FAQs");
+          '
+
+      - name: Prices and translated attributes are consistent
         run: |
           node -e '
             const fs=require("fs");
             const pages={en:"index.html",el:"el/index.html",ro:"ro/index.html",bg:"bg/index.html",sr:"sr/index.html",ru:"ru/index.html"};
-            const counts={};
+            const prices={}, titles={};
             for (const [lang,p] of Object.entries(pages)) {
               const html=fs.readFileSync(p,"utf8");
-              const prices=[...html.matchAll(/<span class="pr">([0-9.]+) €<\/span>/g)].map(m=>m[1]);
-              counts[lang]=prices.join(",");
+              prices[lang]=[...html.matchAll(/<span class="pr">([0-9.]+) €<\/span>/g)].map(m=>m[1]).join(",");
+              titles[lang]=(html.match(/<iframe title="([^"]+)"/)||[])[1];
             }
-            const uniq=new Set(Object.values(counts));
-            if (uniq.size!==1) { console.error("price lists differ between languages"); for (const [l,v] of Object.entries(counts)) console.error(l, v.slice(0,120)); process.exit(1); }
-            console.log("identical price list on all six pages:", Object.values(counts)[0].split(",").length, "prices");
+            if (new Set(Object.values(prices)).size!==1) { console.error(prices); throw new Error("price lists differ between languages"); }
+            if (new Set(Object.values(titles)).size!==6) { console.error(titles); throw new Error("the map iframe title is not localized on every page"); }
+            console.log("identical price list ("+Object.values(prices)[0].split(",").length+" prices) and six localized iframe titles");
           '
