@@ -13,17 +13,73 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Rebuild all pages from _src/master.html
+
+      - name: Rebuild every page from _src/master.html
         run: node scripts/build.mjs
-      - name: Generated pages must match the committed ones (deterministic build)
+
+      - name: Generated files must match what is committed (deterministic build)
         run: git diff --exit-code
-      - name: Sanity checks
+
+      - name: Static files exist
         run: |
-          test -f robots.txt && test -f sitemap.xml && test -f favicon.png
+          test -f robots.txt && test -f sitemap.xml && test -f favicon.png && test -f apple-touch-icon.png
+          test -f images/og-1200x630.jpg
+          ls assets/style.*.css assets/app.*.js >/dev/null
+
+      - name: Every page carries the SEO essentials
+        run: |
           for f in index.html el/index.html ro/index.html bg/index.html sr/index.html ru/index.html; do
             grep -q 'rel="canonical"' "$f"
             grep -q 'hreflang="x-default"' "$f"
             grep -q '"@type": "Restaurant"' "$f"
+            grep -q '"@type": "FAQPage"' "$f"
+            grep -q '<h1>' "$f"
           done
-          ! grep -rn 'data-i18n="g1[3-8]">x<' index.html el ro bg sr ru
-          echo "all sanity checks passed"
+
+      - name: No inline code (the CSP forbids it) and no placeholder text
+        run: |
+          ! grep -l 'style="' index.html el/index.html ro/index.html bg/index.html sr/index.html ru/index.html
+          ! grep -lE '<script>|onload=|onclick=' index.html el/index.html ro/index.html bg/index.html sr/index.html ru/index.html
+          ! grep -rn 'data-i18n="g1[0-9]">x<' index.html el ro bg sr ru
+          ! grep -rn 'Grilled Sardines' index.html el ro bg sr ru
+
+      - name: Referenced assets all exist, and images ship modern formats
+        run: |
+          node -e '
+            const fs=require("fs");
+            const pages=["index.html","el/index.html","ro/index.html","bg/index.html","sr/index.html","ru/index.html"];
+            let missing=0, jpgOnly=0;
+            for (const p of pages) {
+              const html=fs.readFileSync(p,"utf8");
+              for (const m of html.matchAll(/(?:src|href)="(\/(?:images|assets)\/[^"?]+)/g)) {
+                if (!fs.existsSync("."+m[1])) { console.error("MISSING "+m[1]+" (in "+p+")"); missing++; }
+              }
+              for (const m of html.matchAll(/srcset="([^"]+)"/g)) {
+                for (const cand of m[1].split(",")) {
+                  const u=cand.trim().split(/\s+/)[0].split("?")[0];
+                  if (u.startsWith("/") && !fs.existsSync("."+u)) { console.error("MISSING "+u+" (in "+p+")"); missing++; }
+                }
+              }
+              for (const m of html.matchAll(/<img[^>]+src="\/images\/([a-z0-9-]+)\.jpg/g)) {
+                if (!fs.existsSync("images/"+m[1]+".avif")) { console.error("NO AVIF for "+m[1]+" (in "+p+")"); jpgOnly++; }
+              }
+            }
+            if (missing||jpgOnly) process.exit(1);
+            console.log("all referenced assets exist and have modern formats");
+          '
+
+      - name: Prices are identical across all six languages
+        run: |
+          node -e '
+            const fs=require("fs");
+            const pages={en:"index.html",el:"el/index.html",ro:"ro/index.html",bg:"bg/index.html",sr:"sr/index.html",ru:"ru/index.html"};
+            const counts={};
+            for (const [lang,p] of Object.entries(pages)) {
+              const html=fs.readFileSync(p,"utf8");
+              const prices=[...html.matchAll(/<span class="pr">([0-9.]+) €<\/span>/g)].map(m=>m[1]);
+              counts[lang]=prices.join(",");
+            }
+            const uniq=new Set(Object.values(counts));
+            if (uniq.size!==1) { console.error("price lists differ between languages"); for (const [l,v] of Object.entries(counts)) console.error(l, v.slice(0,120)); process.exit(1); }
+            console.log("identical price list on all six pages:", Object.values(counts)[0].split(",").length, "prices");
+          '
