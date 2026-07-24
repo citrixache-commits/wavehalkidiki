@@ -487,7 +487,7 @@ ru: {
 };
 
 /* <picture> with modern formats; ASSET_V is filled in at build time */
-const ASSET_V = {};
+const ASSET_V = {"/images/seafood-grill-300.jpg":"10a11e9a","/images/pork-ribs-300.jpg":"1808bdd7","/images/burger-classic-300.jpg":"bf92f10d","/images/nuggets-300.jpg":"b02f7f30","/images/soups-300.jpg":"86ff43d4","/images/greek-salad-300.jpg":"6a67cf0f","/images/pizza-wine-300.jpg":"d20c2821","/images/pies-300.jpg":"38559705","/images/breakfast-eggs-300.jpg":"6e372370","/images/savory-crepe-300.jpg":"d65d9892","/images/waffle-300.jpg":"56cd3591","/images/pancakes-kinder-300.jpg":"7cc7f20e","/images/sundae-300.jpg":"04e27fc2","/images/coolers-300.jpg":"50e48720"};
 function pictureFor(jpg, attrs){
   const base = jpg.replace(/\.jpg$/, '');
   const v = ASSET_V[jpg] ? '?v=' + ASSET_V[jpg] : '';
@@ -497,7 +497,7 @@ function pictureFor(jpg, attrs){
 /* ---------------- full menu data (transcribed from the in-house menu) ---------------- */
 const MENU = [
  {
-  "img": "/images/seafood-grill-800.jpg",
+  "img": "/images/seafood-grill-300.jpg",
   "t": {
    "en": "From the Sea",
    "el": "Ψαρικά",
@@ -617,7 +617,7 @@ const MENU = [
   ]
  },
  {
-  "img": "/images/pork-ribs-800.jpg",
+  "img": "/images/pork-ribs-300.jpg",
   "t": {
    "en": "Grilled Meat",
    "el": "Κρεατικά σχάρας",
@@ -850,7 +850,7 @@ const MENU = [
     "p": "10"
    }
   ],
-  "img": "/images/burger-classic-800.jpg"
+  "img": "/images/burger-classic-300.jpg"
  },
  {
   "t": {
@@ -1013,7 +1013,7 @@ const MENU = [
     "p": "5"
    }
   ],
-  "img": "/images/nuggets-800.jpg"
+  "img": "/images/nuggets-300.jpg"
  },
  {
   "t": {
@@ -1089,7 +1089,7 @@ const MENU = [
     "p": "8"
    }
   ],
-  "img": "/images/soups-800.jpg"
+  "img": "/images/soups-300.jpg"
  },
  {
   "t": {
@@ -1165,10 +1165,10 @@ const MENU = [
     "p": "8"
    }
   ],
-  "img": "/images/greek-salad-800.jpg"
+  "img": "/images/greek-salad-300.jpg"
  },
  {
-  "img": "/images/pizza-wine-800.jpg",
+  "img": "/images/pizza-wine-300.jpg",
   "t": {
    "en": "Pizza",
    "el": "Πίτσες",
@@ -1325,10 +1325,10 @@ const MENU = [
     "p": "15"
    }
   ],
-  "img": "/images/pies-800.jpg"
+  "img": "/images/pies-300.jpg"
  },
  {
-  "img": "/images/breakfast-eggs-800.jpg",
+  "img": "/images/breakfast-eggs-300.jpg",
   "t": {
    "en": "Omelettes &amp; Eggs",
    "el": "Ομελέτες",
@@ -1528,10 +1528,10 @@ const MENU = [
     "p": "10"
    }
   ],
-  "img": "/images/savory-crepe-800.jpg"
+  "img": "/images/savory-crepe-300.jpg"
  },
  {
-  "img": "/images/waffle-800.jpg",
+  "img": "/images/waffle-300.jpg",
   "t": {
    "en": "Sweet Crepes",
    "el": "Γλυκές κρέπες",
@@ -1685,7 +1685,7 @@ const MENU = [
   ]
  },
  {
-  "img": "/images/pancakes-kinder-800.jpg",
+  "img": "/images/pancakes-kinder-300.jpg",
   "t": {
    "en": "Pancakes",
    "el": "Pancakes",
@@ -1772,7 +1772,7 @@ const MENU = [
   ]
  },
  {
-  "img": "/images/sundae-800.jpg",
+  "img": "/images/sundae-300.jpg",
   "t": {
    "en": "Sweets &amp; Ice Cream",
    "el": "Γλυκά &amp; παγωτά",
@@ -1845,7 +1845,7 @@ const MENU = [
   ]
  },
  {
-  "img": "/images/coolers-800.jpg",
+  "img": "/images/coolers-300.jpg",
   "t": {
    "en": "Coffee &amp; Drinks",
    "el": "Καφέδες &amp; ροφήματα",

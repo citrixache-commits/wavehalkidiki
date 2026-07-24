@@ -43,7 +43,7 @@ const versionOf = (url) => imgVersions[url] || '';
 const hasModern = (base) => existsSync(join(ROOT, base.replace(/^\//, '') + '.avif')) && existsSync(join(ROOT, base.replace(/^\//, '') + '.webp'));
 
 // the client-side renderer only ever injects the menu category images
-const menuImages = [...jsMatch[1].matchAll(/img:\s*'(\/images\/[a-z0-9-]+\.jpg)'/g)].map(m => m[1]);
+const menuImages = [...jsMatch[1].matchAll(/"?img"?:\s*['"](\/images\/[a-z0-9-]+\.jpg)['"]/g)].map(m => m[1]);
 const clientVersions = Object.fromEntries(menuImages.map(u => [u, imgVersions[u]]).filter(([, v]) => v));
 
 let css = cssMatch[1];
@@ -61,6 +61,48 @@ writeFileSync(join(assetsDir, cssName), css);
 writeFileSync(join(assetsDir, jsName), js);
 
 /* ------------------------------------------------------------ transforms */
+
+// intrinsic width of a JPEG/PNG, straight from the file header
+const sizeCache = new Map();
+function intrinsicWidth(relUrl) {
+  if (sizeCache.has(relUrl)) return sizeCache.get(relUrl);
+  const buf = readFileSync(join(ROOT, relUrl.replace(/^\//, '')));
+  let width = 0;
+  if (buf[0] === 0x89 && buf.toString('ascii', 1, 4) === 'PNG') {
+    width = buf.readUInt32BE(16);
+  } else {
+    for (let i = 2; i < buf.length - 9;) {
+      if (buf[i] !== 0xff) { i++; continue; }
+      const marker = buf[i + 1];
+      if (marker >= 0xc0 && marker <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(marker)) {
+        width = buf.readUInt16BE(i + 7); break;
+      }
+      i += 2 + buf.readUInt16BE(i + 2);
+    }
+  }
+  sizeCache.set(relUrl, width);
+  return width;
+}
+
+// give every image that has smaller siblings a real srcset, with descriptors
+// taken from the files themselves (so they can never drift)
+function autoSrcset(html) {
+  return html.replace(/<img\s([^>]*)>/g, (whole, attrs) => {
+    if (/\ssrcset="/.test(attrs)) return whole;
+    const src = (attrs.match(/src="([^"]+)"/) || [])[1];
+    const m = src && src.match(/^\/images\/([a-z0-9-]+)-(\d+)\.(jpg|png)$/);
+    if (!m) return whole;
+    const [, stem, size, ext] = m;
+    const candidates = [];
+    for (const w of ['300', '500', '800', '1200']) {
+      const url = `/images/${stem}-${w}.${ext}`;
+      if (Number(w) <= Number(size) && existsSync(join(ROOT, url.replace(/^\//, '')))) candidates.push(url);
+    }
+    if (candidates.length < 2) return whole;
+    const srcset = candidates.map(u => `${u} ${intrinsicWidth(u)}w`).join(', ');
+    return `<img ${attrs.trim()} srcset="${srcset}">`;
+  });
+}
 
 // <img src="/images/x.jpg" …>  ->  <picture> with AVIF + WebP sources.
 // Every srcset candidate (and its width descriptor) is carried over, so a
@@ -169,7 +211,7 @@ function buildPage(lang) {
   html = html.replace(/<style>[\s\S]*?<\/style>/, `<link rel="stylesheet" href="/assets/${cssName}">`);
   html = html.replace(/<script>\n[\s\S]*?<\/script>\n<\/body>/, `<script src="/assets/${jsName}" defer></script>\n</body>`);
 
-  html = versionImages(toPicture(html));
+  html = versionImages(toPicture(autoSrcset(html)));
 
   const out = lang === 'en' ? join(ROOT, 'index.html') : join(ROOT, lang, 'index.html');
   if (lang !== 'en') mkdirSync(join(ROOT, lang), { recursive: true });
