@@ -21,7 +21,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const BASE = 'https://waveshalkidiki.vercel.app';
 const LANGS = ['el', 'ro', 'bg', 'sr', 'ru'];
-const LASTMOD = '2026-07-24';   // bump when the content changes
+const LASTMOD = '2026-07-25';   // bump when the content changes
 const LOCALE = { en: 'en_US', el: 'el_GR', ro: 'ro_RO', bg: 'bg_BG', sr: 'sr_RS', ru: 'ru_RU' };
 const HTMLLANG = { en: 'en', el: 'el', ro: 'ro', bg: 'bg', sr: 'sr-Latn', ru: 'ru' };
 // the two faces that paint the headline and the body copy above the fold,
